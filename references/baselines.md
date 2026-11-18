@@ -15,10 +15,12 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `code_freeze_break` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
 | `cycles_frame_576x720_32s_4cpu` | 1 | 0.3 min | 0.3 min to 0.3 min | 0.3 min to 0.3 min (few samples) |
 | `dancers_tile_48frame_range_cold` | 3 | 27 min | 19 min to 31 min | 16 min to 32 min (few samples) |
+| `design_round_10_tools_2_stands_code_to_sheet` | 1 | 36 min | 36 min to 36 min | 36 min to 36 min (few samples) |
 | `drive_backup_via_mac_per_gb` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
 | `encode_final_chunk` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
 | `env_bpy_venv_install` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
+| `fanout_12_threads_spawn_to_all_reported` | 1 | 13 min | 13 min to 13 min | 13 min to 13 min (few samples) |
 | `farm_cost_usd_per_2160f_low` | 7 | $69 | $64 to $71 | $63 to $72 |
 | `farm_download_2160f_h` | 1 | 4.2 h | 4.2 h to 4.2 h | 4.2 h to 4.2 h (few samples) |
 | `farm_job_end_to_end_h` | 1 | 6.1 h | 6.1 h to 6.1 h | 6.1 h to 6.1 h (few samples) |
@@ -50,8 +52,10 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
 | `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
+| `stand_strip_3view_1400_128spp_4cpu` | 2 | 3.0 min | 2.9 min to 3.1 min | 2.9 min to 3.1 min (few samples) |
 | `storage_cleanup` | 2 | 18 min | 9.2 min to 27 min | 7.0 min to 29 min (few samples) |
 | `thread_restyle_sheet_total` | 2 | 38 min | 33 min to 44 min | 32 min to 45 min (few samples) |
+| `tool_strip_3view_1400_128spp_4cpu` | 10 | 1.1 min | 0.7 min to 2.5 min | 0.6 min to 3.0 min |
 | `web_feature_build` | 1 | 27 min | 27 min to 27 min | 27 min to 27 min (few samples) |
 <!-- AUTO:END -->
 
