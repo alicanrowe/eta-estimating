@@ -45,6 +45,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_render_4views_sec` | 49 | 27 s | 21 s to 35 s | 16 s to 43 s |
 | `jewelry_sheet_end_to_end` | 1 | 3.2 h | 3.2 h to 3.2 h | 3.2 h to 3.2 h (few samples) |
 | `mac_setup_walkthrough` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
+| `moth_tool_v3_piece_warm` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
 | `pip_bpy_build123d_setup` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
 | `platform_concurrency_stall` | 1 | 1.5 h | 1.5 h to 1.5 h | 1.5 h to 1.5 h (few samples) |
 | `platform_concurrency_stall_seen_count` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
@@ -82,6 +83,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `thread_feet_pass_total` | 1 | 45 min | 45 min to 45 min | 45 min to 45 min (few samples) |
 | `thread_redesign_iteration_lowres` | 1 | 2.3 min | 2.3 min to 2.3 min | 2.3 min to 2.3 min (few samples) |
 | `thread_restyle_sheet_total` | 2 | 38 min | 33 min to 44 min | 32 min to 45 min (few samples) |
+| `tool_family_round_rebuild` | 1 | 42 min | 42 min to 42 min | 42 min to 42 min (few samples) |
 | `web_feature_build` | 1 | 27 min | 27 min to 27 min | 27 min to 27 min (few samples) |
 <!-- AUTO:END -->
 

@@ -287,3 +287,5 @@ dancers_machine_overhaul,91.0,2026-11-18T21:23:41Z,Overhaul Dancer Glow Diva,"3 
 shopbot_render_full,8.5,,Overhaul Dancer Glow Diva,"before/after/exploded 1300 px 96 spp + compose, 4-core cloud, about 140 parts"
 pip_bpy_build123d_setup,2.5,,Overhaul Dancer Glow Diva,
 jewelry_c1_square_4seasons,3.75,2026-11-18T22:50:00Z,Render jewelry c1 bug pendant,"c1-v1 bug_pendant 4 seasons TO 2400 VOXO 0.045, 4-core cloud: 53-61 s per piece; ~17 min incl. pip setup"
+moth_tool_v3_piece_warm,2.5,2026-11-18T23:11:51Z,thread Render Moth tool 07 ember iron,"round 2 mt3-r2, 30k faces, RES 1400 128 spp 3 views, 4 cores: render 92 s; bpy already installed; job sheet said 4-12 min"
+tool_family_round_rebuild,42,2026-11-18T22:45:00Z,Moth tools owner thread,"round 2: 10 tools + 2 stands to high-poly, new materials, fabcheck written and passing, quick renders; excludes fan-out renders"
