@@ -12,9 +12,10 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `callouts_19_of_21` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
 | `cloud_cpu_test_still` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
 | `code_freeze_break` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
+| `drive_backup_via_mac_per_gb` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
 | `encode_final_chunk` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
-| `farm_cost_usd_per_2160f_low` | 5 | $69 | $64 to $70 | $63 to $70 |
+| `farm_cost_usd_per_2160f_low` | 7 | $69 | $64 to $71 | $63 to $72 |
 | `farm_download_2160f_h` | 1 | 4.2 h | 4.2 h to 4.2 h | 4.2 h to 4.2 h (few samples) |
 | `farm_job_end_to_end_h` | 1 | 6.1 h | 6.1 h to 6.1 h | 6.1 h to 6.1 h (few samples) |
 | `farm_pack_copy_checksum` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
@@ -25,6 +26,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `human_gate_active` | 4 | 1.1 min | 0.5 min to 1.8 min | 0.3 min to 2.0 min |
 | `human_gate_daytime_away` | 4 | 47 min | 33 min to 69 min | 31 min to 75 min |
 | `human_gate_overnight` | 2 | 14.9 h | 14.2 h to 15.6 h | 14.1 h to 15.8 h (few samples) |
+| `jewelry_batch_finish` | 1 | 19 min | 19 min to 19 min | 19 min to 19 min (few samples) |
 | `jewelry_cuff_cold` | 4 | 26 min | 20 min to 28 min | 18 min to 29 min |
 | `jewelry_piece_cold` | 27 | 8.8 min | 7.1 min to 15 min | 4.1 min to 16 min |
 | `jewelry_piece_restart_after_stall` | 3 | 3.5 min | 2.3 min to 4.7 min | 2.0 min to 5.0 min (few samples) |
@@ -34,9 +36,11 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `platform_concurrency_stall` | 1 | 1.5 h | 1.5 h to 1.5 h | 1.5 h to 1.5 h (few samples) |
 | `render_check_round` | 7 | 8.0 min | 6.6 min to 25 min | 4.5 min to 38 min |
 | `research_sourcing` | 4 | 29 min | 19 min to 43 min | 18 min to 46 min |
+| `sawhorse_fix_round` | 6 | 26 min | 21 min to 39 min | 19 min to 46 min |
 | `sawhorse_variant` | 8 | 36 min | 28 min to 62 min | 22 min to 80 min |
+| `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
-| `skill_save_or_small_skill` | 2 | 16 min | 9.6 min to 22 min | 8.0 min to 24 min (few samples) |
+| `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
 | `storage_cleanup` | 2 | 18 min | 9.2 min to 27 min | 7.0 min to 29 min (few samples) |
 | `web_feature_build` | 1 | 27 min | 27 min to 27 min | 27 min to 27 min (few samples) |
 <!-- AUTO:END -->
@@ -71,6 +75,8 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 - A web feature built, pushed and live (for example the WebGL fractal engine with 6 presets): about 27 minutes, of which the deploy wait is about 3 minutes.
 - Saving or packaging a small skill: 8 to 24 minutes. Research and sourcing (hinges, wood scans, a production plan, a site style scan): 18 to 46 minutes. Small graphics or a teaser: 11 to 15 minutes. A short explainer animation: about 42 minutes. A new CAD add-on design: about 76 minutes.
 
+- **Backup to Google Drive through the user's computer folder:** about 14 minutes per GB end to end (tar.gz, split into 24 MB parts because file copies to the device cap at 25 MB, reassemble and md5-verify on the user's computer). 1.8 GB took about 25 minutes on 18 Nov.
+
 ### Human gates (the biggest source of error)
 - **the user active in the app:** decision cards, sign-ins and OKs come back in 20 seconds to 2 minutes. A connector sign-in by link took 2 minutes.
 - **Daytime, the user away:** 30 to 75 minutes (unlock the user's computer, free the screen, connect a folder; 55 minutes for computer folder access on 18 Nov).
@@ -85,3 +91,5 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 
 ## How past ETAs did
 See `data/predictions.csv` and run `python3 scripts/eta.py calibration`. As of 18 Nov 2026: the encode and farm-render ETAs were close (0.7x and 0.8x), the download ETA was 5x too short, and two serial ETAs were overtaken when the work was split across machines.
+
+Update 18 Nov, 3:45 PM ET: 6 closed ETAs, median actual/p50 1.30 (above the 1.2 line). The sawhorse fix round ran 1.4x and the load and tipping skill 1.7x over p50, both agent work that grew in scope (extra research, extra fix passes). Until calibration comes back under 1.2, multiply the p50 of agent-work steps by 1.3 and quote the p90 as the late end.

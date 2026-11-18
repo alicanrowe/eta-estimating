@@ -144,3 +144,15 @@ farm_render_2160f_low_h,2.0,,cabinet animation thread,"walnut v3 16:9, submitted
 farm_cost_usd_per_2160f_low,70.0,,cabinet animation thread,walnut v3 9:16
 farm_cost_usd_per_2160f_low,70.0,,cabinet animation thread,walnut v3 16:9
 human_gate_daytime_away,55.0,,furniture build book thread,waiting on Mac folder access to copy scenes
+drive_backup_via_mac_per_gb,14.0,2026-11-18T18:30:55Z,Back up designs to Drive,1.8 GB total (818 MB loose + 3 archives) container -> Mac Google Drive folder in 24 MB tar.gz parts (commit limit 25 MB/file); ~25 min end to end incl. md5 verify
+site_3d_tiles,18.0,,Add 3D previews for a site project and CAD skill,"two home-grid 3D tiles: find source models, filter/pose, gltf-transform meshopt, screenshot check desktop+phone, PR, Drive backup; models already existed"
+jewelry_batch_finish,18.8,2026-11-18T18:14:00Z,squares_r4 file times,"last of 94 squares landed 18:32:47 UTC; ETA was 1:30 PM ET (16 min), 1.17x"
+sawhorse_fix_round,19.4,2026-11-18T18:15:12Z,Calm Thorn sawhorse centre and feet,
+sawhorse_fix_round,22.3,2026-11-18T18:14:58Z,Rebuild Edge sawhorse moth and spike,
+sawhorse_fix_round,23.6,2026-11-18T18:14:49Z,Fix Carved sawhorse stones and work top,
+sawhorse_fix_round,29.3,2026-11-18T18:15:09Z,Strengthen Thread sawhorse legs,
+sawhorse_fix_round,32.7,2026-11-18T18:15:02Z,Fix Stage sawhorse stones and views,
+sawhorse_fix_round,46.1,2026-11-18T18:15:16Z,Fix Swarm sawhorse moths and stone,
+farm_cost_usd_per_2160f_low,71.7,,PM case 9:16 farm job,18 Nov second job
+farm_cost_usd_per_2160f_low,68.99,,PM case 16:9 farm job,18 Nov second job
+skill_save_or_small_skill,105.0,,load and tipping skill thread,bigger skill with research; ETA 61 was 1.7x short

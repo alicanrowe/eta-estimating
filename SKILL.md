@@ -73,6 +73,7 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 ## Keeping it honest
 1. **Log every ETA you give**: `python3 scripts/eta.py predict "<what>" --p50 <min> --p90 <min> --source "<thread>"`.
 2. **When a step passes its late end**, re-estimate from what has actually happened and tell the user the new range once. Don't post every small slip.
+2a. **When newer work pushes an accepted job back, its ETA has changed.** Tell the user in one line what is waiting, why, and the new range, in the same turn you park it. Keep it on your checklist marked paused, and resume it as soon as the urgent work ends. Log it with the request-handoffs skill's `ledger.py park` if the project keeps a request ledger. A job with no update for two hours counts as parked.
 3. **When the work finishes**:
    - `python3 scripts/eta.py resolve <id> <actual minutes>`
    - add each measured step: `python3 scripts/eta.py add <category> <value> --source "<thread>" --note "<what was different>"` (minutes; categories ending `_h` are hours, `_sec` seconds, `_usd` dollars). Make a new category when nothing fits, named `<area>_<what>` in lower case.
@@ -86,3 +87,4 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 - ETAs given for serial work on one machine go stale the moment the work is split across machines. Re-issue the ETA when the plan changes.
 - A step that needs the user's screen or computer (unlocked Mac, Blender UI, a connected folder or drive) is a gate even when it looks like machine work.
 - Fan-out above the platform's concurrency limit doesn't fail loudly: threads start and then never run. Check that every piece actually started.
+- A design round parked silently behind urgent shop-floor questions: it sat at "not started" for two hours with no ETA, and when the user asked where it was, the thread said it had never been asked. Parking is an ETA change; say it out loud (step 2a).
