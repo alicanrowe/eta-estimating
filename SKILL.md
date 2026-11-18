@@ -10,7 +10,7 @@ metadata:
 Give ETAs from measured durations, not from feel. Every ETA is a range with clock times, names what could push it late, and gets checked against what actually happened so the next one is better.
 
 ## Where the data is
-- Live copy, shared by every thread of the project: `/mnt/project-files/eta-estimating/` (use this when it exists, and write new data here).
+- Live copy, shared by every thread of the project: a shared project folder (for example `<project-files>/eta-estimating/`) (use this when it exists, and write new data here).
 - Otherwise the copy bundled with this skill: `data/observations.csv` (measured durations), `data/predictions.csv` (past ETAs and how they did), `references/baselines.md` (the table plus what each row means).
 - `scripts/eta.py` does the maths. It needs only Python 3.
 
