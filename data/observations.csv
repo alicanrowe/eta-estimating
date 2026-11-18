@@ -1,0 +1,136 @@
+category,minutes,start_utc,source,note
+jewelry_piece_cold,9.1,2026-11-18T16:02:59Z,jewelry piece thread,r4-fix2 one piece per machine; create to report; small piece
+jewelry_piece_cold,9.75,2026-11-18T16:02:44Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,9.5,2026-11-18T16:02:48Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,9.8,2026-11-18T16:02:51Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.6,2026-11-18T16:02:55Z,jewelry piece thread,r4-fix2; extra flag write-up
+jewelry_piece_cold,8.4,2026-11-18T16:03:02Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.35,2026-11-18T16:03:09Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.7,2026-11-18T16:03:17Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.5,2026-11-18T16:03:32Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.05,2026-11-18T16:03:36Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,4.1,2026-11-18T16:03:39Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.3,2026-11-18T16:03:43Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,12.9,2026-11-18T16:03:47Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,11.9,2026-11-18T16:03:58Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,9.4,2026-11-18T16:04:09Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,11.9,2026-11-18T16:04:16Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.75,2026-11-18T16:04:24Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.9,2026-11-18T16:04:27Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.7,2026-11-18T16:04:35Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.2,2026-11-18T16:04:45Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.0,2026-11-18T16:04:49Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.5,2026-11-18T16:04:53Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.1,2026-11-18T16:04:57Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,10.5,2026-11-18T16:05:00Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.0,2026-11-18T16:05:03Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.3,2026-11-18T16:16:13Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,5.6,2026-11-18T16:14:01Z,jewelry piece thread,r4-fix2
+jewelry_cuff_cold,26.9,2026-11-18T16:05:11Z,jewelry piece thread,r4-fix2; cuffs are 5-6M tris
+jewelry_cuff_cold,24.75,2026-11-18T16:05:15Z,jewelry piece thread,r4-fix2; flagged
+jewelry_cuff_cold,28.6,2026-11-18T16:05:18Z,jewelry piece thread,r4-fix2
+jewelry_cuff_cold,18.1,2026-11-18T16:05:22Z,jewelry piece thread,r4-fix2
+jewelry_piece_warm_rerender,2.5,2026-11-18T16:42:12Z,jewelry piece thread,r4-fix3 re-render on an already set-up machine
+jewelry_piece_warm_rerender,1.5,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:40:26 (approx)
+jewelry_piece_warm_rerender,4.3,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:44:32
+jewelry_piece_warm_rerender,3.7,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:43:41
+jewelry_piece_warm_rerender,2.0,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:41:55
+jewelry_piece_warm_rerender,6.8,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to log 16:47:14
+jewelry_render_4views_sec,20.8,,render log,Cycles 4 views (seconds not minutes); 1.8M tris
+jewelry_render_4views_sec,25.7,,render log,2.3M tris
+jewelry_render_4views_sec,24.3,,render log,2.8M tris
+jewelry_render_4views_sec,25.0,,render log,2.5M tris
+jewelry_render_4views_sec,22.8,,render log,
+jewelry_render_4views_sec,22.6,,render log,
+jewelry_render_4views_sec,22.1,,render log,
+jewelry_render_4views_sec,25.8,,render log,
+jewelry_render_4views_sec,21.0,,render log,
+jewelry_render_4views_sec,33.9,,render log,glass
+jewelry_render_4views_sec,23.2,,render log,glass
+jewelry_render_4views_sec,24.3,,render log,6.0M tris
+jewelry_render_4views_sec,42.8,,render log,6.2M tris
+jewelry_render_4views_sec,34.5,,render log,
+jewelry_render_4views_sec,28.0,,render log,
+jewelry_render_4views_sec,34.1,,render log,
+jewelry_render_4views_sec,35.4,,render log,
+jewelry_render_4views_sec,28.7,,render log,
+jewelry_render_4views_sec,36.4,,render log,
+jewelry_render_4views_sec,33.3,,render log,
+jewelry_render_4views_sec,31.4,,render log,
+jewelry_render_4views_sec,25.1,,render log,
+jewelry_render_4views_sec,31.4,,render log,
+jewelry_render_4views_sec,27.2,,render log,
+jewelry_render_4views_sec,27.0,,render log,
+jewelry_render_4views_sec,27.5,,render log,
+jewelry_render_4views_sec,20.6,,render log,
+jewelry_render_4views_sec,27.2,,render log,
+jewelry_render_4views_sec,16.3,,render log,
+jewelry_render_4views_sec,29.7,,render log,
+jewelry_render_4views_sec,27.9,,render log,
+jewelry_render_4views_sec,27.0,,render log,
+jewelry_render_4views_sec,26.0,,render log,
+jewelry_render_4views_sec,21.2,,render log,
+jewelry_render_4views_sec,33.4,,render log,
+jewelry_render_4views_sec,30.0,,render log,
+jewelry_render_4views_sec,27.6,,render log,
+jewelry_render_4views_sec,35.6,,render log,
+jewelry_render_4views_sec,18.6,,render log,
+jewelry_render_4views_sec,25.8,,render log,
+jewelry_render_4views_sec,21.6,,render log,
+jewelry_render_4views_sec,31.8,,render log,
+jewelry_render_4views_sec,32.9,,render log,
+jewelry_render_4views_sec,23.6,,render log,
+sawhorse_variant,21.5,2026-11-18T16:00:22Z,sawhorse variant thread,model + render-check loop + sheet on own machine
+sawhorse_variant,31.0,2026-11-18T16:00:36Z,sawhorse variant thread,
+sawhorse_variant,31.1,2026-11-18T16:00:42Z,sawhorse variant thread,
+sawhorse_variant,30.8,2026-11-18T16:00:45Z,sawhorse variant thread,
+sawhorse_variant,39.9,2026-11-18T16:00:32Z,sawhorse variant thread,
+sawhorse_variant,41.1,2026-11-18T16:00:27Z,sawhorse variant thread,
+sawhorse_variant,54.5,2026-11-18T16:00:50Z,sawhorse variant thread,6 render-check rounds
+sawhorse_variant,80.5,2026-11-18T16:00:11Z,sawhorse variant thread,heaviest variant (carved all over); reported ready 17:20
+render_check_round,8.0,2026-11-18T16:07:33Z,sawhorse variant thread,48 min for 6 rounds
+render_check_round,38,2026-11-17T20:16:38Z,cabinet animation thread,procedural walnut rebuild of 68 materials + 5 test frames + sheet
+render_check_round,8,2026-11-17T21:18:57Z,cabinet animation thread,reshape cathedrals + 3 test frames + sheet
+render_check_round,12,2026-11-17T21:29:57Z,cabinet animation thread,roughen grain + 3 test frames + sheet
+render_check_round,8,2026-11-18T13:19:41Z,cabinet animation thread,scan wrap + 4 test frames + sheet
+render_check_round,4.5,2026-11-17T11:23:55Z,cabinet animation thread,rebuild scene + 1 test frame + measure
+render_check_round,16,2026-11-17T19:58:18Z,cabinet animation thread,side panels from photos + test sheet
+cloud_cpu_test_still,2,,cabinet animation thread,"one preview test frame on a 4-core cloud machine, no GPU"
+farm_render_2160f_low_h,2.0,2026-11-17T13:58:00Z,cabinet animation thread,"GarageFarm LOW, Cycles 256spp adaptive, 2160x3840, 2160 frames; 20% at +23 min; agent said about 2 h"
+farm_render_2160f_low_h,1.6,2026-11-17T13:58:00Z,cabinet animation thread,submit 13:58 to first frames downloading 15:32
+farm_render_1728f_overnight_upper_h,8,,furniture build book thread,"1,728-frame 16:9  cut finished overnight (upper bound, exact end unknown)"
+farm_cost_usd_per_2160f_low,63,,cabinet animation thread,old 16:9 job
+farm_cost_usd_per_2160f_low,65,,cabinet animation thread,v3 jobs
+farm_cost_usd_per_2160f_low,69,,cabinet animation thread,v3 9:16 quote
+farm_upload_renderbeamer,6.5,2026-11-18T15:59:29Z,cabinet animation thread,"one packed ~5 MB blend through renderBeamer in Blender, incl. clicking"
+farm_upload_renderbeamer,5,2026-11-18T16:06:05Z,cabinet animation thread,second file
+farm_pack_copy_checksum,6,2026-11-17T13:44:57Z,cabinet animation thread,pack scene + copy to Mac + verify checksum
+farm_download_2160f_h,4.2,2026-11-17T15:32:00Z,cabinet animation thread,"renderBeamer to Mac, ~8 MB/frame PNG16 at ~2.3 MB/s; first frames 15:32, last 19:45"
+callouts_19_of_21,29,2026-11-17T17:39:06Z,cabinet animation thread,overlay callouts on 9:16 frames
+encode_81s_4k,37,2026-11-17T18:08:27Z,cabinet animation thread,encode first 81 s of a 4K 9:16 reel with callouts
+encode_final_chunk,7,2026-11-17T19:45:30Z,cabinet animation thread,last 9 s + concat
+farm_job_end_to_end_h,6.1,2026-11-17T13:45:00Z,cabinet animation thread,approve to delivered 9:16 video; includes 75 min wait for SSD access
+web_feature_build,27,2026-11-17T23:38:28Z,web renderer thread,WebGL engine + 6 presets + push + 3 min deploy
+site_deploy_wait,3.3,2026-11-18T00:02:06Z,web renderer thread,push to live
+skill_save_or_small_skill,24,2026-11-17T23:40:39Z,skill packaging thread,
+skill_save_or_small_skill,8,2026-11-17T17:38:55Z,brand theme thread,
+research_sourcing,18,2026-11-12T17:09:13Z,hinge sourcing thread,
+research_sourcing,21,2026-11-17T10:40:03Z,wood scan download thread,12 CC0 scan sets 450 MB + README
+research_sourcing,37,2026-11-18T14:44:10Z,production plan thread,
+research_sourcing,46,2026-10-21T07:11:00Z,site style scan thread,
+graphics_small,11,2026-11-17T11:34:46Z,explainer graphics thread,
+graphics_small,15,2026-11-11T04:27:56Z,Instagram teaser thread,
+animation_small,42,2026-11-11T04:19:27Z,machine conversion animation thread,
+cad_design_feature,76,2026-11-18T14:54:11Z,CAD add-on design thread,
+storage_cleanup,29,2026-11-18T14:39:00Z,storage cleanup thread,
+storage_cleanup,7,2026-11-17T15:56:03Z,storage cleanup thread,
+mac_setup_walkthrough,4,2026-11-17T10:19:04Z,setup walkthrough thread,agent time only
+human_gate_active,0.3,2026-11-18T17:13:34Z,furniture build book thread,decision card answered while the user was active
+human_gate_active,1.3,2026-11-18T17:17:03Z,furniture build book thread,decision card
+human_gate_active,1,2026-11-18T17:11:44Z,furniture build book thread,OK to run downloaded Blender
+human_gate_active,2,2026-11-18T17:14:04Z,furniture build book thread,Google Drive connector sign-in via link
+human_gate_daytime_away,31,2026-11-18T14:51:16Z,cabinet animation thread,Mac screen locked; asked to unlock
+human_gate_daytime_away,39,2026-11-18T13:34:08Z,cabinet animation thread,asked for 5 min of screen time
+human_gate_daytime_away,75,2026-11-17T16:19:55Z,cabinet animation thread,asked to connect the SSD folder
+human_gate_overnight,948,2026-11-17T21:41:50Z,cabinet animation thread,price OK asked 4:41 PM ET answered 8:29 AM ET
+human_gate_overnight,844,2026-11-17T23:11:37Z,cabinet animation thread,site sign-in asked 6:11 PM ET answered 8:15 AM ET
