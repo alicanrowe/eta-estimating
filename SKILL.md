@@ -40,6 +40,10 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | User answers while active / daytime away / asked after 4 PM | 1 min / 47 min / next morning | 0.3 to 2 min / 31 to 75 min / 14 to 16 h |
 | Fan-out thread stalled by the concurrency limit (until restarted) | 90 min | |
 | Shared code changed without a version bump (render threads blocked) | 3 min | |
+| Sawhorse r8 re-render, design kept (8 images 1000 px, 32 spp, 4-core cloud, mesh 0.09 + checks) | 15 min per full pass; 50 min thread incl. pip setup 3 min, 3 passes | 18 Nov |
+| Farm download of two 2160-frame jobs (39 GB) at about 1.2 MB/s | 9 h | |
+| renderBeamer cold start (plugin download) / restart to first frames | 9 min / 10 min | |
+| Gotcha: renderBeamer auto-download can be off; then nothing downloads. Check it first | | 1 h lost 18 Nov |
 
 ## Making an ETA
 1. **Split the job into steps** and mark each one:
@@ -85,6 +89,8 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 - Estimating a render job from the render time: the render was 20 to 40 s, the job was 8 to 16 min. Setup and checking dominate.
 - Estimating farm download as a quick step: 2160 frames of 16-bit PNG is about 17 GB, 2 to 4 hours at about 2.3 MB/s.
 - ETAs given for serial work on one machine go stale the moment the work is split across machines. Re-issue the ETA when the plan changes.
-- A step that needs the user's screen or computer (unlocked Mac, Blender UI, a connected folder or drive) is a gate even when it looks like machine work.
+- A step that needs the user's screen or computer (unlocked Mac, Blender UI, a connected folder or drive) is a gate even when it looks like machine work. A session on the user's computer stops when it sleeps (18 Nov: a renderBeamer start sat for 70 minutes); ask them to keep it awake, and never plan renders there: renders run on cloud machines or a farm.
+- Farm downloads can be switched off in the downloader's settings; then nothing arrives and nothing errors. Check that frames are landing a few minutes after starting, and estimate from the measured rate (1.2 MB/s seen, so 39 GB took about 9 hours).
+- A job widened past what the user asked (a redesign when they asked for matching pictures) blows the ETA and gets thrown away. Estimate the scope the user's words give (request-handoffs `brief`), not the plan.
 - Fan-out above the platform's concurrency limit doesn't fail loudly: threads start and then never run. Check that every piece actually started.
 - A design round parked silently behind urgent shop-floor questions: it sat at "not started" for two hours with no ETA, and when the user asked where it was, the thread said it had never been asked. Parking is an ETA change; say it out loud (step 2a).

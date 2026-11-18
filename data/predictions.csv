@@ -1,20 +1,20 @@
 id,made_utc,what,p50_min,p90_min,actual_min,ratio_actual_to_p50,status,source
-1,2026-11-17T15:33:08Z,renderBeamer download of 2160 9:16 frames,50,,253,5.06,closed,"cabinet animation (""about 50 minutes""; last frames landed ~19:45)"
-2,2026-11-17T19:45:30Z,finish 9:16 encode,10,,7,0.70,closed,cabinet animation thread
-3,2026-11-17T14:21:04Z,GarageFarm 9:16 remaining render (20% done),90,,71,0.79,closed,cabinet animation (first frames downloading at 15:32; tail frames later)
-4,2026-11-18T15:58:51Z,8 sawhorse variants + comparison sheet (serial on one machine),300,,,,superseded,jewelry said 2-3 PM ET; switched to one machine per variant at 16:00
-5,2026-11-18T15:56:50Z,88 round-4 jewelry variations,34,,,,superseded,jewelry said ~12:30 ET; switched to one machine per piece
-6,2026-11-18T18:13:00Z,"animation frames landing, if submitted within 30 min",347,467,,,superseded,coordinator chat: 7 to 9 PM ET; renders paused 18:3x UTC until design sign-off
+1,2026-11-17T15:33:08Z,renderBeamer download of 2160 9:16 frames,50,,253,5.06,closed,"pm case animation (""about 50 minutes""; last frames landed ~19:45)"
+2,2026-11-17T19:45:30Z,finish 9:16 encode,10,,7,0.70,closed,pm case animation
+3,2026-11-17T14:21:04Z,GarageFarm 9:16 remaining render (20% done),90,,71,0.79,closed,pm case animation (first frames downloading at 15:32; tail frames later)
+4,2026-11-18T15:58:51Z,8 sawhorse variants + comparison sheet (serial on one machine),300,,,,superseded,jewelry thread said 2-3 PM ET; switched to one machine per variant at 16:00
+5,2026-11-18T15:56:50Z,88 round-4 jewelry variations,34,,,,superseded,jewelry thread said ~12:30 ET; switched to one machine per piece
+6,2026-11-18T18:13:00Z,"Moth animation frames landing, if submitted within 30 min",347,467,,,superseded,coordinator chat: 7 to 9 PM ET; Moth renders paused 18:3x UTC until design sign-off
 7,2026-11-18T18:14:00Z,All 94 jewelry renders in,16,16,18.8,1.18,closed,coordinator chat: about 1:30 PM ET
 8,2026-11-18T18:14:00Z,Giant jewelry sheet,136,256,,,open,coordinator chat: 3:30 to 5:30 PM ET
 9,2026-11-18T18:14:00Z,Sawhorse fixes (before comparison sheet),76,136,109.0,1.43,closed,coordinator chat: 2:30 to 3:30 PM ET
 10,2026-11-18T18:14:00Z,Load and tipping check skill,61,61,105.0,1.72,closed,coordinator chat: about 2:15 PM ET
-11,2026-11-18T18:14:00Z,animation frames if scene needs rebuilding,406,526,,,superseded,coordinator chat: 8 to 10 PM ET; renders paused 18:3x UTC until design sign-off
-12,2026-11-18T18:14:00Z,site stills,76,136,,,superseded,coordinator chat: 2:30 to 3:30 PM ET; renders paused 18:3x UTC until design sign-off
+11,2026-11-18T18:14:00Z,Moth animation frames if scene needs rebuilding,406,526,,,superseded,coordinator chat: 8 to 10 PM ET; Moth renders paused 18:3x UTC until design sign-off
+12,2026-11-18T18:14:00Z,Moth site stills,76,136,,,superseded,coordinator chat: 2:30 to 3:30 PM ET; Moth renders paused 18:3x UTC until design sign-off
 13,2026-11-18T18:14:00Z,HISS CAD,166,346,,,open,coordinator chat: 4 to 7 PM ET
-14,2026-11-18T18:15:00Z,animation ready to submit to farm,105,105,,,superseded,via coordinator: about 3 PM ET; renders paused 18:3x UTC until design sign-off
-15,2026-11-18T18:15:00Z,site stills (thread's figure),15,15,,,superseded,via coordinator: about 1:30 PM ET; renders paused 18:3x UTC until design sign-off
-16,2026-11-18T18:15:00Z,animation frames landed (needs OK on ~$284),1125,1365,,,superseded,via coordinator: tomorrow morning ET; gated; renders paused 18:3x UTC until design sign-off
+14,2026-11-18T18:15:00Z,Moth animation ready to submit to farm,105,105,,,superseded,Moth thread via coordinator: about 3 PM ET; Moth renders paused 18:3x UTC until design sign-off
+15,2026-11-18T18:15:00Z,Moth site stills (Moth thread's figure),15,15,,,superseded,Moth thread via coordinator: about 1:30 PM ET; Moth renders paused 18:3x UTC until design sign-off
+16,2026-11-18T18:15:00Z,Moth animation frames landed (needs OK on ~$284),1125,1365,,,superseded,Moth thread via coordinator: tomorrow morning ET; gated; Moth renders paused 18:3x UTC until design sign-off
 17,2026-11-18T18:16:00Z,PM case animation finished cuts,224,344,,,open,coordinator chat: 5 to 7 PM ET
 18,2026-11-18T18:18:00Z,PM case 9:16 cut delivered,132,132,,,open,"coordinator chat: about 3:30 PM ET, ~$70"
 19,2026-11-18T18:18:00Z,PM case 16:9 cut delivered,252,252,,,open,"coordinator chat: about 5:30 PM ET, ~$70"

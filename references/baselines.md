@@ -10,11 +10,15 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `animation_small` | 1 | 42 min | 42 min to 42 min | 42 min to 42 min (few samples) |
 | `cad_design_feature` | 1 | 76 min | 76 min to 76 min | 76 min to 76 min (few samples) |
 | `callouts_19_of_21` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
+| `cloud_bpy_setup` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
 | `cloud_cpu_test_still` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
 | `code_freeze_break` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
+| `cycles_frame_576x720_32s_4cpu` | 1 | 0.3 min | 0.3 min to 0.3 min | 0.3 min to 0.3 min (few samples) |
+| `dancers_tile_48frame_range_cold` | 3 | 27 min | 19 min to 31 min | 16 min to 32 min (few samples) |
 | `drive_backup_via_mac_per_gb` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
 | `encode_final_chunk` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
+| `env_bpy_venv_install` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
 | `farm_cost_usd_per_2160f_low` | 7 | $69 | $64 to $71 | $63 to $72 |
 | `farm_download_2160f_h` | 1 | 4.2 h | 4.2 h to 4.2 h | 4.2 h to 4.2 h (few samples) |
 | `farm_job_end_to_end_h` | 1 | 6.1 h | 6.1 h to 6.1 h | 6.1 h to 6.1 h (few samples) |
@@ -27,21 +31,27 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `human_gate_daytime_away` | 4 | 47 min | 33 min to 69 min | 31 min to 75 min |
 | `human_gate_overnight` | 2 | 14.9 h | 14.2 h to 15.6 h | 14.1 h to 15.8 h (few samples) |
 | `jewelry_batch_finish` | 1 | 19 min | 19 min to 19 min | 19 min to 19 min (few samples) |
-| `jewelry_cuff_cold` | 4 | 26 min | 20 min to 28 min | 18 min to 29 min |
-| `jewelry_piece_cold` | 27 | 8.8 min | 7.1 min to 15 min | 4.1 min to 16 min |
+| `jewelry_cuff_cold` | 5 | 25 min | 10 min to 28 min | 5.0 min to 29 min |
+| `jewelry_piece_cold` | 35 | 8.5 min | 5.1 min to 14 min | 3.5 min to 16 min |
 | `jewelry_piece_restart_after_stall` | 3 | 3.5 min | 2.3 min to 4.7 min | 2.0 min to 5.0 min (few samples) |
 | `jewelry_piece_warm_rerender` | 6 | 3.1 min | 1.8 min to 5.5 min | 1.5 min to 6.8 min |
-| `jewelry_render_4views_sec` | 44 | 27 s | 21 s to 34 s | 16 s to 43 s |
+| `jewelry_render_4views_sec` | 45 | 27 s | 21 s to 34 s | 16 s to 43 s |
 | `mac_setup_walkthrough` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
 | `platform_concurrency_stall` | 1 | 1.5 h | 1.5 h to 1.5 h | 1.5 h to 1.5 h (few samples) |
+| `render_8view_cycles_1000px_48spp` | 2 | 13 min | 10 min to 16 min | 9.3 min to 17 min (few samples) |
 | `render_check_round` | 7 | 8.0 min | 6.6 min to 25 min | 4.5 min to 38 min |
+| `render_sawhorse_view_1000px_48spp` | 2 | 1.1 min | 1.1 min to 1.1 min | 1.1 min to 1.1 min (few samples) |
+| `render_sawhorse_view_1100px_64spp` | 1 | 1.6 min | 1.6 min to 1.6 min | 1.6 min to 1.6 min (few samples) |
+| `renderbeamer_restart_to_frames` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
+| `renderbeamer_startup` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
 | `research_sourcing` | 4 | 29 min | 19 min to 43 min | 18 min to 46 min |
-| `sawhorse_fix_round` | 6 | 26 min | 21 min to 39 min | 19 min to 46 min |
+| `sawhorse_fix_round` | 8 | 28 min | 21 min to 45 min | 19 min to 46 min |
 | `sawhorse_variant` | 8 | 36 min | 28 min to 62 min | 22 min to 80 min |
 | `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
 | `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
 | `storage_cleanup` | 2 | 18 min | 9.2 min to 27 min | 7.0 min to 29 min (few samples) |
+| `thread_restyle_sheet_total` | 2 | 38 min | 33 min to 44 min | 32 min to 45 min (few samples) |
 | `web_feature_build` | 1 | 27 min | 27 min to 27 min | 27 min to 27 min (few samples) |
 <!-- AUTO:END -->
 
@@ -62,7 +72,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 - A round that rebuilds a whole material system (dozens of materials): 30 to 40 minutes.
 
 ### Animation on GarageFarm (via renderBeamer)
-- Pack, copy to the user's computer, checksum: about 6 minutes. Upload through renderBeamer: 5 to 7 minutes per file (needs the user's computer unlocked and the screen free).
+- Pack, copy to the Mac, checksum: about 6 minutes. Upload through renderBeamer: 5 to 7 minutes per file (needs the Mac unlocked and the screen free).
 - Render, LOW priority, 2160 frames at 2160 x 3840, Cycles 256 samples: about 1.5 to 2 hours, about $63 to $70 per cut. A 1,728-frame cut finished overnight. A heavier two-cut job (2,808 frames) was quoted at about $284.
 - **Download is the trap.** About 8 MB per 16-bit PNG frame at about 2.3 MB/s means roughly 2 hours of pure transfer for 2160 frames, and it took about 4 hours in practice because the last frames trail behind. An earlier ETA of "50 minutes" for this step was 5 times too short.
 - Callouts on about 20 labels: about 30 minutes. Encoding a 90-second 4K reel with callouts: about 45 minutes in chunks.
@@ -70,16 +80,17 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 
 ### Cloud machines without a GPU
 - A preview test frame takes about 2 minutes on a 4-core cloud machine. A full-quality animation frame is estimated at 40 to 60 minutes (not measured yet), which is why animations go to the farm.
+- Sawhorse r8 still set (Thorn, 18 Nov): mesh at VOX 0.09 plus 8 stills at 1200 px, 64 spp, CPU Cycles on a 4-core cloud machine took about 18 minutes; the same 8 at 500 px, 16 spp took about 2 minutes. Setup (pip install bpy 5.3 and mesh libs) about 2 minutes.
 
 ### Site and tooling work
 - A web feature built, pushed and live (for example the WebGL fractal engine with 6 presets): about 27 minutes, of which the deploy wait is about 3 minutes.
 - Saving or packaging a small skill: 8 to 24 minutes. Research and sourcing (hinges, wood scans, a production plan, a site style scan): 18 to 46 minutes. Small graphics or a teaser: 11 to 15 minutes. A short explainer animation: about 42 minutes. A new CAD add-on design: about 76 minutes.
 
-- **Backup to Google Drive through the user's computer folder:** about 14 minutes per GB end to end (tar.gz, split into 24 MB parts because file copies to the device cap at 25 MB, reassemble and md5-verify on the user's computer). 1.8 GB took about 25 minutes on 18 Nov.
+- **Backup to Google Drive through the Mac folder:** about 14 minutes per GB end to end (tar.gz, split into 24 MB parts because file copies to the device cap at 25 MB, reassemble and md5-verify on the Mac). 1.8 GB took about 25 minutes on 18 Nov.
 
 ### Human gates (the biggest source of error)
 - **the user active in the app:** decision cards, sign-ins and OKs come back in 20 seconds to 2 minutes. A connector sign-in by link took 2 minutes.
-- **Daytime, the user away:** 30 to 75 minutes (unlock the user's computer, free the screen, connect a folder; 55 minutes for computer folder access on 18 Nov).
+- **Daytime, the user away:** 30 to 75 minutes (unlock the Mac, free the screen, connect a folder; 55 minutes for Mac folder access on 18 Nov).
 - **Evening into the next morning:** 14 to 16 hours. An OK asked for after about 4 PM ET usually comes back after 8 AM ET.
 - Any step that needs the user's screen, a sign-in, a payment OK, or a folder grant is a gate. Put the gate first in the plan when possible, and never put a gate in the middle of the critical path without saying so.
 
