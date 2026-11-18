@@ -246,3 +246,40 @@ animation_frames_48_chunk,16.8,,Dancers frame chunk threads 21:02Z,48 frames per
 animation_frames_48_chunk,27.9,,Dancers frame chunk threads 21:02Z,48 frames per cloud thread
 animation_frames_48_chunk,32.9,,Dancers frame chunk threads 21:02Z,48 frames per cloud thread
 farm_download_start_gate,130.0,,PM case download,"renders done ~18:55Z, download only started 21:05Z: renderBeamer auto-download off since day before and Mac asleep"
+dancers_machine_overhaul,79.0,2026-11-18T21:23:19Z,Overhaul Dancer Honey Glaze,"6 new part makers (compressor, 983A, pump, syringe, tip, felt), head redesign, 3 render rounds; lost ~15 min to other threads' half-written part files and a late shared Ray5 change"
+dancers_machine_overhaul,80.0,,Overhaul Dancer Mortisha,"full redesign to a moving gantry (3 omega drives, T8 Z, electronics), 8 own part makers, 15-row buy list, 283 parts; lost ~15 min to name clashes and the storage outage; dims.svg projection alone 17 min"
+shopbot_render_final,11.0,,Overhaul Dancer Mortisha,"run_bot export+render+compose, 1300 px, 96 spp, ~285 parts, 4-core cloud, ran beside dims projection"
+shopbot_dims_projection,17.5,,Overhaul Dancer Mortisha,"build123d project_to_viewport, 142 parts (hardware under 20 mm dropped), front+side"
+env_bpy_venv_install,1.1,2026-11-18T22:39:13Z,Render jewelry c1 ring C,py3.13 venv bpy 5.3.0 + deps
+jewelry_render_4views_sec,37.0,,Render jewelry c1 ring C,"c1_ring_c_spring c1-v1 make+render 4 views, VOXO 0.045, 4 cpu, 2.9 g ring"
+jewelry_render_4views_sec,31.0,,Render jewelry c1 ring C,"c1_ring_c_summer c1-v1 make+render 4 views, VOXO 0.045, 4 cpu, 2.9 g ring"
+jewelry_render_4views_sec,30.0,,Render jewelry c1 ring C,"c1_ring_c_autumn c1-v1 make+render 4 views, VOXO 0.045, 4 cpu, 2.9 g ring"
+jewelry_render_4views_sec,33.0,,Render jewelry c1 ring C,"c1_ring_c_winter c1-v1 make+render 4 views, VOXO 0.045, 4 cpu, 2.9 g ring"
+jewelry_piece_cold,4.5,2026-11-18T22:38:47Z,Render jewelry c1 ring C,"c1-v1 ring_c, 4 seasons serial on one machine (~0.5 min each); spawn to report incl. check pass"
+jewelry_piece_cold,8.5,,Render jewelry c1 tail earring,"c1-v1 ear_tail x4 seasons serial on one machine; venv setup ~1 min, each render ~47 s (1.24M tris, light); whole spawn-to-report"
+env_bpy_venv_install,0.55,,Render jewelry c1 ring B,"pip cache warm, 4 cpu"
+jewelry_c1_piece_render_only,0.85,,Render jewelry c1 ring B,"c1_ring_b x4 seasons, 1.55M tris, VOXO 0.045, 4 cpu; make+4 views ~50 s each, far under TO"
+jewelry_piece_cold,2.6,,Render jewelry c1 ring B,"4 c1 ring_b seasons in one thread, 10.5 min total incl setup and check"
+jewelry_piece_cold,0.95,2026-11-18T22:39:55Z,render c1 ring A,"c1_ring_a_spring, TO2400 VOX0.045, first piece on fresh machine (venv install 0.7 min separate)"
+jewelry_piece_warm_rerender,0.82,2026-11-18T22:40:52Z,render c1 ring A,c1_ring_a_summer sequential on same machine
+jewelry_piece_warm_rerender,0.85,2026-11-18T22:41:41Z,render c1 ring A,c1_ring_a_autumn sequential on same machine
+jewelry_piece_warm_rerender,0.97,2026-11-18T22:42:32Z,render c1 ring A,c1_ring_a_winter sequential on same machine
+jewelry_c1_piece_render_only,0.97,,c1_ear_drop,"c1_ear_drop season, TO2400 VOXO0.045, 4 cores"
+jewelry_c1_piece_render_only,0.87,,c1_ear_drop,"c1_ear_drop season, TO2400 VOXO0.045, 4 cores"
+jewelry_c1_piece_render_only,0.87,,c1_ear_drop,"c1_ear_drop season, TO2400 VOXO0.045, 4 cores"
+jewelry_c1_piece_render_only,0.87,,c1_ear_drop,"c1_ear_drop season, TO2400 VOXO0.045, 4 cores"
+jewelry_piece_cold,6.0,,c1_ear_drop,"4 c1_ear_drop seasons sequential on one machine incl venv setup, spawn to checked"
+dancers_machine_overhaul,82.0,,Overhaul Dancer Cher Bend,"cher_bend: 4 new part makers, full redesign for real listings, sheet nesting, 3 renders"
+shopbot_render_final,10.2,,Overhaul Dancer Cher Bend,cher_bend 3 images 1300px 96spp 101 parts
+render_sawhorse_view_1000px_48spp,1.2,2026-11-18T22:42:00Z,Stage r10,"8 views + mesh in ~10 min, 4 cores"
+jewelry_piece_cold,4.4,,jewelry c1 batch 22:38Z,"c1 pieces, code already frozen"
+jewelry_piece_cold,4.6,,jewelry c1 batch 22:38Z,"c1 pieces, code already frozen"
+jewelry_piece_cold,5.1,,jewelry c1 batch 22:38Z,"c1 pieces, code already frozen"
+jewelry_piece_cold,5.05,,jewelry c1 batch 22:38Z,"c1 pieces, code already frozen"
+jewelry_piece_cold,5.4,,jewelry c1 batch 22:38Z,"c1 pieces, code already frozen"
+jewelry_piece_cold,5.9,,jewelry c1 batch 22:38Z,"c1 pieces, code already frozen"
+platform_concurrency_stall_seen_count,4.0,,jewelry c1 batch 22:38Z,"4 of 14 never started (last 4 created, 22:39:05-15Z); no activity after 7 min"
+sawhorse_fix_round,22,2026-11-18T22:37:00Z,Match Edge sawhorse closeups to Durumi,"r10: stretcher swap, 1 preview round, 8 views 1000px 48spp"
+dancers_machine_overhaul,92.0,2026-11-18T21:24:05Z,Overhaul Dancer Moisture Madame,"1 machine, 6 own parts + 3 shared; about 55 min of it waiting for Chrome-read listings (machine 19 of the queue); work itself ~40 min"
+render_machine_3views_1300px_96spp,10.0,2026-11-18T22:37:00Z,Overhaul Dancer Moisture Madame,"242 parts, 4-core cloud, before+after+exploded"
+dancers_listing_wait,56.0,2026-11-18T21:28:00Z,Overhaul Dancer Moisture Madame,"single Chrome reader, ~2 listings/min, my ASINs at queue positions 125-143 of 150"
