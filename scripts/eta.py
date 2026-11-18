@@ -15,6 +15,7 @@ Commands
   eta.py resolve ID ACTUAL_MIN
   eta.py calibration                            how far off past ETAs were
   eta.py rebuild                                regenerate the baselines table
+  eta.py stallcheck LISTING.json [--min 3]      flag fan-out threads that started but never ran
 Only the standard library is used.
 """
 import argparse, csv, datetime as dt, math, os, re, statistics, sys
@@ -191,6 +192,36 @@ def cmd_rebuild(_a):
     print(f"rebuilt {BASE}")
 
 
+def _parse_ts(t):
+    return dt.datetime.fromisoformat(t.replace("Z", "+00:00"))
+
+
+def cmd_stallcheck(a):
+    """Read a saved list_threads result (JSON with a 'sessions' list) and flag stalled threads."""
+    import json
+    with open(a.listing) as f:
+        data = json.load(f)
+    sess = data.get("sessions", data if isinstance(data, list) else [])
+    now = _parse_ts(a.now) if a.now else dt.datetime.now(dt.timezone.utc)
+    stalled, running = [], 0
+    for s in sess:
+        if s.get("state") != "working":
+            continue
+        running += 1
+        c, l = _parse_ts(s["created_at"]), _parse_ts(s["last_activity_at"])
+        idle_since_start = (l - c).total_seconds() < 5
+        age = (now - c).total_seconds() / 60
+        quiet = (now - l).total_seconds() / 60
+        if (idle_since_start and age >= a.min) or quiet >= a.quiet:
+            stalled.append((s.get("title", "?"), age, quiet, idle_since_start))
+    print(f"{running} threads working; {len(stalled)} look stalled")
+    for t, age, quiet, never in stalled:
+        why = "never started" if never else f"quiet {quiet:.0f} min"
+        print(f"  STALLED  {t}  (started {age:.0f} min ago, {why})")
+    if stalled:
+        print("Restart these as others finish, and add up to 90 min to the late end of the ETA until they run.")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = p.add_subparsers(dest="cmd", required=True)
@@ -212,6 +243,11 @@ def main():
     s.set_defaults(f=cmd_resolve)
     s = sp.add_parser("calibration"); s.set_defaults(f=cmd_calibration)
     s = sp.add_parser("rebuild"); s.set_defaults(f=cmd_rebuild)
+    s = sp.add_parser("stallcheck"); s.add_argument("listing")
+    s.add_argument("--min", type=float, default=3.0, help="minutes after start with no activity")
+    s.add_argument("--quiet", type=float, default=20.0, help="minutes of silence on a started thread")
+    s.add_argument("--now", help="ISO time to measure against (default: now)")
+    s.set_defaults(f=cmd_stallcheck)
     a = p.parse_args()
     a.f(a)
 

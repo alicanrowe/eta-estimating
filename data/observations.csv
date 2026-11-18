@@ -98,7 +98,7 @@ render_check_round,16,2026-11-17T19:58:18Z,cabinet animation thread,side panels 
 cloud_cpu_test_still,2,,cabinet animation thread,"one preview test frame on a 4-core cloud machine, no GPU"
 farm_render_2160f_low_h,2.0,2026-11-17T13:58:00Z,cabinet animation thread,"GarageFarm LOW, Cycles 256spp adaptive, 2160x3840, 2160 frames; 20% at +23 min; agent said about 2 h"
 farm_render_2160f_low_h,1.6,2026-11-17T13:58:00Z,cabinet animation thread,submit 13:58 to first frames downloading 15:32
-farm_render_1728f_overnight_upper_h,8,,furniture build book thread,"1,728-frame 16:9  cut finished overnight (upper bound, exact end unknown)"
+farm_render_1728f_overnight_upper_h,8,,furniture build book thread,"1,728-frame 16:9 cut finished overnight (upper bound, exact end unknown)"
 farm_cost_usd_per_2160f_low,63,,cabinet animation thread,old 16:9 job
 farm_cost_usd_per_2160f_low,65,,cabinet animation thread,v3 jobs
 farm_cost_usd_per_2160f_low,69,,cabinet animation thread,v3 9:16 quote
@@ -134,3 +134,13 @@ human_gate_daytime_away,39,2026-11-18T13:34:08Z,cabinet animation thread,asked f
 human_gate_daytime_away,75,2026-11-17T16:19:55Z,cabinet animation thread,asked to connect the SSD folder
 human_gate_overnight,948,2026-11-17T21:41:50Z,cabinet animation thread,price OK asked 4:41 PM ET answered 8:29 AM ET
 human_gate_overnight,844,2026-11-17T23:11:37Z,cabinet animation thread,site sign-in asked 6:11 PM ET answered 8:15 AM ET
+platform_concurrency_stall,90.0,2026-11-18T16:40:00Z,coordinator report 18 Nov,about 43 jewelry render threads started but never ran until restarted (session concurrency limit)
+jewelry_piece_restart_after_stall,2.0,,coordinator report 18 Nov,"restarted stalled thread, finished in 2-5 min"
+jewelry_piece_restart_after_stall,3.5,,coordinator report 18 Nov,middle of reported 2-5 min
+jewelry_piece_restart_after_stall,5.0,,coordinator report 18 Nov,top of reported 2-5 min
+code_freeze_break,3.0,,coordinator report 18 Nov,shared code edited without a version bump; render threads blocked until re-frozen
+farm_render_2160f_low_h,2.0,,cabinet animation thread,"walnut v3 9:16, submitted 16:12 UTC 18 Nov"
+farm_render_2160f_low_h,2.0,,cabinet animation thread,"walnut v3 16:9, submitted 16:12 UTC 18 Nov"
+farm_cost_usd_per_2160f_low,70.0,,cabinet animation thread,walnut v3 9:16
+farm_cost_usd_per_2160f_low,70.0,,cabinet animation thread,walnut v3 16:9
+human_gate_daytime_away,55.0,,furniture build book thread,waiting on Mac folder access to copy scenes

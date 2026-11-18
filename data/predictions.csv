@@ -1,6 +1,6 @@
 id,made_utc,what,p50_min,p90_min,actual_min,ratio_actual_to_p50,status,source
-1,2026-11-17T15:33:08Z,renderBeamer download of 2160 9:16 frames,50,,253,5.06,closed,"cabinet animation thread (""about 50 minutes""; last frames landed ~19:45)"
+1,2026-11-17T15:33:08Z,renderBeamer download of 2160 9:16 frames,50,,253,5.06,closed,"cabinet animation (""about 50 minutes""; last frames landed ~19:45)"
 2,2026-11-17T19:45:30Z,finish 9:16 encode,10,,7,0.70,closed,cabinet animation thread
-3,2026-11-17T14:21:04Z,GarageFarm 9:16 remaining render (20% done),90,,71,0.79,closed,cabinet animation thread (first frames downloading at 15:32; tail frames later)
+3,2026-11-17T14:21:04Z,GarageFarm 9:16 remaining render (20% done),90,,71,0.79,closed,cabinet animation (first frames downloading at 15:32; tail frames later)
 4,2026-11-18T15:58:51Z,8 sawhorse variants + comparison sheet (serial on one machine),300,,,,superseded,jewelry said 2-3 PM ET; switched to one machine per variant at 16:00
 5,2026-11-18T15:56:50Z,88 round-4 jewelry variations,34,,,,superseded,jewelry said ~12:30 ET; switched to one machine per piece

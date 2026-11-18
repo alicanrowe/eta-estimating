@@ -30,14 +30,16 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Render-check round that rebuilds a material system | 38 min | 30 to 40 min |
 | Preview still on a 4-core cloud machine, no GPU | 2 min | |
 | Farm: pack and copy / renderBeamer upload per file | 6 min / 6 min | 5 to 7 min |
-| Farm render, 2160 frames 4K, Cycles 256, LOW priority | 1.8 h, about $65 | 1.6 to 2 h, $63 to $69 |
+| Farm render, 2160 frames 4K, Cycles 256, LOW priority | 2 h, about $69 | 1.6 to 2 h, $63 to $70 |
 | Farm frame download, 2160 x 8 MB at about 2.3 MB/s | 2 to 4 h | 4.2 h seen |
 | Callouts on about 20 labels / encode a 90 s 4K reel | 30 min / 45 min | |
 | Farm job end to end, "go" to delivered video | 6 h | |
 | Web feature built and live (deploy about 3 min) | 27 min | |
 | Research or sourcing | 29 min | 18 to 46 min |
 | Small skill save / small graphic or teaser | 16 min / 13 min | 8 to 24 / 11 to 15 min |
-| User answers while active / daytime away / asked after 4 PM | 1 min / 40 min / next morning | 0.3 to 2 min / 31 to 75 min / 14 to 16 h |
+| User answers while active / daytime away / asked after 4 PM | 1 min / 47 min / next morning | 0.3 to 2 min / 31 to 75 min / 14 to 16 h |
+| Fan-out thread stalled by the concurrency limit (until restarted) | 90 min | |
+| Shared code changed without a version bump (render threads blocked) | 3 min | |
 
 ## Making an ETA
 1. **Split the job into steps** and mark each one:
@@ -48,14 +50,18 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
    - Fewer than 4 samples: use the observed min times 0.8 to the max times 1.5, and say the data is thin.
    - No matching category: take the nearest one, widen it by half, and say there's no direct data.
 3. **Add the loop rounds.** A new look or design takes 3 to 6 render-check rounds; a settled pipeline takes 1 or 2. When per-piece checks feed fixes back into shared code, add one central-fix round (10 to 20 min) and a full re-render wave.
-4. **Fan-out across machines**: `python3 scripts/eta.py fanout --n <pieces> --cat <category> --cap 40`. A batch ends when its slowest piece ends. Starting threads takes about 3 s each, and above roughly 40 running at once new threads may fail to start, so plan in waves. Put heavy pieces (for example cuffs) in their own class.
-5. **Transfers**: `python3 scripts/eta.py transfer --frames <n> --mb <MB per frame> --rate <MB/s>`, then plan up to twice that. Downloads of farm frames were the worst-estimated step so far (5x over).
-6. **Gates, by the user's clock**:
+4. **Concurrency stalls are the top ETA risk for fan-out.** On 18 Nov about 43 render threads started but sat idle for about 90 minutes because too many sessions were running; once restarted each finished in 2 to 5 minutes. Until every piece is confirmed running, the late end of any fan-out ETA is "+90 min".
+   - **Detect:** about 3 minutes after starting a batch, list the threads (`list_threads`, state working). A thread whose `last_activity_at` still equals its `created_at`, or that has posted no checklist, or that shows a "too many threads and sessions" error, is stalled. `python3 scripts/eta.py stallcheck threads.json` flags them from a saved listing.
+   - **Prevent:** start in waves of about 40, start the next wave only as the last one finishes, and keep heavy pieces in the first wave.
+   - **Recover:** restart stalled threads as others finish; a restarted piece is a warm job (2 to 5 min). Re-issue the ETA once, saying how many stalled.
+5. **Fan-out across machines**: `python3 scripts/eta.py fanout --n <pieces> --cat <category> --cap 40`. A batch ends when its slowest piece ends. Starting threads takes about 3 s each, and above roughly 40 running at once new threads may fail to start, so plan in waves. Put heavy pieces (for example cuffs) in their own class.
+6. **Transfers**: `python3 scripts/eta.py transfer --frames <n> --mb <MB per frame> --rate <MB/s>`, then plan up to twice that. Downloads of farm frames were the worst-estimated step so far (5x over).
+7. **Gates, by the user's clock**:
    - User active right now: 1 to 2 minutes.
    - Daytime, user away: 30 to 75 minutes.
    - Asked after about 4 PM in the user's time zone: the answer usually comes after 8 AM the next day.
    Ask for every gate you can see up front, at the start, so they don't land mid-job.
-7. **Add it up**: serial steps add; parallel branches take the longest one. Keep the early end (all p50, no surprises) and the late end (p90s plus the gates) separate. Don't add p90s of many small steps blindly: for 5 or more independent steps, late end = sum of p50 + the largest single (p90 minus p50) + gates.
+8. **Add it up**: serial steps add; parallel branches take the longest one. Keep the early end (all p50, no surprises) and the late end (p90s plus the gates) separate. Don't add p90s of many small steps blindly: for 5 or more independent steps, late end = sum of p50 + the largest single (p90 minus p50) + gates.
 
 ## Saying it
 - Give a range in the user's time zone (for this project, New York time): "between 12:40 and 1:15 PM ET".
