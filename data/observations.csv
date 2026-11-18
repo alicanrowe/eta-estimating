@@ -283,3 +283,7 @@ sawhorse_fix_round,22,2026-11-18T22:37:00Z,Match Edge sawhorse closeups to Durum
 dancers_machine_overhaul,92.0,2026-11-18T21:24:05Z,Overhaul Dancer Moisture Madame,"1 machine, 6 own parts + 3 shared; about 55 min of it waiting for Chrome-read listings (machine 19 of the queue); work itself ~40 min"
 render_machine_3views_1300px_96spp,10.0,2026-11-18T22:37:00Z,Overhaul Dancer Moisture Madame,"242 parts, 4-core cloud, before+after+exploded"
 dancers_listing_wait,56.0,2026-11-18T21:28:00Z,Overhaul Dancer Moisture Madame,"single Chrome reader, ~2 listings/min, my ASINs at queue positions 125-143 of 150"
+dancers_machine_overhaul,91.0,2026-11-18T21:23:41Z,Overhaul Dancer Glow Diva,"3 own parts + 4 shared, listings read by another (about 20 min of waiting), 2 bad listing picks swapped, rebuilt on the true Ray5, 3 full renders"
+shopbot_render_full,8.5,,Overhaul Dancer Glow Diva,"before/after/exploded 1300 px 96 spp + compose, 4-core cloud, about 140 parts"
+pip_bpy_build123d_setup,2.5,,Overhaul Dancer Glow Diva,
+jewelry_c1_square_4seasons,3.75,2026-11-18T22:50:00Z,Render jewelry c1 bug pendant,"c1-v1 bug_pendant 4 seasons TO 2400 VOXO 0.045, 4-core cloud: 53-61 s per piece; ~17 min incl. pip setup"

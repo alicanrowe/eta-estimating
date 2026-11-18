@@ -17,7 +17,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `code_freeze_break` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
 | `cycles_frame_576x720_32s_4cpu` | 1 | 0.3 min | 0.3 min to 0.3 min | 0.3 min to 0.3 min (few samples) |
 | `dancers_listing_wait` | 1 | 56 min | 56 min to 56 min | 56 min to 56 min (few samples) |
-| `dancers_machine_overhaul` | 11 | 75 min | 52 min to 82 min | 42 min to 1.5 h |
+| `dancers_machine_overhaul` | 12 | 76 min | 53 min to 1.5 h | 42 min to 1.5 h |
 | `dancers_tile_48frame_range_cold` | 3 | 27 min | 19 min to 31 min | 16 min to 32 min (few samples) |
 | `drive_backup_via_mac_per_gb` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
@@ -37,6 +37,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `human_gate_overnight` | 2 | 14.9 h | 14.2 h to 15.6 h | 14.1 h to 15.8 h (few samples) |
 | `jewelry_batch_finish` | 1 | 19 min | 19 min to 19 min | 19 min to 19 min (few samples) |
 | `jewelry_c1_piece_render_only` | 5 | 0.9 min | 0.9 min to 0.9 min | 0.8 min to 1.0 min |
+| `jewelry_c1_square_4seasons` | 1 | 3.8 min | 3.8 min to 3.8 min | 3.8 min to 3.8 min (few samples) |
 | `jewelry_cuff_cold` | 5 | 25 min | 10 min to 28 min | 5.0 min to 29 min |
 | `jewelry_piece_cold` | 56 | 7.2 min | 4.2 min to 12 min | 0.9 min to 16 min |
 | `jewelry_piece_restart_after_stall` | 3 | 3.5 min | 2.3 min to 4.7 min | 2.0 min to 5.0 min (few samples) |
@@ -44,6 +45,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_render_4views_sec` | 49 | 27 s | 21 s to 35 s | 16 s to 43 s |
 | `jewelry_sheet_end_to_end` | 1 | 3.2 h | 3.2 h to 3.2 h | 3.2 h to 3.2 h (few samples) |
 | `mac_setup_walkthrough` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
+| `pip_bpy_build123d_setup` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
 | `platform_concurrency_stall` | 1 | 1.5 h | 1.5 h to 1.5 h | 1.5 h to 1.5 h (few samples) |
 | `platform_concurrency_stall_seen_count` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
 | `render_8view_cycles_1000px_48spp` | 2 | 13 min | 10 min to 16 min | 9.3 min to 17 min (few samples) |
@@ -72,6 +74,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `shopbot_overhaul` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `shopbot_render_draft` | 2 | 2.9 min | 1.9 min to 3.9 min | 1.6 min to 4.1 min (few samples) |
 | `shopbot_render_final` | 7 | 10 min | 9.6 min to 11 min | 8.9 min to 11 min |
+| `shopbot_render_full` | 1 | 8.5 min | 8.5 min to 8.5 min | 8.5 min to 8.5 min (few samples) |
 | `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
 | `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
