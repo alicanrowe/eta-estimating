@@ -41,6 +41,7 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Fan-out thread stalled by the concurrency limit (until restarted) | 90 min | |
 | Shared code changed without a version bump (render threads blocked) | 3 min | |
 | Sawhorse r8 re-render, design kept (8 images 1000 px, 32 spp, 4-core cloud, mesh 0.09 + checks) | 15 min per full pass; 50 min thread incl. pip setup 3 min, 3 passes | 18 Nov |
+| Moth v2 stand render, one piece per machine (3 views 1400 px, 128 spp Cycles CPU, 4-core cloud, ~22k faces) | 3.3 min render (re-render after a central fix: 3.0 min render, 4 min end to end); ~13 min thread incl. pip bpy 1 min, checks and overlap test | 18 Nov |
 | Farm download of two 2160-frame jobs (39 GB) at about 1.2 MB/s | 9 h | |
 | renderBeamer cold start (plugin download) / restart to first frames | 9 min / 10 min | |
 | Gotcha: renderBeamer auto-download can be off; then nothing downloads. Check it first | | 1 h lost 18 Nov |

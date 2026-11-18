@@ -1,199 +1,248 @@
 category,minutes,start_utc,source,note
-jewelry_piece_cold,9.1,2026-11-18T16:02:59Z,thread Render glass earring 07,r4-fix2 one piece per machine; create to report; small piece
-jewelry_piece_cold,9.75,2026-11-18T16:02:44Z,thread Render glass clip 01,r4-fix2
-jewelry_piece_cold,9.5,2026-11-18T16:02:48Z,thread Render glass clip 02,r4-fix2
-jewelry_piece_cold,9.8,2026-11-18T16:02:51Z,thread Render glass clip 04,r4-fix2
-jewelry_piece_cold,15.6,2026-11-18T16:02:55Z,thread Render glass clip 07,r4-fix2; extra flag write-up
-jewelry_piece_cold,8.4,2026-11-18T16:03:02Z,thread Render glass earring 08,r4-fix2
-jewelry_piece_cold,8.35,2026-11-18T16:03:09Z,thread Render bug necklace 01,r4-fix2
-jewelry_piece_cold,8.7,2026-11-18T16:03:17Z,thread Render bug necklace 03,r4-fix2
-jewelry_piece_cold,8.5,2026-11-18T16:03:32Z,thread Render bug necklace 04,r4-fix2
-jewelry_piece_cold,8.05,2026-11-18T16:03:36Z,thread Render bug necklace 05,r4-fix2
-jewelry_piece_cold,4.1,2026-11-18T16:03:39Z,thread Render bug necklace 06,r4-fix2
-jewelry_piece_cold,8.3,2026-11-18T16:03:43Z,thread Render bug necklace 07,r4-fix2
-jewelry_piece_cold,12.9,2026-11-18T16:03:47Z,thread Render bug necklace 08,r4-fix2
-jewelry_piece_cold,11.9,2026-11-18T16:03:58Z,thread Render vein clip 01,r4-fix2
-jewelry_piece_cold,9.4,2026-11-18T16:04:09Z,thread Render vein clip 04,r4-fix2
-jewelry_piece_cold,11.9,2026-11-18T16:04:16Z,thread Render vein clip 06,r4-fix2
-jewelry_piece_cold,8.75,2026-11-18T16:04:24Z,thread Render vein clip 08,r4-fix2
-jewelry_piece_cold,15.9,2026-11-18T16:04:27Z,thread Render vein clip 09,r4-fix2
-jewelry_piece_cold,7.7,2026-11-18T16:04:35Z,thread Render vein stud 01,r4-fix2
-jewelry_piece_cold,15.2,2026-11-18T16:04:45Z,thread Render vein stud 04,r4-fix2
-jewelry_piece_cold,7.0,2026-11-18T16:04:49Z,thread Render vein stud 05,r4-fix2
-jewelry_piece_cold,8.5,2026-11-18T16:04:53Z,thread Render vein stud 06,r4-fix2
-jewelry_piece_cold,7.1,2026-11-18T16:04:57Z,thread Render vein stud 07,r4-fix2
-jewelry_piece_cold,10.5,2026-11-18T16:05:00Z,thread Render vein stud 08,r4-fix2
-jewelry_piece_cold,15.0,2026-11-18T16:05:03Z,thread Render vein stud 09,r4-fix2
-jewelry_piece_cold,7.3,2026-11-18T16:16:13Z,thread Render glass earring 05,r4-fix2
-jewelry_piece_cold,5.6,2026-11-18T16:14:01Z,thread Render glass clip 03,r4-fix2
-jewelry_cuff_cold,26.9,2026-11-18T16:05:11Z,thread Render moth cuff 01,r4-fix2; cuffs are 5-6M tris
-jewelry_cuff_cold,24.75,2026-11-18T16:05:15Z,thread Render moth cuff 02,r4-fix2; flagged
-jewelry_cuff_cold,28.6,2026-11-18T16:05:18Z,thread Render moth cuff 03,r4-fix2
-jewelry_cuff_cold,18.1,2026-11-18T16:05:22Z,thread Render moth cuff 04,r4-fix2
-jewelry_piece_warm_rerender,2.5,2026-11-18T16:42:12Z,thread Render vein clip 03,r4-fix3 re-render on an already set-up machine
-jewelry_piece_warm_rerender,1.5,2026-11-18T16:40:00Z,thread Render vein ring 04,freeze 16:40 to resolved 16:40:26 (approx)
-jewelry_piece_warm_rerender,4.3,2026-11-18T16:40:00Z,thread Render vein clip 01,freeze 16:40 to resolved 16:44:32
-jewelry_piece_warm_rerender,3.7,2026-11-18T16:40:00Z,thread Render bug necklace 06,freeze 16:40 to resolved 16:43:41
-jewelry_piece_warm_rerender,2.0,2026-11-18T16:40:00Z,thread Render moth cuff 04,freeze 16:40 to resolved 16:41:55
-jewelry_piece_warm_rerender,6.8,2026-11-18T16:40:00Z,thread Render bug necklace 04,freeze 16:40 to log 16:47:14
-jewelry_render_4views_sec,20.8,,_logs/g4_bug_necklace_01.txt,Cycles 4 views (seconds not minutes); 1.8M tris
-jewelry_render_4views_sec,25.7,,_logs/g4_bug_necklace_02.txt,2.3M tris
-jewelry_render_4views_sec,24.3,,_logs/g4_bug_necklace_03.txt,2.8M tris
-jewelry_render_4views_sec,25.0,,_logs/g4_bug_necklace_04.txt,2.5M tris
-jewelry_render_4views_sec,22.8,,_logs/g4_bug_necklace_05.txt,
-jewelry_render_4views_sec,22.6,,_logs/g4_bug_necklace_06.txt,
-jewelry_render_4views_sec,22.1,,_logs/g4_bug_necklace_07.txt,
-jewelry_render_4views_sec,25.8,,_logs/g4_bug_necklace_08.txt,
-jewelry_render_4views_sec,21.0,,_logs/g4_bug_necklace_09.txt,
-jewelry_render_4views_sec,33.9,,_logs/g4_glass_ear_04.txt,glass
-jewelry_render_4views_sec,23.2,,_logs/g4_glass_pendant_01.txt,glass
-jewelry_render_4views_sec,24.3,,_logs/g4_moth_cuff_01.txt,6.0M tris
-jewelry_render_4views_sec,42.8,,_logs/g4_moth_cuff_02.txt,6.2M tris
-jewelry_render_4views_sec,34.5,,_logs/g4_moth_cuff_03.txt,
-jewelry_render_4views_sec,28.0,,_logs/g4_moth_cuff_04.txt,
-jewelry_render_4views_sec,34.1,,_logs/g4_moth_cuff_05.txt,
-jewelry_render_4views_sec,35.4,,_logs/g4_moth_cuff_06.txt,
-jewelry_render_4views_sec,28.7,,_logs/g4_moth_cuff_07.txt,
-jewelry_render_4views_sec,36.4,,_logs/g4_moth_cuff_08.txt,
-jewelry_render_4views_sec,33.3,,_logs/g4_moth_cuff_09.txt,
-jewelry_render_4views_sec,31.4,,_logs/g4_moth_cuff_10.txt,
-jewelry_render_4views_sec,25.1,,_logs/g4_vein_clip_01.txt,
-jewelry_render_4views_sec,31.4,,_logs/g4_vein_clip_02.txt,
-jewelry_render_4views_sec,27.2,,_logs/g4_vein_clip_03.txt,
-jewelry_render_4views_sec,27.0,,_logs/g4_vein_ear_01.txt,
-jewelry_render_4views_sec,27.5,,_logs/g4_vein_ear_02.txt,
-jewelry_render_4views_sec,20.6,,_logs/g4_vein_ear_03.txt,
-jewelry_render_4views_sec,27.2,,_logs/g4_vein_ear_04.txt,
-jewelry_render_4views_sec,16.3,,_logs/g4_vein_ear_05.txt,
-jewelry_render_4views_sec,29.7,,_logs/g4_vein_ear_06.txt,
-jewelry_render_4views_sec,27.9,,_logs/g4_vein_ear_07.txt,
-jewelry_render_4views_sec,27.0,,_logs/g4_vein_ear_08.txt,
-jewelry_render_4views_sec,26.0,,_logs/g4_vein_ear_09.txt,
-jewelry_render_4views_sec,21.2,,_logs/g4_vein_ring_01.txt,
-jewelry_render_4views_sec,33.4,,_logs/g4_vein_ring_02.txt,
-jewelry_render_4views_sec,30.0,,_logs/g4_vein_ring_03.txt,
-jewelry_render_4views_sec,27.6,,_logs/g4_vein_ring_04.txt,
-jewelry_render_4views_sec,35.6,,_logs/g4_vein_ring_05.txt,
-jewelry_render_4views_sec,18.6,,_logs/g4_vein_ring_06.txt,
-jewelry_render_4views_sec,25.8,,_logs/g4_vein_ring_07.txt,
-jewelry_render_4views_sec,21.6,,_logs/g4_vein_ring_08.txt,
-jewelry_render_4views_sec,31.8,,_logs/g4_vein_ring_09.txt,
-jewelry_render_4views_sec,32.9,,_logs/g4_vein_ring_10.txt,
-jewelry_render_4views_sec,23.6,,_logs/g4_vein_stud_09.txt,
-sawhorse_variant,21.5,2026-11-18T16:00:22Z,thread Make hyodomachine-heavy metal sawhorse,model + render-check loop + sheet on own machine
-sawhorse_variant,31.0,2026-11-18T16:00:36Z,thread Make Komune-heavy metal sawhorse,
-sawhorse_variant,31.1,2026-11-18T16:00:42Z,thread Make Wen Jue Lu-heavy metal sawhorse,
-sawhorse_variant,30.8,2026-11-18T16:00:45Z,thread Make thorn-barb metal sawhorse,
-sawhorse_variant,39.9,2026-11-18T16:00:32Z,thread Make Gsongim-heavy metal sawhorse,
-sawhorse_variant,41.1,2026-11-18T16:00:27Z,thread Make Söderberg-heavy metal sawhorse,
-sawhorse_variant,54.5,2026-11-18T16:00:50Z,thread Make moth-swarm metal sawhorse,6 render-check rounds
-sawhorse_variant,80.5,2026-11-18T16:00:11Z,thread Make Moira-heavy metal sawhorse,heaviest variant (carved all over); reported ready 17:20
-render_check_round,8.0,2026-11-18T16:07:33Z,thread Make moth-swarm metal sawhorse,48 min for 6 rounds
-render_check_round,38,2026-11-17T20:16:38Z,thread pm case animation,procedural walnut rebuild of 68 materials + 5 test frames + sheet
-render_check_round,8,2026-11-17T21:18:57Z,thread pm case animation,reshape cathedrals + 3 test frames + sheet
-render_check_round,12,2026-11-17T21:29:57Z,thread pm case animation,roughen grain + 3 test frames + sheet
-render_check_round,8,2026-11-18T13:19:41Z,thread pm case animation,scan wrap + 4 test frames + sheet
-render_check_round,4.5,2026-11-17T11:23:55Z,thread pm case animation,rebuild scene + 1 test frame + measure
-render_check_round,16,2026-11-17T19:58:18Z,thread pm case animation,side panels from photos + test sheet
-cloud_cpu_test_still,2,,thread pm case animation,"one preview test frame on a 4-core cloud machine, no GPU"
-farm_render_2160f_low_h,2.0,2026-11-17T13:58:00Z,thread pm case animation,"GarageFarm LOW, Cycles 256spp adaptive, 2160x3840, 2160 frames; 20% at +23 min; agent said about 2 h"
-farm_render_2160f_low_h,1.6,2026-11-17T13:58:00Z,thread pm case animation,submit 13:58 to first frames downloading 15:32
-farm_render_1728f_overnight_upper_h,8,,thread Moth build book,"1,728-frame 16:9 Moth cut finished overnight (upper bound, exact end unknown)"
-farm_cost_usd_per_2160f_low,63,,thread pm case animation,old 16:9 job
-farm_cost_usd_per_2160f_low,65,,thread pm case animation,v3 jobs
-farm_cost_usd_per_2160f_low,69,,thread pm case animation,v3 9:16 quote
-farm_upload_renderbeamer,6.5,2026-11-18T15:59:29Z,thread pm case animation,"one packed ~5 MB blend through renderBeamer in Blender, incl. clicking"
-farm_upload_renderbeamer,5,2026-11-18T16:06:05Z,thread pm case animation,second file
-farm_pack_copy_checksum,6,2026-11-17T13:44:57Z,thread pm case animation,pack scene + copy to Mac + verify checksum
-farm_download_2160f_h,4.2,2026-11-17T15:32:00Z,thread pm case animation,"renderBeamer to Mac, ~8 MB/frame PNG16 at ~2.3 MB/s; first frames 15:32, last 19:45"
-callouts_19_of_21,29,2026-11-17T17:39:06Z,thread pm case animation,overlay callouts on 9:16 frames
-encode_81s_4k,37,2026-11-17T18:08:27Z,thread pm case animation,encode first 81 s of a 4K 9:16 reel with callouts
-encode_final_chunk,7,2026-11-17T19:45:30Z,thread pm case animation,last 9 s + concat
-farm_job_end_to_end_h,6.1,2026-11-17T13:45:00Z,thread pm case animation,approve to delivered 9:16 video; includes 75 min wait for SSD access
-web_feature_build,27,2026-11-17T23:38:28Z,thread Build web Mandelbulb renderer for site,WebGL engine + 6 presets + push + 3 min deploy
-site_deploy_wait,3.3,2026-11-18T00:02:06Z,thread Build web Mandelbulb renderer for site,push to live
-skill_save_or_small_skill,24,2026-11-17T23:40:39Z,thread Save Teardown and motion design skills,
-skill_save_or_small_skill,8,2026-11-17T17:38:55Z,thread Centralize my brand theme and layout,
-research_sourcing,18,2026-11-12T17:09:13Z,thread Find Brusso LI-97LH hinges for Eric,
-research_sourcing,21,2026-11-17T10:40:03Z,thread Download walnut wood scans,12 CC0 scan sets 450 MB + README
-research_sourcing,37,2026-11-18T14:44:10Z,thread Plan production for jewelry and metal sawhorse,
-research_sourcing,46,2026-10-21T07:11:00Z,thread Site style scan,
-graphics_small,11,2026-11-17T11:34:46Z,thread Make a site project explainer graphics,
-graphics_small,15,2026-11-11T04:27:56Z,thread Make moth project Instagram teaser,
-animation_small,42,2026-11-11T04:19:27Z,thread Animate laser cutter to Drag Queen conversion,
-cad_design_feature,76,2026-11-18T14:54:11Z,thread Build MouthPad add-on for existing grills,
-storage_cleanup,29,2026-11-18T14:39:00Z,thread Free project storage by backing up to Drive,
-storage_cleanup,7,2026-11-17T15:56:03Z,thread Free up project file storage,
-mac_setup_walkthrough,4,2026-11-17T10:19:04Z,thread Set up Claude Code on the Mac,agent time only
-human_gate_active,0.3,2026-11-18T17:13:34Z,thread Moth build book,decision card answered while the user was active
-human_gate_active,1.3,2026-11-18T17:17:03Z,thread Moth build book,decision card
-human_gate_active,1,2026-11-18T17:11:44Z,thread Moth build book,OK to run downloaded Blender
-human_gate_active,2,2026-11-18T17:14:04Z,thread Moth build book,Google Drive connector sign-in via link
-human_gate_daytime_away,31,2026-11-18T14:51:16Z,thread pm case animation,Mac screen locked; asked to unlock
-human_gate_daytime_away,39,2026-11-18T13:34:08Z,thread pm case animation,asked for 5 min of screen time
-human_gate_daytime_away,75,2026-11-17T16:19:55Z,thread pm case animation,asked to connect the SSD folder
-human_gate_overnight,948,2026-11-17T21:41:50Z,thread pm case animation,price OK asked 4:41 PM ET answered 8:29 AM ET
-human_gate_overnight,844,2026-11-17T23:11:37Z,thread pm case animation,site sign-in asked 6:11 PM ET answered 8:15 AM ET
+jewelry_piece_cold,9.1,2026-11-18T16:02:59Z,jewelry piece thread,r4-fix2 one piece per machine; create to report; small piece
+jewelry_piece_cold,9.75,2026-11-18T16:02:44Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,9.5,2026-11-18T16:02:48Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,9.8,2026-11-18T16:02:51Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.6,2026-11-18T16:02:55Z,jewelry piece thread,r4-fix2; extra flag write-up
+jewelry_piece_cold,8.4,2026-11-18T16:03:02Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.35,2026-11-18T16:03:09Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.7,2026-11-18T16:03:17Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.5,2026-11-18T16:03:32Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.05,2026-11-18T16:03:36Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,4.1,2026-11-18T16:03:39Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.3,2026-11-18T16:03:43Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,12.9,2026-11-18T16:03:47Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,11.9,2026-11-18T16:03:58Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,9.4,2026-11-18T16:04:09Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,11.9,2026-11-18T16:04:16Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.75,2026-11-18T16:04:24Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.9,2026-11-18T16:04:27Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.7,2026-11-18T16:04:35Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.2,2026-11-18T16:04:45Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.0,2026-11-18T16:04:49Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,8.5,2026-11-18T16:04:53Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.1,2026-11-18T16:04:57Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,10.5,2026-11-18T16:05:00Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,15.0,2026-11-18T16:05:03Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,7.3,2026-11-18T16:16:13Z,jewelry piece thread,r4-fix2
+jewelry_piece_cold,5.6,2026-11-18T16:14:01Z,jewelry piece thread,r4-fix2
+jewelry_cuff_cold,26.9,2026-11-18T16:05:11Z,jewelry piece thread,r4-fix2; cuffs are 5-6M tris
+jewelry_cuff_cold,24.75,2026-11-18T16:05:15Z,jewelry piece thread,r4-fix2; flagged
+jewelry_cuff_cold,28.6,2026-11-18T16:05:18Z,jewelry piece thread,r4-fix2
+jewelry_cuff_cold,18.1,2026-11-18T16:05:22Z,jewelry piece thread,r4-fix2
+jewelry_piece_warm_rerender,2.5,2026-11-18T16:42:12Z,jewelry piece thread,r4-fix3 re-render on an already set-up machine
+jewelry_piece_warm_rerender,1.5,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:40:26 (approx)
+jewelry_piece_warm_rerender,4.3,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:44:32
+jewelry_piece_warm_rerender,3.7,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:43:41
+jewelry_piece_warm_rerender,2.0,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to resolved 16:41:55
+jewelry_piece_warm_rerender,6.8,2026-11-18T16:40:00Z,jewelry piece thread,freeze 16:40 to log 16:47:14
+jewelry_render_4views_sec,20.8,,render log,Cycles 4 views (seconds not minutes); 1.8M tris
+jewelry_render_4views_sec,25.7,,render log,2.3M tris
+jewelry_render_4views_sec,24.3,,render log,2.8M tris
+jewelry_render_4views_sec,25.0,,render log,2.5M tris
+jewelry_render_4views_sec,22.8,,render log,
+jewelry_render_4views_sec,22.6,,render log,
+jewelry_render_4views_sec,22.1,,render log,
+jewelry_render_4views_sec,25.8,,render log,
+jewelry_render_4views_sec,21.0,,render log,
+jewelry_render_4views_sec,33.9,,render log,glass
+jewelry_render_4views_sec,23.2,,render log,glass
+jewelry_render_4views_sec,24.3,,render log,6.0M tris
+jewelry_render_4views_sec,42.8,,render log,6.2M tris
+jewelry_render_4views_sec,34.5,,render log,
+jewelry_render_4views_sec,28.0,,render log,
+jewelry_render_4views_sec,34.1,,render log,
+jewelry_render_4views_sec,35.4,,render log,
+jewelry_render_4views_sec,28.7,,render log,
+jewelry_render_4views_sec,36.4,,render log,
+jewelry_render_4views_sec,33.3,,render log,
+jewelry_render_4views_sec,31.4,,render log,
+jewelry_render_4views_sec,25.1,,render log,
+jewelry_render_4views_sec,31.4,,render log,
+jewelry_render_4views_sec,27.2,,render log,
+jewelry_render_4views_sec,27.0,,render log,
+jewelry_render_4views_sec,27.5,,render log,
+jewelry_render_4views_sec,20.6,,render log,
+jewelry_render_4views_sec,27.2,,render log,
+jewelry_render_4views_sec,16.3,,render log,
+jewelry_render_4views_sec,29.7,,render log,
+jewelry_render_4views_sec,27.9,,render log,
+jewelry_render_4views_sec,27.0,,render log,
+jewelry_render_4views_sec,26.0,,render log,
+jewelry_render_4views_sec,21.2,,render log,
+jewelry_render_4views_sec,33.4,,render log,
+jewelry_render_4views_sec,30.0,,render log,
+jewelry_render_4views_sec,27.6,,render log,
+jewelry_render_4views_sec,35.6,,render log,
+jewelry_render_4views_sec,18.6,,render log,
+jewelry_render_4views_sec,25.8,,render log,
+jewelry_render_4views_sec,21.6,,render log,
+jewelry_render_4views_sec,31.8,,render log,
+jewelry_render_4views_sec,32.9,,render log,
+jewelry_render_4views_sec,23.6,,render log,
+sawhorse_variant,21.5,2026-11-18T16:00:22Z,sawhorse variant thread,model + render-check loop + sheet on own machine
+sawhorse_variant,31.0,2026-11-18T16:00:36Z,sawhorse variant thread,
+sawhorse_variant,31.1,2026-11-18T16:00:42Z,sawhorse variant thread,
+sawhorse_variant,30.8,2026-11-18T16:00:45Z,sawhorse variant thread,
+sawhorse_variant,39.9,2026-11-18T16:00:32Z,sawhorse variant thread,
+sawhorse_variant,41.1,2026-11-18T16:00:27Z,sawhorse variant thread,
+sawhorse_variant,54.5,2026-11-18T16:00:50Z,sawhorse variant thread,6 render-check rounds
+sawhorse_variant,80.5,2026-11-18T16:00:11Z,sawhorse variant thread,heaviest variant (carved all over); reported ready 17:20
+render_check_round,8.0,2026-11-18T16:07:33Z,sawhorse variant thread,48 min for 6 rounds
+render_check_round,38,2026-11-17T20:16:38Z,cabinet animation thread,procedural walnut rebuild of 68 materials + 5 test frames + sheet
+render_check_round,8,2026-11-17T21:18:57Z,cabinet animation thread,reshape cathedrals + 3 test frames + sheet
+render_check_round,12,2026-11-17T21:29:57Z,cabinet animation thread,roughen grain + 3 test frames + sheet
+render_check_round,8,2026-11-18T13:19:41Z,cabinet animation thread,scan wrap + 4 test frames + sheet
+render_check_round,4.5,2026-11-17T11:23:55Z,cabinet animation thread,rebuild scene + 1 test frame + measure
+render_check_round,16,2026-11-17T19:58:18Z,cabinet animation thread,side panels from photos + test sheet
+cloud_cpu_test_still,2,,cabinet animation thread,"one preview test frame on a 4-core cloud machine, no GPU"
+farm_render_2160f_low_h,2.0,2026-11-17T13:58:00Z,cabinet animation thread,"GarageFarm LOW, Cycles 256spp adaptive, 2160x3840, 2160 frames; 20% at +23 min; agent said about 2 h"
+farm_render_2160f_low_h,1.6,2026-11-17T13:58:00Z,cabinet animation thread,submit 13:58 to first frames downloading 15:32
+farm_render_1728f_overnight_upper_h,8,,furniture build book thread,"1,728-frame 16:9 cut finished overnight (upper bound, exact end unknown)"
+farm_cost_usd_per_2160f_low,63,,cabinet animation thread,old 16:9 job
+farm_cost_usd_per_2160f_low,65,,cabinet animation thread,v3 jobs
+farm_cost_usd_per_2160f_low,69,,cabinet animation thread,v3 9:16 quote
+farm_upload_renderbeamer,6.5,2026-11-18T15:59:29Z,cabinet animation thread,"one packed ~5 MB blend through renderBeamer in Blender, incl. clicking"
+farm_upload_renderbeamer,5,2026-11-18T16:06:05Z,cabinet animation thread,second file
+farm_pack_copy_checksum,6,2026-11-17T13:44:57Z,cabinet animation thread,pack scene + copy to Mac + verify checksum
+farm_download_2160f_h,4.2,2026-11-17T15:32:00Z,cabinet animation thread,"renderBeamer to Mac, ~8 MB/frame PNG16 at ~2.3 MB/s; first frames 15:32, last 19:45"
+callouts_19_of_21,29,2026-11-17T17:39:06Z,cabinet animation thread,overlay callouts on 9:16 frames
+encode_81s_4k,37,2026-11-17T18:08:27Z,cabinet animation thread,encode first 81 s of a 4K 9:16 reel with callouts
+encode_final_chunk,7,2026-11-17T19:45:30Z,cabinet animation thread,last 9 s + concat
+farm_job_end_to_end_h,6.1,2026-11-17T13:45:00Z,cabinet animation thread,approve to delivered 9:16 video; includes 75 min wait for SSD access
+web_feature_build,27,2026-11-17T23:38:28Z,web renderer thread,WebGL engine + 6 presets + push + 3 min deploy
+site_deploy_wait,3.3,2026-11-18T00:02:06Z,web renderer thread,push to live
+skill_save_or_small_skill,24,2026-11-17T23:40:39Z,skill packaging thread,
+skill_save_or_small_skill,8,2026-11-17T17:38:55Z,brand theme thread,
+research_sourcing,18,2026-11-12T17:09:13Z,hinge sourcing thread,
+research_sourcing,21,2026-11-17T10:40:03Z,wood scan download thread,12 CC0 scan sets 450 MB + README
+research_sourcing,37,2026-11-18T14:44:10Z,production plan thread,
+research_sourcing,46,2026-10-21T07:11:00Z,site style scan thread,
+graphics_small,11,2026-11-17T11:34:46Z,explainer graphics thread,
+graphics_small,15,2026-11-11T04:27:56Z,Instagram teaser thread,
+animation_small,42,2026-11-11T04:19:27Z,machine conversion animation thread,
+cad_design_feature,76,2026-11-18T14:54:11Z,CAD add-on design thread,
+storage_cleanup,29,2026-11-18T14:39:00Z,storage cleanup thread,
+storage_cleanup,7,2026-11-17T15:56:03Z,storage cleanup thread,
+mac_setup_walkthrough,4,2026-11-17T10:19:04Z,setup walkthrough thread,agent time only
+human_gate_active,0.3,2026-11-18T17:13:34Z,furniture build book thread,decision card answered while the user was active
+human_gate_active,1.3,2026-11-18T17:17:03Z,furniture build book thread,decision card
+human_gate_active,1,2026-11-18T17:11:44Z,furniture build book thread,OK to run downloaded Blender
+human_gate_active,2,2026-11-18T17:14:04Z,furniture build book thread,Google Drive connector sign-in via link
+human_gate_daytime_away,31,2026-11-18T14:51:16Z,cabinet animation thread,Mac screen locked; asked to unlock
+human_gate_daytime_away,39,2026-11-18T13:34:08Z,cabinet animation thread,asked for 5 min of screen time
+human_gate_daytime_away,75,2026-11-17T16:19:55Z,cabinet animation thread,asked to connect the SSD folder
+human_gate_overnight,948,2026-11-17T21:41:50Z,cabinet animation thread,price OK asked 4:41 PM ET answered 8:29 AM ET
+human_gate_overnight,844,2026-11-17T23:11:37Z,cabinet animation thread,site sign-in asked 6:11 PM ET answered 8:15 AM ET
 platform_concurrency_stall,90.0,2026-11-18T16:40:00Z,coordinator report 18 Nov,about 43 jewelry render threads started but never ran until restarted (session concurrency limit)
 jewelry_piece_restart_after_stall,2.0,,coordinator report 18 Nov,"restarted stalled thread, finished in 2-5 min"
 jewelry_piece_restart_after_stall,3.5,,coordinator report 18 Nov,middle of reported 2-5 min
 jewelry_piece_restart_after_stall,5.0,,coordinator report 18 Nov,top of reported 2-5 min
 code_freeze_break,3.0,,coordinator report 18 Nov,shared code edited without a version bump; render threads blocked until re-frozen
-farm_render_2160f_low_h,2.0,,thread pm case animation,"walnut v3 9:16, submitted 16:12 UTC 18 Nov"
-farm_render_2160f_low_h,2.0,,thread pm case animation,"walnut v3 16:9, submitted 16:12 UTC 18 Nov"
-farm_cost_usd_per_2160f_low,70.0,,thread pm case animation,walnut v3 9:16
-farm_cost_usd_per_2160f_low,70.0,,thread pm case animation,walnut v3 16:9
-human_gate_daytime_away,55.0,,thread Moth build book,waiting on Mac folder access to copy scenes
-drive_backup_via_mac_per_gb,14.0,2026-11-18T18:30:55Z,thread Back up designs to Drive,1.8 GB total (818 MB loose + 3 archives) container -> Mac Google Drive folder in 24 MB tar.gz parts (commit limit 25 MB/file); ~25 min end to end incl. md5 verify
+farm_render_2160f_low_h,2.0,,cabinet animation thread,"walnut v3 9:16, submitted 16:12 UTC 18 Nov"
+farm_render_2160f_low_h,2.0,,cabinet animation thread,"walnut v3 16:9, submitted 16:12 UTC 18 Nov"
+farm_cost_usd_per_2160f_low,70.0,,cabinet animation thread,walnut v3 9:16
+farm_cost_usd_per_2160f_low,70.0,,cabinet animation thread,walnut v3 16:9
+human_gate_daytime_away,55.0,,furniture build book thread,waiting on Mac folder access to copy scenes
+drive_backup_via_mac_per_gb,14.0,2026-11-18T18:30:55Z,Back up designs to Drive,1.8 GB total (818 MB loose + 3 archives) container -> Mac Google Drive folder in 24 MB tar.gz parts (commit limit 25 MB/file); ~25 min end to end incl. md5 verify
 site_3d_tiles,18.0,,Add 3D previews for a site project and CAD skill,"two home-grid 3D tiles: find source models, filter/pose, gltf-transform meshopt, screenshot check desktop+phone, PR, Drive backup; models already existed"
 jewelry_batch_finish,18.8,2026-11-18T18:14:00Z,squares_r4 file times,"last of 94 squares landed 18:32:47 UTC; ETA was 1:30 PM ET (16 min), 1.17x"
-sawhorse_fix_round,19.4,2026-11-18T18:15:12Z,thread Calm Thorn sawhorse centre and feet,
-sawhorse_fix_round,22.3,2026-11-18T18:14:58Z,thread Rebuild Edge sawhorse moth and spike,
-sawhorse_fix_round,23.6,2026-11-18T18:14:49Z,thread Fix Carved sawhorse stones and work top,
-sawhorse_fix_round,29.3,2026-11-18T18:15:09Z,thread Strengthen Thread sawhorse legs,
-sawhorse_fix_round,32.7,2026-11-18T18:15:02Z,thread Fix Stage sawhorse stones and views,
-sawhorse_fix_round,46.1,2026-11-18T18:15:16Z,thread Fix Swarm sawhorse moths and stone,
+sawhorse_fix_round,19.4,2026-11-18T18:15:12Z,Calm Thorn sawhorse centre and feet,
+sawhorse_fix_round,22.3,2026-11-18T18:14:58Z,Rebuild Edge sawhorse moth and spike,
+sawhorse_fix_round,23.6,2026-11-18T18:14:49Z,Fix Carved sawhorse stones and work top,
+sawhorse_fix_round,29.3,2026-11-18T18:15:09Z,Strengthen Thread sawhorse legs,
+sawhorse_fix_round,32.7,2026-11-18T18:15:02Z,Fix Stage sawhorse stones and views,
+sawhorse_fix_round,46.1,2026-11-18T18:15:16Z,Fix Swarm sawhorse moths and stone,
 farm_cost_usd_per_2160f_low,71.7,,PM case 9:16 farm job,18 Nov second job
 farm_cost_usd_per_2160f_low,68.99,,PM case 16:9 farm job,18 Nov second job
 skill_save_or_small_skill,105.0,,load and tipping skill thread,bigger skill with research; ETA 61 was 1.7x short
-render_8view_cycles_1000px_48spp,9.3,2026-11-18T21:09:06Z,thread Match Edge sawhorse closeups to Durumi,"sawhorse r8: 8 views 1000 px, 48 spp, bpy 5.3, 4-CPU cloud box, about 70 s per view"
-cloud_bpy_setup,2.5,2026-11-18T20:50:00Z,thread Match Edge sawhorse closeups to Durumi,"fresh venv + pip bpy 5.3 manifold3d trimesh numba"
-sawhorse_fix_round,45,2026-11-18T20:41:00Z,thread Match Edge sawhorse closeups to Durumi,"one flagged motif redone + lookdev + 8 renders + sheet; 3 preview rounds"
-renderbeamer_startup,9,2026-11-18T20:50:00Z,thread Merge site PRs and start renderBeamer download,cold start incl. Blender plugin download at ~117 KB/s
-renderbeamer_restart_to_frames,10,2026-11-18T20:55:00Z,thread Merge site PRs and start renderBeamer download,restart after enabling auto-download to first PNGs landing
-sawhorse_fix_round,26.0,2026-11-18T20:41:00Z,thread Redesign Liquid sawhorse glyph and feet,"r8 Liquid: glyph+feet tweak, 4 test renders, 8 final views 1200px/64spp (~17 min on 4 cores), cloud"
-render_8view_cycles_1000px_48spp,17.0,,thread Redesign Liquid sawhorse glyph and feet,"actually 1200px/64spp, 4-core cloud, sawhorse"
+render_8view_cycles_1000px_48spp,9.3,2026-11-18T21:09:06Z,Match Edge sawhorse closeups to Durumi,"sawhorse r8: 8 views 1000 px, 48 spp, bpy 5.3, 4-CPU cloud box, about 70 s per view"
+cloud_bpy_setup,2.5,2026-11-18T20:50:00Z,Match Edge sawhorse closeups to Durumi,fresh venv + pip bpy 5.3 manifold3d trimesh numba
+sawhorse_fix_round,45,2026-11-18T20:41:00Z,Match Edge sawhorse closeups to Durumi,one flagged motif redone + lookdev + 8 renders + sheet; 3 preview rounds
+renderbeamer_startup,9,2026-11-18T20:50:00Z,Merge site PRs and start renderBeamer download,cold start incl. Blender plugin download at ~117 KB/s
+renderbeamer_restart_to_frames,10,2026-11-18T20:55:00Z,Merge site PRs and start renderBeamer download,restart after enabling auto-download to first PNGs landing
+sawhorse_fix_round,26.0,2026-11-18T20:41:00Z,Redesign Liquid sawhorse glyph and feet,"r8 Liquid: glyph+feet tweak, 4 test renders, 8 final views 1200px/64spp (~17 min on 4 cores), cloud"
+render_8view_cycles_1000px_48spp,17.0,,Redesign Liquid sawhorse glyph and feet,"actually 1200px/64spp, 4-core cloud, sawhorse"
 env_bpy_venv_install,2.0,,Thread r8,"uv venv + bpy 5.3, numba, trimesh, manifold3d on 4-core cloud box"
 render_sawhorse_view_1100px_64spp,1.6,,Thread r8,"8 views in 13 min, 4 cores, wire frame + leather saddle"
 thread_restyle_sheet_total,45.0,,Thread r8,"no redesign: lookdev + 6 closeups + Durumi-layout sheet, start to handoff"
-render_sawhorse_view_1000px_48spp,1.1,2026-11-18T21:01:30Z,thread Stage r8,"8 views + mesh in 9 min, 4 cores, Stage moth frame + leather saddle, VOX 0.10"
-thread_restyle_sheet_total,32.0,2026-11-18T20:41:00Z,thread Stage r8,"no redesign: blender setup + lookdev + 6 closeups + Durumi-layout sheet, start to handoff"
-jewelry_piece_cold,5.0,2026-11-18T21:14:33Z,thread Re-render vein ring 01,"r4-fix4; venv install ~1 min, make+render 48 s; output pixel-identical to pre-fix3-late square"
-jewelry_piece_cold,3.5,,thread Render vein ear 02,"r4-fix4 g3_vein_ear_02; venv install 1 min, make+render 1 min (238k/1.4M tris), spawn to report ~3.5 min, faster than 8-9 min baseline"
-jewelry_piece_cold,5.5,2026-11-18T21:14:11Z,thread Render vein ring 02,r4-fix4 g3_vein_ring_02; venv install 1.5 min; make+render 39 s (4-view 12 s); 1.59M tris
-jewelry_piece_cold,6.0,,"g3_bug_clip_06 r4-fix4 thread (venv 1.5 min, render 1.4 min, 2.66M tris)",
-jewelry_piece_cold,3.5,2026-11-18T21:14:31Z,thread Re-render vein ear 03,"r4-fix4; venv install ~1.5 min, make+render 52 s, bodies 2"
-jewelry_piece_cold,6.5,2026-11-18T21:14:14Z,thread Render vein ring 03,r4-fix4 g3 ring; venv install ~2.5 min; make+4-view render 50 s
-jewelry_cuff_cold,5.0,2026-11-18T21:14:04Z,thread Render moth cuff 03,r4-fix4 g3 cuff; 5.3M tris; make+render 3.0 min on 4 cores; venv install ~1 min; far under 26 min baseline (g3 cuff lighter than g4)
-jewelry_render_4views_sec,25.4,2026-11-18T21:18:00Z,thread Render moth cuff 03,g3_moth_cuff_03 PRES 720 PSPP 24
-jewelry_piece_cold,5.2,2026-11-18T21:14:21Z,thread Render bug pendant 03,r4-fix4 g3_bug_pendant_03; 1.5M tris; make+render 41 s; rest is venv setup
-cycles_frame_576x720_32s_4cpu,0.33,,thread Render Dancers frames 96-143,
-dancers_tile_48frame_range_cold,16.4,,thread Render Dancers frames 96-143,
-jewelry_piece_cold,10.5,2026-11-18T21:14:18Z,thread Render vein ring 04,"r4-fix4 g3_vein_ring_04; 1.5M tris; make+render 1 min, venv setup most of it"
-render_sawhorse_view_1000px_48spp,1.1,2026-11-18T21:25:00Z,thread Stage r8 fix,"8 views + mesh + straps in 9 min, 4 cores"
-dancers_tile_48frame_range_cold,27.0,2026-11-18T21:03:09Z,thread Render Dancers frames 144-191,"4 cores, 32 spp 576px; ~33 s/frame; bpy already installed"
-dancers_tile_48frame_range_cold,32.0,2026-11-18T21:35:00Z,thread Render Dancers frames 48-95,"4 cores, 32 spp 576px; ~31 s/frame incl. bpy install; 1917 s wall"
-tool_strip_3view_1400_128spp_4cpu,1.0,2026-11-18T22:24:09Z,thread Render Moth tool 03 moth scalpel,"3 views RES 1400 128 spp cycles CPU; small tool ~2-12k faces; render only"
-tool_strip_3view_1400_128spp_4cpu,0.6,2026-11-18T22:25:20Z,thread Render Moth tool 09 listening probe,render only
-tool_strip_3view_1400_128spp_4cpu,1.1,2026-11-18T22:25:00Z,thread Render Moth tool 05 suture spindle,render only
-tool_strip_3view_1400_128spp_4cpu,1.4,2026-11-18T22:24:40Z,thread Render Moth tool 01 marrow saw,render only
-tool_strip_3view_1400_128spp_4cpu,0.75,2026-11-18T22:25:30Z,thread Render Moth tool 07 ember iron,render only
-tool_strip_3view_1400_128spp_4cpu,1.3,2026-11-18T22:25:30Z,thread Render Moth tool 02 oath chisel,render only
-tool_strip_3view_1400_128spp_4cpu,1.0,2026-11-18T22:25:50Z,thread Render Moth tool 06 lantern spreader,render only
-tool_strip_3view_1400_128spp_4cpu,2.4,2026-11-18T22:25:30Z,thread Render Moth tool 08 fleam,render only
-tool_strip_3view_1400_128spp_4cpu,1.05,2026-11-18T22:26:50Z,thread Render Moth tool 04 serpent fork,render only
-tool_strip_3view_1400_128spp_4cpu,2.95,2026-11-18T22:25:10Z,thread Render Moth tool 10 tincture phial,glass; render only
-stand_strip_3view_1400_128spp_4cpu,3.1,2026-11-18T22:31:30Z,thread Render Moth reliquary tool stand,"20-60k faces with tools hung; render only"
-stand_strip_3view_1400_128spp_4cpu,2.9,2026-11-18T22:32:30Z,thread Render Moth arcade tool stand,render only
-fanout_12_threads_spawn_to_all_reported,13.0,2026-11-18T22:22:17Z,thread Preview new Moth tools and stands,"spawn to last OK incl. bpy install and a storage-full recopy round; one fix1 re-render of 2 stands adds ~5 min"
-design_round_10_tools_2_stands_code_to_sheet,36.0,2026-11-18T22:01:16Z,thread Preview new Moth tools and stands,"from spawn to sheet sent: read old code, write builder, quick renders, fan out, sheet"
+render_sawhorse_view_1000px_48spp,1.1,2026-11-18T21:01:30Z,Stage r8,"8 views + mesh in 9 min, 4 cores, Stage moth frame + leather saddle, VOX 0.10"
+thread_restyle_sheet_total,32.0,2026-11-18T20:41:00Z,Stage r8,"no redesign: blender setup + lookdev + 6 closeups + Durumi-layout sheet, start to handoff"
+jewelry_piece_cold,5.0,2026-11-18T21:14:33Z,Re-render vein ring 01,"r4-fix4; venv install ~1 min, make+render 48 s; output pixel-identical to pre-fix3-late square"
+jewelry_piece_cold,3.5,,jewelry piece thread,"r4-fix4 g3_vein_ear_02; venv install 1 min, make+render 1 min (238k/1.4M tris), spawn to report ~3.5 min, faster than 8-9 min baseline"
+jewelry_piece_cold,5.5,2026-11-18T21:14:11Z,jewelry piece thread,r4-fix4 g3_vein_ring_02; venv install 1.5 min; make+render 39 s (4-view 12 s); 1.59M tris
+jewelry_piece_cold,6.0,,"g3_bug_clip_06 r4-fix4 (venv 1.5 min, render 1.4 min, 2.66M tris)",
+jewelry_piece_cold,3.5,2026-11-18T21:14:31Z,Re-render vein ear 03,"r4-fix4; venv install ~1.5 min, make+render 52 s, bodies 2"
+jewelry_piece_cold,6.5,2026-11-18T21:14:14Z,jewelry piece thread,r4-fix4 g3 ring; venv install ~2.5 min; make+4-view render 50 s
+jewelry_cuff_cold,5.0,2026-11-18T21:14:04Z,jewelry piece thread,r4-fix4 g3 cuff; 5.3M tris; make+render 3.0 min on 4 cores; venv install ~1 min; far under 26 min baseline (g3 cuff lighter than g4)
+jewelry_render_4views_sec,25.4,2026-11-18T21:18:00Z,jewelry piece thread,g3_moth_cuff_03 PRES 720 PSPP 24
+jewelry_piece_cold,5.2,2026-11-18T21:14:21Z,jewelry piece thread,r4-fix4 g3_bug_pendant_03; 1.5M tris; make+render 41 s; rest is venv setup
+cycles_frame_576x720_32s_4cpu,0.33,,Render Dancers frames 96-143,
+dancers_tile_48frame_range_cold,16.4,,Render Dancers frames 96-143,
+jewelry_piece_cold,10.5,2026-11-18T21:14:18Z,jewelry piece thread,"r4-fix4 g3_vein_ring_04; 1.5M tris; make+render 1 min, venv setup most of it"
+render_sawhorse_view_1000px_48spp,1.1,2026-11-18T21:25:00Z,Stage r8 fix,"8 views + mesh + straps in 9 min, 4 cores"
+dancers_tile_48frame_range_cold,27.0,2026-11-18T21:03:09Z,Render Dancers frames 144-191,"4 cores, 32 spp 576px; ~33 s/frame; bpy already installed"
+dancers_tile_48frame_range_cold,32.0,2026-11-18T21:35:00Z,Render Dancers frames 48-95,"4 cores, 32 spp 576px; ~31 s/frame incl. bpy install; 1917 s wall"
+render_shopbot_3view_1300px_96spp,10.4,,Overhaul Dancer Lady Liner,"before/after/exploded, 1300 px 96 spp, 4-core cloud, ~115 parts"
+dancers_machine_overhaul,42.0,,Overhaul Dancer Lady Liner,"3 own parts specced, redesign, check_machine pass, final render, docs; shared parts landed mid-run"
+shared_parts_batch,50.0,2026-11-18T21:22:43Z,Dancers shared parts B,"25 bought-part makers + specs + look sheets (rails, extrusion, wheels, GT2, fans, supplies, PID/SSR); datasheets first, listings arriving from another thread; ~12 renders in waves of 3 on one cloud box"
+cloud_bpy_setup,1.0,2026-11-18T21:24:08Z,Dancers shared parts B,pip bpy 5.2.4 + build123d
+blender_download_cloud,0.6,2026-11-18T21:14:00Z,CAD Fawn Orchard,Blender 4.2 LTS linux tarball download+extract on cloud container
+scene_render_4core_1000px,0.9,2026-11-18T21:31:00Z,CAD Fawn Orchard,"6-piece 2.3M-tri scene, Cycles 48 spp, 1000x750, 4-core cloud, incl. PLY import"
+sdf_carved_piece_build,0.6,2026-11-18T22:20:00Z,CAD Fawn Orchard,"96in log SDF 3mm voxels, 1500 ellipsoid scoops + marching cubes, numpy"
+shopbot_machine_rebuild,46.0,2026-11-18T21:23:13Z,Overhaul Dancer Handmaiden,"11 buy rows (8 Amazon read by Dancers thread), 10 new part makers + look sheets, full machine redesign, check_machine pass, final render, site files; one cloud machine"
+shopbot_render_final,10.0,,Overhaul Dancer Handmaiden,"run_bot export+render, 1300 px, 96 spp, 3 images (before/after/exploded), ~180 parts, 4-core cloud"
+shopbot_render_draft,4.1,,Overhaul Dancer Handmaiden,same scene at 800 px 24 spp
+shopbot_check_machine,0.6,,Overhaul Dancer Handmaiden,"check_machine.py one pose, 180 parts"
+dancers_machine_overhaul,52.0,2026-11-18T21:23:00Z,Overhaul Dancer Queen Bee,"7 new parts from listings, new head design, checks, 3 renders, site files"
+render_machine_3views_1300px_96spp,8.0,,Overhaul Dancer Queen Bee,"Queen Bee before/after/exploded, 4 CPU cloud"
+sawhorse_fix_round,40,2026-11-18T21:56:00Z,Match Edge sawhorse closeups to Durumi,"r9: feet + new motif + buckle, 2 preview rounds, 8 views 1000px 48spp (~9.5 min)"
+shop_machine_preview_render,9.0,2026-11-18T21:56:00Z,Overhaul Dancer Sandra Paper,"run_bot render: before+after+exploded, 800 px, 32 spp, ~190 parts, 4-core cloud"
+shopbot_overhaul,55.0,2026-11-18T21:22:00Z,Overhaul Dancer Drag Queen,"11-row buy list, 7 new part makers incl. Ray5 frame, head redesign, checks pass, 3 renders, site files; listings via Dancers (cloud blocked by Amazon)"
+shopbot_render_final,10.0,,Overhaul Dancer Drag Queen,"run_bot export+render+compose, 1300 px, 96 spp, 3 images, ~85 parts, ran alongside two check_machine runs"
+shopbot_check_machine,6.0,,Overhaul Dancer Drag Queen,"check_machine one pose, 85 parts incl. the 1036 mm Ray5 frame, two poses in parallel"
+thread_redesign_iteration_lowres,2.3,2026-11-18T21:55:00Z,Stage r8b,"one make-and-check pass: mesh + 4-5 views at 600px 12spp, 4 cores; 6 passes for moth centre, feet, legs, rail ends"
+shopbot_machine_rebuild,53.0,2026-11-18T21:23:28Z,Overhaul Dancer Pour Decisions,"8 buy rows (4 bought parts modelled: motor, chamber, pump, speed board), look sheets incl. orange palette tuning, pod and hose redesign, check_machine pass, final render, docs; 30 min wait on 2 listings overlapped with other work"
+shopbot_render_final,8.9,2026-11-18T22:06:29Z,Overhaul Dancer Pour Decisions,"run_bot export+render, 1600 px, 64 spp, 3 images, ~75 parts, 4-core cloud"
+shopbot_render_draft,1.65,,Overhaul Dancer Pour Decisions,"same scene at 800 px 32 spp, 3 images"
+shopbot_check_machine,0.3,,Overhaul Dancer Pour Decisions,"check_machine.py one pose, 75 parts"
+render_sawhorse_view_1100px_64spp,1.9,,Thread r9,"8 views in ~15 min after a ~3 min full SDF re-mesh at vox 0.08, 4 cores"
+thread_feet_pass_total,45.0,,Thread r9,"feet-only redesign: 2 preview rounds + full re-mesh, render, sheet"
+render_machine_3views_1300px_64spp,5.0,2026-11-18T22:11:00Z,Overhaul Dancer Sandra Paper,"run_bot export+render+compose, ~190 parts, 4-core cloud"
+dancers_machine_overhaul,58.0,2026-11-18T21:23:00Z,Overhaul Dancer Sandra Paper,"full redesign (gantry, drives, electronics), 3 own parts, waited ~40 min for listings while modelling from maker sources; 2 preview renders + final"
+shared_parts_batch,62.0,2026-11-18T21:22:40Z,Dancers shared parts A,"13 listings, 16 specs and makers from listings, 2 look-sheet rounds, 4-core cloud; ~12 min lost to a stalled pip install (kill and rerun)"
+setup_pip_bpy_build123d,16.0,,Dancers shared parts A,"first pip of bpy+build123d hung with 9 s CPU in 14 min; killed, build123d alone 2 min, bpy 3 min"
+dancers_machine_overhaul,63.0,2026-11-18T21:23:10Z,Overhaul Dancer Vogue,"Vogue: 6 new parts, base redesign, riser fix for bearing corners, waited ~15 min on shared a4988_clone spec, final 3-view render 1600px 96spp ~16 min"
+dancers_machine_overhaul,72.0,,Overhaul Dancer Mud Diva,"Mud Diva: 7 new part specs, 12 printed parts, ram redesign; ~10 min waiting on Amazon reads; storage outage re-saves"
+shopbot_render_final,10.5,,Overhaul Dancer Mud Diva,"3 images 1300 px 96 spp, 109 parts, 4-core cloud, plus export"
+dancers_machine_overhaul,75.0,2026-11-18T21:23:20Z,Overhaul Dancer Skin Tight,"listings read by another thread, ~45 min of it waiting on 5 listings; 7 bought parts, 1 shared (oven); 2 render rounds"
+shopbot_render_final,10.3,2026-11-18T22:24:11Z,Overhaul Dancer Skin Tight,"before+after+exploded, 1300 px, 96 spp, 4-core cloud, about 66 parts incl. oven"
+dancers_machine_overhaul,77.0,2026-11-18T21:23:22Z,Overhaul Dancer Flex Appeal,spawn to site/ delivered; 6 own parts modelled from listings/datasheets; waited ~25 min on Chrome listing reads; bag kit changed the layout
+render_machine_3views_1300px_96spp,10.1,2026-11-18T22:27:56Z,Overhaul Dancer Flex Appeal,"flex_appeal export + before/after/exploded, RES 1300 SAMPLES 96, cloud, ~90 parts, includes STL export"
+shop_machine_overhaul_thread,75.0,2026-11-18T21:24:00Z,Overhaul Dancer Cane-Dace,"spawn to delivered site/ incl. ~25 min waiting on 6 listings from the Dancers thread, pip bpy+build123d ~3 min, 6 new parts, full redesign"
+shop_bot_final_render_1300_96,12.5,2026-11-18T22:26:13Z,Overhaul Dancer Cane-Dace,"run_bot export+render+compose, before/after/exploded 1300 px 96 spp, 4-core cloud, ~215 parts incl. 97 swept cords"
+shop_machine_check,1.3,,Overhaul Dancer Cane-Dace,"check_machine, 215 parts, cords as swept polylines (was >10 min with sphere+cylinder compounds)"
+jewelry_sheet_end_to_end,191.0,,giant jewelry sheet,r4 sheet written 21:25Z; ETA made 18:14Z; includes re-render wave
+jewelry_piece_warm_rerender,3.0,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,3.6,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,3.8,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,4.0,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,4.3,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,4.6,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,4.9,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,5.2,,jewelry re-render wave 21:14Z,
+jewelry_piece_warm_rerender,11.0,,jewelry re-render wave 21:14Z,
+jewelry_piece_cold,4.2,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,4.1,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,4.6,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,4.2,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,5.2,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,6.0,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,7.7,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,4.5,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,11.6,,tool and stand renders 22:22Z,tool/stand pieces
+jewelry_piece_cold,12.5,,tool and stand renders 22:22Z,tool/stand pieces
+animation_frames_48_chunk,16.8,,Dancers frame chunk threads 21:02Z,48 frames per cloud thread
+animation_frames_48_chunk,27.9,,Dancers frame chunk threads 21:02Z,48 frames per cloud thread
+animation_frames_48_chunk,32.9,,Dancers frame chunk threads 21:02Z,48 frames per cloud thread
+farm_download_start_gate,130.0,,PM case download,"renders done ~18:55Z, download only started 21:05Z: renderBeamer auto-download off since day before and Mac asleep"
