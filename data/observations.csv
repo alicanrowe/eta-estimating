@@ -338,3 +338,6 @@ jewelry_piece_incl_stall,43.8,,jewelry c1 batch 22:39Z,4 threads that never star
 platform_concurrency_stall,15.0,,jewelry c1 batch,vein clip and split bar ran after about 15 min
 platform_concurrency_stall,38.0,,jewelry c1 batch,bug clip and bug pendant ran after about 35-40 min
 farm_download_mac_sleep_stall,120.0,,PM case download,download stopped when the Mac slept (~22:00Z?) until the user woke it ~23:58Z; upper estimate
+studio_render_1800x1200_40spp_cloud,4.4,2026-11-19T00:05:00Z,shrine bench thread,"Cycles CPU 4 cores, 5 stills of a 17 MB carved GLB in 22 min, sharing CPU with a seatcheck run"
+look_match_round_6stills_30pct,9.0,,shrine bench thread,one round of a photographer-matching loop: 6 stills at 720x480 24spp plus measuring; 6 rounds
+seatcheck_15mm_55k_cells,50.0,,shrine bench thread,"about 10 load cases, 4-11 min each; more when sharing CPU with renders"

@@ -51,6 +51,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_piece_warm_rerender` | 18 | 3.8 min | 0.9 min to 5.7 min | 0.8 min to 11 min |
 | `jewelry_render_4views_sec` | 49 | 27 s | 21 s to 35 s | 16 s to 43 s |
 | `jewelry_sheet_end_to_end` | 1 | 3.2 h | 3.2 h to 3.2 h | 3.2 h to 3.2 h (few samples) |
+| `look_match_round_6stills_30pct` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
 | `mac_setup_walkthrough` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
 | `moth_gem_render_4view` | 5 | 10 min | 9.8 min to 11 min | 9.6 min to 11 min |
 | `moth_tool_v3_piece` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
@@ -79,6 +80,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `scene_render_4core_1600px_96spp` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `sdf_carved_piece_build` | 1 | 0.6 min | 0.6 min to 0.6 min | 0.6 min to 0.6 min (few samples) |
 | `sdf_log_96in_build` | 1 | 0.8 min | 0.8 min to 0.8 min | 0.8 min to 0.8 min (few samples) |
+| `seatcheck_15mm_55k_cells` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `setup_pip_bpy_build123d` | 1 | 16 min | 16 min to 16 min | 16 min to 16 min (few samples) |
 | `shared_parts_batch` | 2 | 56 min | 51 min to 61 min | 50 min to 62 min (few samples) |
 | `shop_bot_final_render_1300_96` | 1 | 12 min | 12 min to 12 min | 12 min to 12 min (few samples) |
@@ -101,6 +103,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `site_page_rebuild` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
 | `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
 | `storage_cleanup` | 2 | 18 min | 9.2 min to 27 min | 7.0 min to 29 min (few samples) |
+| `studio_render_1800x1200_40spp_cloud` | 1 | 4.4 min | 4.4 min to 4.4 min | 4.4 min to 4.4 min (few samples) |
 | `thread_feet_pass_total` | 1 | 45 min | 45 min to 45 min | 45 min to 45 min (few samples) |
 | `thread_redesign_iteration_lowres` | 1 | 2.3 min | 2.3 min to 2.3 min | 2.3 min to 2.3 min (few samples) |
 | `thread_restyle_sheet_total` | 2 | 38 min | 33 min to 44 min | 32 min to 45 min (few samples) |
