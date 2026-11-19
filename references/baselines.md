@@ -11,6 +11,8 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `animation_label_fix_round` | 2 | 50 min | 15 min to 84 min | 6.0 min to 1.6 h (few samples) |
 | `animation_small` | 1 | 42 min | 42 min to 42 min | 42 min to 42 min (few samples) |
 | `blender_download_cloud` | 1 | 0.6 min | 0.6 min to 0.6 min | 0.6 min to 0.6 min (few samples) |
+| `book_metal_pages_redo_after_rejection` | 1 | 68 min | 68 min to 68 min | 68 min to 68 min (few samples) |
+| `book_rebuild_existing` | 1 | 7.3 min | 7.3 min to 7.3 min | 7.3 min to 7.3 min (few samples) |
 | `bot_render_1300_96_cloud` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `cad_design_feature` | 1 | 76 min | 76 min to 76 min | 76 min to 76 min (few samples) |
 | `cadcheck_trimesh_fcl_swing` | 1 | 11 min | 11 min to 11 min | 11 min to 11 min (few samples) |
@@ -87,6 +89,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `render_sawhorse_view_1000px_48spp` | 3 | 1.1 min | 1.1 min to 1.2 min | 1.1 min to 1.2 min (few samples) |
 | `render_sawhorse_view_1100px_64spp` | 3 | 1.9 min | 1.7 min to 2.0 min | 1.6 min to 2.0 min (few samples) |
 | `render_shopbot_3view_1300px_96spp` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
+| `render_still_cloud_each` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `render_stills_cloud_set` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
 | `renderbeamer_restart_to_frames` | 2 | 5.3 min | 1.5 min to 9.1 min | 0.6 min to 10 min (few samples) |
 | `renderbeamer_startup` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
@@ -117,6 +120,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `shopbot_render_final` | 12 | 10 min | 9.0 min to 16 min | 7.0 min to 20 min |
 | `shopbot_render_full` | 7 | 17 min | 9.1 min to 21 min | 8.5 min to 22 min |
 | `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
+| `site_batch_deploy` | 1 | 44 min | 44 min to 44 min | 44 min to 44 min (few samples) |
 | `site_deploy_live_min` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
 | `site_page_full_refresh` | 1 | 40 min | 40 min to 40 min | 40 min to 40 min (few samples) |
@@ -181,6 +185,9 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 - **The Mac sleeps mid-download again:** 12:46 PM ET, and it only resumed once the user wrote "go" in that thread, 39 minutes later. Ask for the user's computer to stay awake before any download starts.
 - **Supplier web forms fail on submit.** Xometry's large-quote form threw a server error 4 times, and the Materialise form stalled too. The workaround (a normal quote, then each part's manual-quote button) needed the user to drag the files in. Budget 45 to 60 minutes and 1 or 2 human gates for any quote form. The reply is about 2 business days.
 - **Project storage full (10 GB):** saves fail until a delete is OK'd. That is a gate, so check free space before a big render or a book build.
+
+- **Fast but rejected counts as late.** The book rebuild was handed over in 7 minutes against an ETA of 10, but the user rejected its metal pages: grey case, wrong finishes, callouts on the model. The redo took another 68 minutes. For anything visual the user reviews, add one rejection-and-redo round (about 1 hour) to the late end until the check that runs before delivery has a clean record.
+- **Matching a material to a photo** (the felt) passed in the test light and failed in the case light. Check a match in the real scene's lighting before calling it done, and expect 2 or 3 rounds.
 
 ### Platform limits
 - Starting threads is sequential at about 3 seconds each, so 90 machines take about 5 minutes just to start.

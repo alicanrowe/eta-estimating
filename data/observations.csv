@@ -405,3 +405,7 @@ human_gate_daytime_away,39.0,,build book thread,Mac slept 12:46 PM ET mid-downlo
 mac_lag_session_kill,15.0,,build book thread,"Mac RC session unresponsive 19:33-19:48Z while patching Blender + uploading to farm; killed, farm submit status unknown"
 quote_form_submit_web,49.0,,casting service thread,"Xometry: large-quote form server error x4, workaround via normal quote + manual quote button; 2 human gates (drag files)"
 model_fix_and_refarm_prep,15.0,,build book thread,"plush clipping refit + Brusso hinges modelled, farm fix files made 19:05-19:20Z"
+book_rebuild_existing,7.3,,build book thread,"v7e text + silver figures, storage OK to handoff"
+book_metal_pages_redo_after_rejection,68.0,,build book thread,"the user rejected pages (grey case, wrong finishes, callouts on model); redo + new QA gate + candidate, 21:16-22:25Z"
+site_batch_deploy,44.0,,website thread,"batch 1: texture, freshness check, z-fight fix, viewer rebuild, merged and checked live"
+render_still_cloud_each,5.0,,website thread,"batch 2 views, about 5 min each on cloud"
