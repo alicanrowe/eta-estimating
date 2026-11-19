@@ -338,6 +338,54 @@ jewelry_piece_incl_stall,43.8,,jewelry c1 batch 22:39Z,4 threads that never star
 platform_concurrency_stall,15.0,,jewelry c1 batch,vein clip and split bar ran after about 15 min
 platform_concurrency_stall,38.0,,jewelry c1 batch,bug clip and bug pendant ran after about 35-40 min
 farm_download_mac_sleep_stall,120.0,,PM case download,download stopped when the Mac slept (~22:00Z?) until the user woke it ~23:58Z; upper estimate
-studio_render_1800x1200_40spp_cloud,4.4,2026-11-19T00:05:00Z,shrine bench thread,"Cycles CPU 4 cores, 5 stills of a 17 MB carved GLB in 22 min, sharing CPU with a seatcheck run"
-look_match_round_6stills_30pct,9.0,,shrine bench thread,one round of a photographer-matching loop: 6 stills at 720x480 24spp plus measuring; 6 rounds
-seatcheck_15mm_55k_cells,50.0,,shrine bench thread,"about 10 load cases, 4-11 min each; more when sharing CPU with renders"
+jewelry_piece_warm_rerender,1.5,2026-11-19T00:05:46Z,Render jewelry c1 ring C,"c1-v4 ring_c winter, warm machine, venv already built; relay to report incl. check"
+jewelry_piece_warm_rerender,1.43,2026-11-19T00:05:57Z,render c1 ring A,"c1_ring_a_winter c1-v4 re-render, same machine"
+jewelry_c1_piece_render_only,1.55,,c1_ear_drop,"c1-v4 winter rerender, warm machine"
+jewelry_piece_warm_rerender,2.5,,c1_ear_drop,"c1_ear_drop_winter c1-v4, request to checked"
+jewelry_c1_piece_render_only,1.6,,Render jewelry c1 ring B,"c1-v4 winter re-render, warm venv, 4 cpu"
+drive_backup_via_mac_per_gb,6.5,2026-11-19T00:10:00Z,Keep project storage under the cap,0.93 GB in 24 MB parts via device_commit_files (3 batches) + reassemble + md5 verify on Mac; ~6 min end to end
+storage_cleanup,86,2026-11-19T00:12:00Z,Keep project storage under the cap,incl. ~65 min waiting for Mac connect; freed 1.59 GB
+jewelry_piece_warm_rerender,0.78,2026-11-19T00:11:34Z,render c1 ring A,"c1_ring_a_winter c1-v5, same machine"
+jewelry_piece_warm_rerender,1.2,2026-11-19T00:11:44Z,Render jewelry c1 ring C,"c1-v5 ring_c winter colour-only, warm machine; render 36 s"
+jewelry_c1_piece_render_only,1.08,,c1_ear_drop,"c1-v5 winter rerender, warm"
+jewelry_piece_warm_rerender,2.2,,c1_ear_drop,"c1_ear_drop_winter c1-v5, request to checked"
+moth_gem_render_4view,9.0,2026-11-19T00:15:56Z,Render gem motif thornrose,"fix3 thornrose round 4, same settings, 4-core cloud"
+moth_gem_render_4view,10.5,,Render gem motif pinned,"fix3 pinned, same settings, render+check; first codeversion check read a stale mount copy seconds after CODE_VERSION was written, recheck passed"
+moth_gem_render_4view,12.5,2026-11-19T00:16:00Z,Render gem motif lancet,"fix3 lancet round 4, same settings, render only"
+cycles_3view_strip_1400px_128s_4cpu_75kfaces,1.65,,Render tool 05 suture spindle (fix4),
+dancers_build_audit,24.0,2026-11-19T00:13Z,skin_tight thread,"Skin Tight build audit: 3 passes, 16 issues, CAD fixes, docs rewrite, 3-view re-render at 1300/96 (12 min of it in background)"
+dancers_build_audit,25.0,2026-11-19T00:13:00Z,Flex Appeal,3 passes 15 fixes CAD+firmware+guide+rerender
+dancers_build_audit,28,,Overhaul Dancer Cher Bend,"cher_bend: 3 passes, 17 issues, CAD+guide+buy list, re-render 9.7 min"
+shopbot_render_final,9.7,,Overhaul Dancer Cher Bend,"cher_bend audit re-render, 129 parts"
+dancers_build_audit,31.0,2026-11-19T00:12:00Z,Overhaul Dancer Queen Bee,"Queen Bee: 3 passes, 29 issues fixed, firmware source read, re-render"
+dancers_build_audit,29.0,2026-11-19T00:12Z,lathe_minnelli thread,"Lathe Minnelli build audit: 4 passes, 36 issues, CAD fixes (spindle location, mains box, guard, holes), guide/buy list/README rewrite, 3-view re-render 1300/96 (~9 min background)"
+dancers_build_audit,80.0,2026-11-18T23:30:00Z,Overhaul Dancer Pour Decisions,"Pour Decisions build audit: 3 passes, 18 issues (mounts resonance, plug-in controller, cord/capacitor, fence split), 2 new part specs, docs rewrite, 1600/64 re-render 9 min; start time approximate"
+dancers_build_audit,37.0,2026-11-19T00:13:03Z,Overhaul Dancer Honey Glaze,"honey_glaze: 15 issues, CAD change (head mount, control tray), re-render; 3 passes"
+shopbot_build_audit,50.0,2026-11-19T00:12:00Z,Overhaul Dancer Drag Queen,"3 passes, 20 issues fixed: power rail, solenoid duty, spring physics, screw access, STL export, converter pull/hold/rest, guide rewrite, re-render"
+dancers_build_audit,47.0,2026-11-19T00:12:56Z,Overhaul Bog Witch,"3 passes, 19 issues; new IoT Relay part + panel holes + two-part hinges; ESPHome venv install ~5 min, first compile ~12 min (cached recompile <1 min); full re-render 14 min while compiling"
+shopbot_render_full,14.0,,Overhaul Bog Witch,"render only, 178 parts, 1300 px 96 spp, sharing 4 cores with an ESPHome compile"
+shopbot_render_final,19.9,2026-11-19T00:45:00Z,er overhaul,1600px 96 samples before+after+exploded+compose cloud
+dancers_machine_tray_remodel,32,2026-11-19T00:34:00Z,er overhaul,replace example mold with new press mold: CAD+scene+docs+checks (render excluded)
+dancers_build_audit,52.0,2026-11-19T00:13:00Z,Overhaul Dancer Glow Diva,"glow_diva: 3 passes, 22 issues fixed (UV via MOSFET on 5 V, swap/carriage screw clashes, joint inserts, motor screw reliefs, recipe ratio/feed, firmware written), docs rewrite, 1300/96 re-render ~9 min; worker restart mid-way"
+furniture_motif_design_to_preview,55.0,,Design Lancet side panels,"side-panel casting from gable motif: read model, clearance map, 3 model passes, 4 context render passes, clipping+swing check, sheet; one 4-core machine"
+cloud_env_setup_bpy,3.0,,Design Lancet side panels,pip bpy 5.3 + trimesh manifold3d numba fcl on a fresh container
+context_render_case_3views_1500px,8.0,,Design Lancet side panels,"case + 7 castings, 3 views 1500px 64spp Cycles CPU 4 cores"
+cadcheck_trimesh_fcl_swing,11.0,,Design Lancet side panels,7 x 400k-face castings clipping + 2 roof swing sweeps at 0.25 deg; clipping alone ~3 min
+dancers_build_audit,67.0,2026-11-19T00:13:00Z,Overhaul Dancer Handmaiden,"handmaiden: 3 passes, 27 issues fixed (homing collision/order, FluidNC config, vac Nano sketch, screw lengths, inserts, pump clips, inlet box, buy list +14 rows), docs rewrite, 1300/96 re-render ~16 min"
+shopbot_render_final,16.0,2026-11-19T00:56:00Z,Overhaul Dancer Handmaiden,1300px 96 samples before+after+exploded cloud
+dancers_example_print_swap,27.0,2026-11-19T00:58:00Z,Overhaul Dancer Queen Bee,"Queen Bee jar to drawer-pull pattern: model, STL, re-render 3 views + dims"
+dancers_build_audit,75.0,2026-11-19T00:13:00Z,Audit Sterling Silva build,"3 passes, 27 issues; new parts (PSU cover+inlet, perfboard box, scale box, Z switch, merged arm), FluidNC+ESPHome configs, guide rewrite; 4 poses x 3 rounds of check_machine (~10 min each) dominate; one worker restart"
+shopbot_render_full,18.0,2026-11-19T01:06:00Z,Audit Sterling Silva build,"export 20 + before/after/exploded 1300 px 96 spp + compose, 273 parts"
+dancers_build_audit,150.0,,hot_flash,"Hot Flash build audit: 4 passes, 33 fixes, new parts, re-render"
+dancers_machine_listing_fixes,33.0,2026-11-19T01:55:00Z,Overhaul Dancer Handmaiden,"apply listing reads: SAB40 -> DP40 + printed nipples (CAD, new part maker/spec), 4 buy rows, docs, checks + 4 poses, 1300/96 re-render ~23 min (render excluded from 33? no, included to 02:27; total 32)"
+dancers_build_audit,157.0,2026-11-19T00:12:00Z,Overhaul Dancer Mortisha,"Mortisha: 5 passes, 25 issues, wheel swap + 2 new part makers (solid V-wheel, GST120A), power redesign with IoT Relay, guide rewrite, waits on listing reads, a container restart, 2 re-renders (~10 min each)"
+shopbot_render_final,10.0,,Overhaul Dancer Mortisha,"mortisha audit re-render, 283 parts, 3 views"
+shopbot_render_final,7.0,,Overhaul Dancer Mortisha,"mortisha e-stop latch re-render, 290 parts"
+dancers_build_audit,190.0,2026-11-19T00:10,dusty_springfield,"7-check audit, 3 passes, 30 issues, ESPHome firmware written+compiled, re-render; includes ~60 min listing waits"
+render_machine_3views_1300px_96spp,12.0,,dusty_springfield,audit re-render
+farm_download_2160f_h,1.6,,PM case 9:16 download,"00:05Z-01:41Z after Mac woke, about 3.4 MB/s; faster when it runs alone and the Mac is awake"
+farm_tail_last_frames_to_delivery,14.0,,PM case 9:16,"callouts done during download; encode 4 chunks, check, deliver"
+farm_tail_last_frames_to_delivery,24.0,,PM case 16:9,15 of 19 callouts and 5-chunk encode after last frame
+farm_job_end_to_end_h,9.7,,PM case two cuts,submit 16:12Z to second cut 01:55Z; ~4 h lost to download start and Mac sleep
+animation_label_fix_round,93.0,,PM case r7,"move all labels off objects, both cuts, re-composite in cloud, re-encode, recheck, copy to Mac"
+animation_label_fix_round,6.0,,PM case r8,one label on one cut

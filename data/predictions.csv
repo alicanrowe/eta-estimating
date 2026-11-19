@@ -15,7 +15,7 @@ id,made_utc,what,p50_min,p90_min,actual_min,ratio_actual_to_p50,status,source
 14,2026-11-18T18:15:00Z,animation ready to submit to farm,105,105,,,superseded,via coordinator: about 3 PM ET; renders paused 18:3x UTC until design sign-off
 15,2026-11-18T18:15:00Z,site stills (thread's figure),15,15,,,superseded,via coordinator: about 1:30 PM ET; renders paused 18:3x UTC until design sign-off
 16,2026-11-18T18:15:00Z,animation frames landed (needs OK on ~$284),1125,1365,,,superseded,via coordinator: tomorrow morning ET; gated; renders paused 18:3x UTC until design sign-off
-17,2026-11-18T18:16:00Z,PM case animation finished cuts,224,344,,,open,coordinator chat: 5 to 7 PM ET
-18,2026-11-18T18:18:00Z,PM case 9:16 cut delivered,132,132,,,open,"coordinator chat: about 3:30 PM ET, ~$70"
-19,2026-11-18T18:18:00Z,PM case 16:9 cut delivered,252,252,,,open,"coordinator chat: about 5:30 PM ET, ~$70"
-20,2026-11-18T22:41:08Z,PM case 16:9 delivered (re-issued by pm case thread),355.0,500.0,,,open,pm case 21:05Z: about 10 PM ET | 00:05Z re-issued again to ~10:30 PM ET after Mac sleep stall
+17,2026-11-18T18:16:00Z,PM case animation finished cuts,224,344,459.0,2.05,closed,coordinator chat: 5 to 7 PM ET
+18,2026-11-18T18:18:00Z,PM case 9:16 cut delivered,132,132,457.0,3.46,closed,"coordinator chat: about 3:30 PM ET, ~$70"
+19,2026-11-18T18:18:00Z,PM case 16:9 cut delivered,252,252,407.0,1.62,closed,"coordinator chat: about 5:30 PM ET, ~$70"
+20,2026-11-18T22:41:08Z,PM case 16:9 delivered (re-issued by pm case thread),355.0,500.0,240.0,0.68,closed,pm case 21:05Z: about 10 PM ET | 00:05Z re-issued again to ~10:30 PM ET after Mac sleep stall
