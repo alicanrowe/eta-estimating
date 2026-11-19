@@ -48,7 +48,7 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | c1 square, 4 seasons of one design on one machine (TO 2400, VOXO 0.045, 4-core cloud) | 1.2 min per piece, 4.9 min for all 4; ~13 min thread incl. pip setup 6.3 min | 18 Nov |
 | c1 bug_clip, 4 seasons on one machine (c1-v1, TO 2400, VOXO 0.045, 4-core cloud) | 1.5 min per piece, 6.0 min for all 4; pip setup 1.5 min; ~16 min thread | 18 Nov |
 | c1 vein_clip, 4 seasons on one machine (c1-v1, TO 2400, VOXO 0.045, 4-core cloud) | 1.7 min per piece, 6.7 min for all 4; pip setup ~2 min; ~18 min thread | 18 Nov |
-| Farm download of two 2160-frame jobs (39 GB) at about 1.2 MB/s | 9 h | |
+| Farm download of two 2160-frame 4K jobs (39 GB, ~9.1 MB/frame) | 4.5 h | 2.5 to 4.5 MB/s; 1.2 MB/s seen early |
 | renderBeamer cold start (plugin download) / restart to first frames | 9 min / 10 min | |
 | Gotcha: renderBeamer auto-download can be off; then nothing downloads. Check it first | | 1 h lost 18 Nov |
 | Gotcha: if the Renders SSD is unplugged mid-download, renderBeamer keeps failing (I/O error) until restarted; restart to first frames 35 s, then about 2.5 MB/s | | |

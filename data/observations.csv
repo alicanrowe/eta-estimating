@@ -389,3 +389,19 @@ farm_tail_last_frames_to_delivery,24.0,,PM case 16:9,15 of 19 callouts and 5-chu
 farm_job_end_to_end_h,9.7,,PM case two cuts,submit 16:12Z to second cut 01:55Z; ~4 h lost to download start and Mac sleep
 animation_label_fix_round,93.0,,PM case r7,"move all labels off objects, both cuts, re-composite in cloud, re-encode, recheck, copy to Mac"
 animation_label_fix_round,6.0,,PM case r8,one label on one cut
+farm_download,99,2026-11-19T00:02:00Z,Merge site PRs and start renderBeamer download,2922 frames ~26.6 GB after restart at 2.5-4.5 MB/s; full v3w pair (2x2160 frames 39 GB) ~4h20m actual downloading
+sculpted_cast_plate_pair_round,50.0,2026-11-19T13:25:00Z,jail r3,two cast relief plates via moth_gems SDF + flange union + clip check + 3 context renders + sheet; incl. 2 non-manifold retries
+context_render_case_1view_1300px_96spp,1.7,,jail r3,"Cycles CPU cloud, v6y + cast parts, single view"
+context_render_case_3views_1100px,1.5,,jail r3,"3 views run in parallel, 64 spp"
+furniture_motif_variant_round,32.0,,Design Lancet side panels,"client sheet notes fixed on 3 patterns + 2 new end patterns, 7 context views, clipping, sheet; one 4-core machine"
+context_render_case_3views_1500px,9.0,,Design Lancet side panels,"side views, 11 castings"
+site_page_full_refresh,40.0,,Bring Dancers page fully up to date,"24-section /dancers rebuild from audited outputs via the saved page builder + guides/recipes/text, Drag Queen surgery, checks, 2 PRs; 15:10 to 15:50 UTC"
+skill_fix_and_publish,12.0,,Bring Dancers page fully up to date,new check script + skill text + sync.sh; needed add_repo for push and public.sed overrides for site name
+render_sawhorse_view_1100px_64spp,2.0,,Thread r10,"8 views 17 min, 4 cores"
+site_deploy_live_min,4.0,,Thread r10,merge to live on /nine-rests (Cloudflare Pages)
+thread_fix_pass_total,50.0,,Thread r10,lumpy fix + found r9 regression + stone seats + render + site; Drive upload blocked by 4 MB connector cap
+render_stills_cloud_set,29.0,,build book thread,"monster close-up + 5 frames, cloud; ETA 30-40 min; re-sent on white 20 min later (49 total)"
+human_gate_daytime_away,39.0,,build book thread,Mac slept 12:46 PM ET mid-download until the user said go 1:25 PM ET
+mac_lag_session_kill,15.0,,build book thread,"Mac RC session unresponsive 19:33-19:48Z while patching Blender + uploading to farm; killed, farm submit status unknown"
+quote_form_submit_web,49.0,,casting service thread,"Xometry: large-quote form server error x4, workaround via normal quote + manual quote button; 2 human gates (drag files)"
+model_fix_and_refarm_prep,15.0,,build book thread,"plush clipping refit + Brusso hinges modelled, farm fix files made 19:05-19:20Z"
