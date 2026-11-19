@@ -11,11 +11,11 @@ id,made_utc,what,p50_min,p90_min,actual_min,ratio_actual_to_p50,status,source
 10,2026-11-18T18:14:00Z,Load and tipping check skill,61,61,105.0,1.72,closed,coordinator chat: about 2:15 PM ET
 11,2026-11-18T18:14:00Z,animation frames if scene needs rebuilding,406,526,,,superseded,coordinator chat: 8 to 10 PM ET; renders paused 18:3x UTC until design sign-off
 12,2026-11-18T18:14:00Z,site stills,76,136,,,superseded,coordinator chat: 2:30 to 3:30 PM ET; renders paused 18:3x UTC until design sign-off
-13,2026-11-18T18:14:00Z,HISS CAD,166,346,,,open,coordinator chat: 4 to 7 PM ET
+13,2026-11-18T18:14:00Z,HISS CAD,166,346,,,no_data,"coordinator chat: 4 to 7 PM ET | 19 Nov 00:05Z: no HISS CAD found, not scored"
 14,2026-11-18T18:15:00Z,animation ready to submit to farm,105,105,,,superseded,via coordinator: about 3 PM ET; renders paused 18:3x UTC until design sign-off
 15,2026-11-18T18:15:00Z,site stills (thread's figure),15,15,,,superseded,via coordinator: about 1:30 PM ET; renders paused 18:3x UTC until design sign-off
 16,2026-11-18T18:15:00Z,animation frames landed (needs OK on ~$284),1125,1365,,,superseded,via coordinator: tomorrow morning ET; gated; renders paused 18:3x UTC until design sign-off
 17,2026-11-18T18:16:00Z,PM case animation finished cuts,224,344,,,open,coordinator chat: 5 to 7 PM ET
 18,2026-11-18T18:18:00Z,PM case 9:16 cut delivered,132,132,,,open,"coordinator chat: about 3:30 PM ET, ~$70"
 19,2026-11-18T18:18:00Z,PM case 16:9 cut delivered,252,252,,,open,"coordinator chat: about 5:30 PM ET, ~$70"
-20,2026-11-18T22:41:08Z,PM case 16:9 delivered (re-issued by pm case thread),355.0,500.0,,,open,pm case 21:05Z: about 10 PM ET
+20,2026-11-18T22:41:08Z,PM case 16:9 delivered (re-issued by pm case thread),355.0,500.0,,,open,pm case 21:05Z: about 10 PM ET | 00:05Z re-issued again to ~10:30 PM ET after Mac sleep stall

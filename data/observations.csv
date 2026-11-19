@@ -287,5 +287,54 @@ dancers_machine_overhaul,91.0,2026-11-18T21:23:41Z,Overhaul Dancer Glow Diva,"3 
 shopbot_render_full,8.5,,Overhaul Dancer Glow Diva,"before/after/exploded 1300 px 96 spp + compose, 4-core cloud, about 140 parts"
 pip_bpy_build123d_setup,2.5,,Overhaul Dancer Glow Diva,
 jewelry_c1_square_4seasons,3.75,2026-11-18T22:50:00Z,Render jewelry c1 bug pendant,"c1-v1 bug_pendant 4 seasons TO 2400 VOXO 0.045, 4-core cloud: 53-61 s per piece; ~17 min incl. pip setup"
-moth_tool_v3_piece_warm,2.5,2026-11-18T23:11:51Z,thread Render Moth tool 07 ember iron,"round 2 mt3-r2, 30k faces, RES 1400 128 spp 3 views, 4 cores: render 92 s; bpy already installed; job sheet said 4-12 min"
-tool_family_round_rebuild,42,2026-11-18T22:45:00Z,Moth tools owner thread,"round 2: 10 tools + 2 stands to high-poly, new materials, fabcheck written and passing, quick renders; excludes fan-out renders"
+shop_machine_overhaul,97.0,,Overhaul Dancer Lathe Minnelli,"one machine, 9 own parts + new back plate and bar picks, 148 parts; 47 min of it waiting for the shared listing reader; 4-core cloud"
+shop_listing_wait,47.0,,Overhaul Dancer Lathe Minnelli,8 Amazon listings queued behind ~90 reads in the single Chrome reader
+shop_bot_render_full,13.5,,Overhaul Dancer Lathe Minnelli,"run_bot export+render+compose, 1300 px 96 spp, 148 parts, 4-core cloud"
+shop_bot_render_preview,2.1,,Overhaul Dancer Lathe Minnelli,before/after/exploded 800 px 32 spp (8 min when the CPU was shared with part look renders)
+jewelry_c1_square_4seasons,3.95,2026-11-18T22:53:00Z,Render jewelry c1 split bar,"c1-v1 split_bar 4 seasons TO 2400 VOXO 0.045, 4-core cloud: 56-61 s per piece; ~19 min incl. pip setup"
+dancers_machine_overhaul,97.0,2026-11-18T21:23:55Z,Overhaul Bog Witch,"4 own parts + 4 shared; full redesign (old panels fit no sheet, prints too big for bed); 1 listing re-pick via Dancers; ~12 min lost to the storage outage and a blrender fix round"
+shopbot_render_full,9.5,,Overhaul Bog Witch,"export 44 files + before/after/exploded 1300 px 96 spp, transparent glass, 4-core cloud, about 157 parts, no compose"
+moth_gem_render_4view,10.5,,Render gem motif pinned,"r1 pinned, VOX 0.03 PRES 1400 PSPP 96 oxidised, 4-core cloud: mesh ~1 min + 4 views ~2.5 min each; pip setup ~1 min extra"
+moth_gem_render_4view,10.1,2026-11-18T22:55:17Z,Render gem motif thornrose,"r1 thornrose, VOX 0.03 PRES 1400 PSPP 96 oxidised, 4-core cloud: mesh ~0.5 min + 4 views 2.1-3.1 min each (gable slowest)"
+dancers_machine_overhaul,108.0,2026-11-18T21:24:00Z,Overhaul Sterling Silva,"4 own part makers (7 specs) + 9 shared; full rebuild, 4 poses checked; 1 listing re-pick (JETS sprue base, Rio Grande blocked); ~12 min lost to the storage outage and 1 killed render"
+shopbot_render_full,22.0,2026-11-18T22:49:00Z,Overhaul Sterling Silva,"export 20 files + before/after/exploded 1300 px 96 spp + compose, 4-core cloud, 229 parts"
+moth_tool_v3_piece_warm,2.5,2026-11-18T23:11:51Z,Render tool 07 ember iron,"round 2 mt3-r2, 30k faces, RES 1400 128 spp 3 views, 4 cores: render 92 s; bpy already installed; job sheet said 4-12 min"
+moth_tool_v3_piece,3.5,,Render tool 05 suture spindle (round 2),
+cycles_3view_strip_1400px_128s_4cpu_75kfaces,1.8,,Render tool 05 suture spindle (round 2),
+moth_tool_v3_render_1400_128,1.97,2026-11-18T23:12:35Z,Render tool 06 lantern spreader,"round 2 mt3-r2, 06_lantern_spreader, 60439 faces, 4 cores, bpy already installed; doc expected 4-12 min"
+dancers_machine_overhaul,111.0,,Overhaul Slip Kitten,"6 own part makers (6 specs) + 8 shared; full redesign (tilt axis, load path, pump, electronics), 2 states checked; ~12 min lost to storage outage, blrender crash from another thread, and one wrong Mac-connect detour"
+shopbot_render_full,20.0,,Overhaul Slip Kitten,"before/after/exploded 1300 px 96 spp + compose, 4-core cloud, 170 parts"
+moth_v3_piece_cold,7.0,2026-11-18T23:11:55Z,Render tool 08 fleam,render_v3 mt3-r2 RES=1400 SAMPLES=128 4-core cloud bpy preinstalled; fabcheck ~10 s; Cycles 3 views 271 s (7898 faces); relay to report
+moth_tool_v3_render_1400_128,6.55,2026-11-18T23:12:40Z,Render tool 10 tincture phial,"10_tincture_phial round 2 mt3-r2, 4 cores, 3 views, 66599 faces; render only"
+dancers_machine_overhaul,117.0,2026-11-18T21:23:00Z,Overhaul Dancer Hot Flash,"toaster-oven PID machine: 4 own parts (oven, IEC, HLK-PM12, mica), 7 shared; waited ~30 min on listings and shared parts; pod redesign; 3 render rounds"
+shop_bot_render_full,34.0,2026-11-18T22:43:00Z,Overhaul Dancer Hot Flash,"run_bot export+render+compose, 95 parts, 1600 px 64 spp Cycles CPU 4-core; most of the time is single-threaded STL export of the 3 manifests (an 800 px 32 spp pass took 21 min)"
+dancers_listing_wait,32.0,2026-11-18T21:27:00Z,Overhaul Dancer Hot Flash,"8 Amazon listings via the Dancers thread, after asking twice"
+cycles_3view_strip_1400px_128s_4cpu_75kfaces,1.6,,Render tool 05 suture spindle (fix1),
+moth_tool_v3_render_1400_128,2.02,2026-11-18T23:22:09Z,Render tool 06 lantern spreader,"fix1 rerun, 61447 faces, 4 cores"
+moth_v3_piece_rerun,5.5,2026-11-18T23:21:32Z,Render tool 08 fleam,render_v3 mt3-r2-fix1 warm machine RES=1400 SAMPLES=128; Cycles 3 views 237 s; relay to report
+moth_tool_v3_render_1400_128,5.57,2026-11-18T23:22:30Z,Render tool 10 tincture phial,"10_tincture_phial mt3-r2-fix1, 4 cores, 3 views, 66599 faces; render only"
+furniture_cast_piece_cold,13.0,2026-11-18T22:51:40Z,Render gem motif lancet,"gable motif r1, cm kit, 4 views 1400px 96spp + check, one piece per machine, create to report"
+furniture_cast_piece_cold,10.1,2026-11-18T22:51:46Z,Render gem motif thornrose,"gable motif r1, same"
+furniture_cast_piece_cold,10.5,2026-11-18T22:51:51Z,Render gem motif pinned,"gable motif r1, same"
+design_three_options_to_frozen,50,2026-11-18T22:01:12Z,Preview gem window motifs,"3 gothic motif options: read kit, build, 3 quick check passes, stone/setting fixes, freeze r1"
+dancers_listing_wait,45.0,2026-11-18T21:25:00Z,Overhaul Dancer Dusty Springfield,7 Amazon listings via the Dancers (near the end of its queue); 4 replacement listings took 4 more min
+dancer_machine_overhaul,137.0,2026-11-18T21:24:00Z,Overhaul Dancer Dusty Springfield,"10 own parts specced/modelled, full redesign, 2 render passes + final 1300px/96spp on 4-core cloud; includes 45 min listing wait and 25 min lost to a hose sweep that stalled the export"
+bot_render_1300_96_cloud,15.0,2026-11-18T23:24:00Z,Overhaul Dancer Dusty Springfield,"before/after/exploded + compose, ~158 parts, 4-core cloud"
+scene_render_4core_1600px_96spp,6.0,,fawn-orchard thread,"Cycles CPU, full installation scene"
+photo_matched_carving_cad_full,270.0,,fawn-orchard thread,"6 carved pieces + scene, ~20 check passes, renders, sheet, exports"
+sdf_log_96in_build,0.8,,fawn-orchard thread,2000 scoops at 0.12in grid
+moth_gem_render_4view,10.9,2026-11-18T23:28:41Z,Render gem motif thornrose,"fix1 thornrose re-render, same settings, 4-core cloud"
+moth_gem_render_4view,11.1,,Render gem motif pinned,"fix1 pinned, same settings, 4-core cloud, render+check, deps already installed"
+dancers_machine_overhaul,145,2026-11-18T21:23:16Z,Overhaul Lazarella,"Lazarella: 12 own parts specced+modelled, full rebuild, check_machine pass, 3 renders, site/ + docs; ~10 min lost to storage outage, ~35 min to dims.svg HLR stalls (helical auger)"
+shopbot_render_full,17,2026-11-18T22:50:00Z,Overhaul Lazarella,"before/after/exploded, 1300 px, 96 samples, cloud"
+render_loop_fanout,50.0,,Dancers overhaul,"156-frame 576px Cycles loop split over 4 cloud machines incl. a container restart; 22:39-23:22 render, then encode+PR+live ~15 min"
+site_page_rebuild,25.0,,Dancers overhaul,"24-machine /dancers merge with main CSS, build, broken-image check, PR, live check"
+moth_gem_render_4view,9.6,2026-11-18T23:54:49Z,Render gem motif thornrose,"fix2 thornrose final round, same settings, 4-core cloud"
+renderbeamer_restart_to_frames,0.6,2026-11-19T00:02:00Z,Merge site PRs and start renderBeamer download,restart after SSD reconnect; 2.5 MB/s after
+jewelry_piece_incl_stall,18.2,,jewelry c1 batch 22:39Z,4 threads that never started at first; start to done incl. stall
+jewelry_piece_incl_stall,19.0,,jewelry c1 batch 22:39Z,4 threads that never started at first; start to done incl. stall
+jewelry_piece_incl_stall,40.0,,jewelry c1 batch 22:39Z,4 threads that never started at first; start to done incl. stall
+jewelry_piece_incl_stall,43.8,,jewelry c1 batch 22:39Z,4 threads that never started at first; start to done incl. stall
+platform_concurrency_stall,15.0,,jewelry c1 batch,vein clip and split bar ran after about 15 min
+platform_concurrency_stall,38.0,,jewelry c1 batch,bug clip and bug pendant ran after about 35-40 min
+farm_download_mac_sleep_stall,120.0,,PM case download,download stopped when the Mac slept (~22:00Z?) until the user woke it ~23:58Z; upper estimate
