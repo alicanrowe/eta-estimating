@@ -417,3 +417,4 @@ human_gate_active,43.0,2026-11-20T17:24:35Z,farm automation thread,Remote Contro
 research_tooling,70.0,2026-11-20T16:59:45Z,farm automation thread,renderBeamer/GarageFarm automation research + Mac read-only inspection + new skill and pointers in 7 skills pushed
 fractal_preset_render,1.8,2026-11-20T18:20:00Z,syd preset thread,fractal engine preset 2350x1000 20 samples headless SwiftShader on cloud; 940x400 2-sample preview ~2 s
 site_style_iteration,58.0,2026-11-20T17:58:00Z,syd preset thread,fractal engine syd preset: ~20 render-compare rounds, engine sky mode, PR merged and live checked
+site_deploy_live_min,6.0,,Thread nine-lives,merge to live on / and /nine-lives (Cloudflare Pages; build queued behind another deploy)
