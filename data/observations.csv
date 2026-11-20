@@ -413,3 +413,5 @@ material_photo_match,106.0,,build book thread,"felt match to photo: 3 rounds, fa
 site_batch_deploy,180.0,,website thread,"batch 2: v7f model swap, renders, diagram, exploded view, jewellery 3D, one deploy"
 human_gate_active,8.0,,build book thread,Mac refused paid upload until the user typed the exact submit line (23:12-23:20Z)
 farm_upload_renderbeamer,5.0,,fix7h,16:9 upload start 23:20 to both jobs running 23:25Z
+human_gate_active,43.0,2026-11-20T17:24:35Z,farm automation thread,Remote Control consent card for a new folder sat unanswered 43 min; reusing an already-served folder started instantly with no card
+research_tooling,70.0,2026-11-20T16:59:45Z,farm automation thread,renderBeamer/GarageFarm automation research + Mac read-only inspection + new skill and pointers in 7 skills pushed
