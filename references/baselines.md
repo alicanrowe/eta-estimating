@@ -49,12 +49,12 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `farm_render_1728f_overnight_upper_h` | 1 | 8.0 h | 8.0 h to 8.0 h | 8.0 h to 8.0 h (few samples) |
 | `farm_render_2160f_low_h` | 4 | 2.0 h | 1.7 h to 2.0 h | 1.6 h to 2.0 h |
 | `farm_tail_last_frames_to_delivery` | 2 | 19 min | 15 min to 23 min | 14 min to 24 min (few samples) |
-| `farm_upload_renderbeamer` | 2 | 5.8 min | 5.2 min to 6.3 min | 5.0 min to 6.5 min (few samples) |
+| `farm_upload_renderbeamer` | 3 | 5.0 min | 5.0 min to 6.2 min | 5.0 min to 6.5 min (few samples) |
 | `furniture_cast_piece_cold` | 3 | 10 min | 10 min to 12 min | 10 min to 13 min (few samples) |
 | `furniture_motif_design_to_preview` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `furniture_motif_variant_round` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
 | `graphics_small` | 2 | 13 min | 11 min to 15 min | 11 min to 15 min (few samples) |
-| `human_gate_active` | 4 | 1.1 min | 0.5 min to 1.8 min | 0.3 min to 2.0 min |
+| `human_gate_active` | 5 | 1.3 min | 0.6 min to 5.6 min | 0.3 min to 8.0 min |
 | `human_gate_daytime_away` | 5 | 39 min | 34 min to 67 min | 31 min to 75 min |
 | `human_gate_overnight` | 2 | 14.9 h | 14.2 h to 15.6 h | 14.1 h to 15.8 h (few samples) |
 | `jewelry_batch_finish` | 1 | 19 min | 19 min to 19 min | 19 min to 19 min (few samples) |
@@ -69,6 +69,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_sheet_end_to_end` | 1 | 3.2 h | 3.2 h to 3.2 h | 3.2 h to 3.2 h (few samples) |
 | `mac_lag_session_kill` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `mac_setup_walkthrough` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
+| `material_photo_match` | 1 | 1.8 h | 1.8 h to 1.8 h | 1.8 h to 1.8 h (few samples) |
 | `model_fix_and_refarm_prep` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `moth_gem_render_4view` | 8 | 10 min | 9.4 min to 12 min | 9.0 min to 12 min |
 | `moth_tool_v3_piece` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
@@ -120,7 +121,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `shopbot_render_final` | 12 | 10 min | 9.0 min to 16 min | 7.0 min to 20 min |
 | `shopbot_render_full` | 7 | 17 min | 9.1 min to 21 min | 8.5 min to 22 min |
 | `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
-| `site_batch_deploy` | 1 | 44 min | 44 min to 44 min | 44 min to 44 min (few samples) |
+| `site_batch_deploy` | 2 | 1.9 h | 58 min to 2.8 h | 44 min to 3.0 h (few samples) |
 | `site_deploy_live_min` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
 | `site_page_full_refresh` | 1 | 40 min | 40 min to 40 min | 40 min to 40 min (few samples) |
@@ -188,6 +189,9 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 
 - **Fast but rejected counts as late.** The book rebuild was handed over in 7 minutes against an ETA of 10, but the user rejected its metal pages: grey case, wrong finishes, callouts on the model. The redo took another 68 minutes. For anything visual the user reviews, add one rejection-and-redo round (about 1 hour) to the late end until the check that runs before delivery has a clean record.
 - **Matching a material to a photo** (the felt) passed in the test light and failed in the case light. Check a match in the real scene's lighting before calling it done, and expect 2 or 3 rounds.
+
+- **Paid farm uploads need the user's own words.** The Mac session refused the fix upload until the user typed the exact submit line in that thread, which cost 8 minutes while the user was active. Ask for that exact line together with the price, in one message.
+- **Fixes multiply.** On 19 Nov the Moth animation ETA (9 to 10 PM ET) was overtaken by four rounds of fixes, one after another: plush clipping, needle, felt, then torn tools. Each needed a new model letter and a new farm job. When the user is still reviewing a design, quote the animation as "about 6 hours after the last fix is OK'd", not as a clock time.
 
 ### Platform limits
 - Starting threads is sequential at about 3 seconds each, so 90 machines take about 5 minutes just to start.

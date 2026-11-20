@@ -409,3 +409,7 @@ book_rebuild_existing,7.3,,build book thread,"v7e text + silver figures, storage
 book_metal_pages_redo_after_rejection,68.0,,build book thread,"the user rejected pages (grey case, wrong finishes, callouts on model); redo + new QA gate + candidate, 21:16-22:25Z"
 site_batch_deploy,44.0,,website thread,"batch 1: texture, freshness check, z-fight fix, viewer rebuild, merged and checked live"
 render_still_cloud_each,5.0,,website thread,"batch 2 views, about 5 min each on cloud"
+material_photo_match,106.0,,build book thread,"felt match to photo: 3 rounds, failed in case light once; approx, OK'd 23:12Z"
+site_batch_deploy,180.0,,website thread,"batch 2: v7f model swap, renders, diagram, exploded view, jewellery 3D, one deploy"
+human_gate_active,8.0,,build book thread,Mac refused paid upload until the user typed the exact submit line (23:12-23:20Z)
+farm_upload_renderbeamer,5.0,,fix7h,16:9 upload start 23:20 to both jobs running 23:25Z
