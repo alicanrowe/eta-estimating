@@ -192,6 +192,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 - **Matching a material to a photo** (the felt) passed in the test light and failed in the case light. Check a match in the real scene's lighting before calling it done, and expect 2 or 3 rounds.
 
 - **Paid farm uploads need the user's own words.** The Mac session refused the fix upload until the user typed the exact submit line in that thread, which cost 8 minutes while the user was active. Ask for that exact line together with the price, in one message.
+- **Work that waits on a decision card overnight makes no progress.** Site batch 3 (ETA 6 h) never started because its thread was waiting on a storage decision from the user. When an ETA'd job is behind a pending card, the ETA is "after you answer", not a clock time.
 - **Fixes multiply.** On 19 Nov the Moth animation ETA (9 to 10 PM ET) was overtaken by four rounds of fixes, one after another: plush clipping, needle, felt, then torn tools. Each needed a new model letter and a new farm job. When the user is still reviewing a design, quote the animation as "about 6 hours after the last fix is OK'd", not as a clock time.
 
 ### Platform limits
