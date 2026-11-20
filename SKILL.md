@@ -29,7 +29,7 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | One render-check round (few settings, 3 to 5 test frames) | 8 min | 4.5 to 16 min |
 | Render-check round that rebuilds a material system | 38 min | 30 to 40 min |
 | Preview still on a 4-core cloud machine, no GPU | 2 min | |
-| Farm: pack and copy / renderBeamer upload per file | 6 min / 6 min | 5 to 7 min |
+| Farm: pack and copy / renderBeamer upload per file (headless, see the render-farm skill) | 6 min / 6 min | 5 to 7 min |
 | Farm render, 2160 frames 4K, Cycles 256, LOW priority | 2 h, about $69 | 1.6 to 2 h, $63 to $70 |
 | Farm frame download, 2160 x 8 MB at about 2.3 MB/s | 2 to 4 h | 4.2 h seen |
 | Callouts on about 20 labels / encode a 90 s 4K reel | 30 min / 45 min | |
@@ -98,6 +98,7 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 - Estimating farm download as a quick step: 2160 frames of 16-bit PNG is about 17 GB, 2 to 4 hours at about 2.3 MB/s.
 - ETAs given for serial work on one machine go stale the moment the work is split across machines. Re-issue the ETA when the plan changes.
 - A step that needs the user's screen or computer (unlocked Mac, Blender UI, a connected folder or drive) is a gate even when it looks like machine work. A session on the user's computer stops when it sleeps (18 Nov: a renderBeamer start sat for 70 minutes); ask them to keep it awake, and never plan renders there: renders run on cloud machines or a farm.
+- A renderBeamer step done by clicking in the UI is a human gate (its window can't be reached by screen control). The headless upload in the render-farm skill takes it off the critical path.
 - Farm downloads can be switched off in the downloader's settings; then nothing arrives and nothing errors. Check that frames are landing a few minutes after starting, and estimate from the measured rate (1.2 MB/s seen, so 39 GB took about 9 hours).
 - A job widened past what the user asked (a redesign when they asked for matching pictures) blows the ETA and gets thrown away. Estimate the scope the user's words give (request-handoffs `brief`), not the plan.
 - Fan-out above the platform's concurrency limit doesn't fail loudly: threads start and then never run. Check that every piece actually started.
