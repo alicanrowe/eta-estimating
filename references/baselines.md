@@ -17,6 +17,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `cad_design_feature` | 1 | 76 min | 76 min to 76 min | 76 min to 76 min (few samples) |
 | `cadcheck_trimesh_fcl_swing` | 1 | 11 min | 11 min to 11 min | 11 min to 11 min (few samples) |
 | `callouts_19_of_21` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
+| `caption_overlay_min_per_100f_mac_nice19` | 4 | 1.3 min | 0.5 min to 2.1 min | 0.5 min to 2.1 min |
 | `cloud_bpy_setup` | 2 | 1.8 min | 1.1 min to 2.4 min | 1.0 min to 2.5 min (few samples) |
 | `cloud_cpu_test_still` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
 | `cloud_env_setup_bpy` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
@@ -38,23 +39,28 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `drive_backup_via_mac_per_gb` | 2 | 10 min | 7.2 min to 13 min | 6.5 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
 | `encode_final_chunk` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
+| `encode_videotoolbox_mac` | 4 | 0.7 min | 0.5 min to 1.0 min | 0.4 min to 1.1 min |
 | `env_bpy_venv_install` | 3 | 1.1 min | 0.7 min to 1.8 min | 0.6 min to 2.0 min (few samples) |
+| `farm_cost_usd_per_100f_medium_1440p` | 2 | $6 | $6 to $6 | $6 to $6 (few samples) |
 | `farm_cost_usd_per_2160f_low` | 7 | $69 | $64 to $71 | $63 to $72 |
 | `farm_download` | 1 | 1.6 h | 1.6 h to 1.6 h | 1.6 h to 1.6 h (few samples) |
 | `farm_download_2160f_h` | 2 | 2.9 h | 1.9 h to 3.9 h | 1.6 h to 4.2 h (few samples) |
 | `farm_download_mac_sleep_stall` | 1 | 2.0 h | 2.0 h to 2.0 h | 2.0 h to 2.0 h (few samples) |
+| `farm_download_min_per_100f` | 1 | 1.5 min | 1.5 min to 1.5 min | 1.5 min to 1.5 min (few samples) |
 | `farm_download_start_gate` | 1 | 2.2 h | 2.2 h to 2.2 h | 2.2 h to 2.2 h (few samples) |
 | `farm_job_end_to_end_h` | 2 | 7.9 h | 6.5 h to 9.3 h | 6.1 h to 9.7 h (few samples) |
 | `farm_pack_copy_checksum` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `farm_render_1728f_overnight_upper_h` | 1 | 8.0 h | 8.0 h to 8.0 h | 8.0 h to 8.0 h (few samples) |
 | `farm_render_2160f_low_h` | 4 | 2.0 h | 1.7 h to 2.0 h | 1.6 h to 2.0 h |
+| `farm_render_medium_min_per_100f` | 2 | 2.5 min | 2.3 min to 2.6 min | 2.3 min to 2.7 min (few samples) |
 | `farm_tail_last_frames_to_delivery` | 2 | 19 min | 15 min to 23 min | 14 min to 24 min (few samples) |
-| `farm_upload_renderbeamer` | 3 | 5.0 min | 5.0 min to 6.2 min | 5.0 min to 6.5 min (few samples) |
+| `farm_upload_renderbeamer` | 4 | 5.0 min | 2.5 min to 6.1 min | 1.4 min to 6.5 min |
+| `fractal_preset_render` | 1 | 1.8 min | 1.8 min to 1.8 min | 1.8 min to 1.8 min (few samples) |
 | `furniture_cast_piece_cold` | 3 | 10 min | 10 min to 12 min | 10 min to 13 min (few samples) |
 | `furniture_motif_design_to_preview` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `furniture_motif_variant_round` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
 | `graphics_small` | 2 | 13 min | 11 min to 15 min | 11 min to 15 min (few samples) |
-| `human_gate_active` | 5 | 1.3 min | 0.6 min to 5.6 min | 0.3 min to 8.0 min |
+| `human_gate_active` | 6 | 1.6 min | 0.6 min to 26 min | 0.3 min to 43 min |
 | `human_gate_daytime_away` | 5 | 39 min | 34 min to 67 min | 31 min to 75 min |
 | `human_gate_overnight` | 2 | 14.9 h | 14.2 h to 15.6 h | 14.1 h to 15.8 h (few samples) |
 | `jewelry_batch_finish` | 1 | 19 min | 19 min to 19 min | 19 min to 19 min (few samples) |
@@ -95,6 +101,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `renderbeamer_restart_to_frames` | 2 | 5.3 min | 1.5 min to 9.1 min | 0.6 min to 10 min (few samples) |
 | `renderbeamer_startup` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
 | `research_sourcing` | 4 | 29 min | 19 min to 43 min | 18 min to 46 min |
+| `research_tooling` | 1 | 70 min | 70 min to 70 min | 70 min to 70 min (few samples) |
 | `sawhorse_fix_round` | 10 | 28 min | 22 min to 45 min | 19 min to 46 min |
 | `sawhorse_variant` | 8 | 36 min | 28 min to 62 min | 22 min to 80 min |
 | `scene_render_4core_1000px` | 1 | 0.9 min | 0.9 min to 0.9 min | 0.9 min to 0.9 min (few samples) |
@@ -122,10 +129,11 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `shopbot_render_full` | 7 | 17 min | 9.1 min to 21 min | 8.5 min to 22 min |
 | `site_3d_tiles` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
 | `site_batch_deploy` | 2 | 1.9 h | 58 min to 2.8 h | 44 min to 3.0 h (few samples) |
-| `site_deploy_live_min` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
+| `site_deploy_live_min` | 2 | 5.0 min | 4.2 min to 5.8 min | 4.0 min to 6.0 min (few samples) |
 | `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
 | `site_page_full_refresh` | 1 | 40 min | 40 min to 40 min | 40 min to 40 min (few samples) |
 | `site_page_rebuild` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
+| `site_style_iteration` | 1 | 58 min | 58 min to 58 min | 58 min to 58 min (few samples) |
 | `skill_fix_and_publish` | 1 | 12 min | 12 min to 12 min | 12 min to 12 min (few samples) |
 | `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
 | `storage_cleanup` | 3 | 29 min | 11 min to 75 min | 7.0 min to 86 min (few samples) |

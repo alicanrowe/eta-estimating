@@ -418,3 +418,17 @@ research_tooling,70.0,2026-11-20T16:59:45Z,farm automation thread,renderBeamer/G
 fractal_preset_render,1.8,2026-11-20T18:20:00Z,syd preset thread,fractal engine preset 2350x1000 20 samples headless SwiftShader on cloud; 940x400 2-sample preview ~2 s
 site_style_iteration,58.0,2026-11-20T17:58:00Z,syd preset thread,fractal engine syd preset: ~20 render-compare rounds, engine sky mode, PR merged and live checked
 site_deploy_live_min,6.0,,Thread nine-lives,merge to live on / and /nine-lives (Cloudflare Pages; build queued behind another deploy)
+farm_upload_renderbeamer,1.4,2026-11-19T23:19:29Z,moth fix7h mac thread,"headless renderBeamer upload, 219 MB packed .blend, app already running; upload to registered"
+farm_render_medium_min_per_100f,2.67,2026-11-19T23:22:48Z,moth fix7h mac thread,"GarageFarm MEDIUM 30 nodes, 2560x1440 Cycles 128 GPU, 461 frames in 12.3 min"
+farm_render_medium_min_per_100f,2.29,2026-11-19T23:23:38Z,moth fix7h mac thread,"GarageFarm MEDIUM 30 nodes, 1440x2560 Cycles 128 GPU, 288 frames in 6.6 min"
+farm_cost_usd_per_100f_medium_1440p,6.31,2026-11-19T23:22:48Z,moth fix7h mac thread,"461 frames 2560x1440 Cycles 128, $29.11"
+farm_cost_usd_per_100f_medium_1440p,5.63,2026-11-19T23:23:38Z,moth fix7h mac thread,"288 frames 1440x2560 Cycles 128, $16.22"
+farm_download_min_per_100f,1.47,2026-11-19T23:36:35Z,moth fix7h mac thread,"749 PNG frames 1440p, auto-download after app restart, first to last file 11 min"
+caption_overlay_min_per_100f_mac_nice19,2.06,2026-11-20T14:24:20Z,moth fix7h mac thread,"kit v7 moverlay.py PIL, 1080 frames 1440x2560 on owner's Mac at nice 19, 22.2 min"
+caption_overlay_min_per_100f_mac_nice19,2.09,2026-11-20T14:47:04Z,moth fix7h mac thread,"kit v7 moverlay.py PIL, 1728 frames 2560x1440, 36.2 min"
+caption_overlay_min_per_100f_mac_nice19,0.47,2026-11-20T17:40:47Z,moth fix7h mac thread,"kit v8 moverlay_theme.py (numpy), 1728 frames 2560x1440, 8.2 min"
+caption_overlay_min_per_100f_mac_nice19,0.46,2026-11-20T17:49:01Z,moth fix7h mac thread,"kit v8 moverlay_theme.py, 1080 frames 1440x2560, 5.0 min"
+encode_videotoolbox_mac,0.6,2026-11-20T14:46:30Z,moth fix7h mac thread,"Swift VideoToolbox H.264 40 Mbps, 1080 src frames 1440x2560 -> 2160 out, nice 19"
+encode_videotoolbox_mac,0.8,2026-11-20T15:23:17Z,moth fix7h mac thread,1728 src frames 2560x1440 -> 3456 out
+encode_videotoolbox_mac,1.1,2026-11-20T17:54:00Z,moth fix7h mac thread,1728 src frames 2560x1440 (captions v8)
+encode_videotoolbox_mac,0.4,2026-11-20T17:55:06Z,moth fix7h mac thread,1080 src frames 1440x2560 (captions v8)
