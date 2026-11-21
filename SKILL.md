@@ -149,3 +149,16 @@ After every round: add a row to `data/projects.csv` (ask, delivered, verdict tim
 - Fan-out above the platform's concurrency limit doesn't fail loudly: threads start and then never run. Check that every piece actually started.
 - A design round parked silently behind urgent shop-floor questions: it sat at "not started" for two hours with no ETA, and when the user asked where it was, the thread said it had never been asked. Parking is an ETA change; say it out loud (step 2a).
 - A finished reel went unfound for a day: its thread stalled one step before delivery (saving to Drive), and when the user asked for its ETA by its look, the search covered only the last 2 days of threads. Nothing listed all projects. Fix: Step 0 and the project registry.
+
+## Excuses that don't count
+Each of these is a shortcut that ends in a broken result. If you catch yourself thinking the left column, do the right column.
+
+| The excuse | What to do instead |
+|---|---|
+| "This one is just a quick guess" | Every ETA comes from the baselines. No baseline? Say so and give a range. |
+| "I'll log the real time later" | Log actual against estimate when the job ends, in the same session. |
+| "It's just the render, the rest is quick" | Count every stage: check loops, fan-out, uploads, site work, and waits on the user. |
+| "While I'm in here I'll also tidy/refactor this other bit" | Change only what the task needs. Smallest diff that works; no new options, helpers or files nobody asked for. Note other ideas for later instead. |
+
+## Keep this skill improving
+When a step here goes wrong or the owner corrects something, write the lesson into this skill (dated) in the same session, add a check to a script if one could have caught it, and publish it with the skills publish script. No private data.
