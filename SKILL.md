@@ -1,6 +1,6 @@
 ---
 name: eta-estimating
-description: Use whenever you give a time estimate or ETA, including for a whole project from design to live page (renders, render-check loops, fan-out across machines, farm animations, CAD, site work, sign-ins and other waits on the user): estimate from measured baselines, answer with a range in the user's time zone, log it, and update the baselines when the work finishes.
+description: Use whenever you give a time estimate or ETA, or someone asks where a project stands, including for a whole project from design to live page (renders, render-check loops, fan-out across machines, farm animations, CAD, site work, sign-ins and other waits on the user): estimate from measured baselines, answer with a range in the user's time zone, log it, and update the baselines when the work finishes.
 metadata:
   author: Alican Rowe (@alicanrowe)
 ---
@@ -13,6 +13,7 @@ Give ETAs from measured durations, not from feel. Every ETA is a range with cloc
 - Live copy, shared by every thread of the project: a shared project folder (for example `<project-files>/eta-estimating/`) (use this when it exists, and write new data here).
 - Otherwise the copy bundled with this skill: `data/observations.csv` (measured durations), `data/predictions.csv` (past ETAs and how they did), `references/baselines.md` (the table plus what each row means).
 - `scripts/eta.py` does the maths. It needs only Python 3.
+- **Project registry**: `PROJECTS.md` in the live copy lists every project and deliverable with its look, folder, thread and status. It stays private (never copied to the public repo); `references/project-registry.md` has the format and rules for starting one.
 
 - If neither is on hand (for example the skill was saved without its files), get them from the GitHub repo `alicanrowe/eta-estimating`, or fall back to the quick baselines below.
 
@@ -48,6 +49,7 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Moth tool render, one piece per machine (serpent fork; 3 views 1400 px, 128 spp, 4-core cloud): v2 ~10k faces / v3 ~46k faces | v2 63 s render; v3 91 to 97 s render + fabcheck under 1 min; ~3 to 4 min thread end to end, pip bpy already cached (job sheet guessed 4 to 12 min) | 18 Nov |
 | c1 cuff, 4 seasons on one machine (c1-v1, 6.1M tris, VOXO 0.05, 4 views 720 px 24 spp, 4-core cloud) | 3.0 to 3.2 min per season, 12 min for all 4; ~15 min thread incl. pip bpy setup ~1 min | 18 Nov |
 | Site 3D model flicker fix (find cause, rebuild web GLB from the full model, rendered flicker check, PR, live check) | 85 min thread end to end: diagnosis and coplanar finder 25 min, fix-and-recheck rounds 45 min (each rendered check 1 to 2 min, 6 headings, SwiftShader), Cloudflare preview build 4 min, merge to live 2 min | 20 Nov |
+| Site publish of a prepared batch (53 files: page + 26 stills + 26 GLBs, all site checks, PR, merge, live check) | 50 min thread end to end: file handoff and a refused write on a full project folder 3 min, lint/layout/theme/versions 6 min, page-wide flicker check too slow (2 of 64 models in 20 min), so run only the changed GLBs in 4 parallel shards: 26 models in about 15 min; Cloudflare preview 5 min, merge to live under 1 min | 21 Nov |
 | c1 square, 4 seasons of one design on one machine (TO 2400, VOXO 0.045, 4-core cloud) | 1.2 min per piece, 4.9 min for all 4; ~13 min thread incl. pip setup 6.3 min | 18 Nov |
 | c1 bug_clip, 4 seasons on one machine (c1-v1, TO 2400, VOXO 0.045, 4-core cloud) | 1.5 min per piece, 6.0 min for all 4; pip setup 1.5 min; ~16 min thread | 18 Nov |
 | c1 vein_clip, 4 seasons on one machine (c1-v1, TO 2400, VOXO 0.045, 4-core cloud) | 1.7 min per piece, 6.7 min for all 4; pip setup ~2 min; ~18 min thread | 18 Nov |
@@ -55,10 +57,20 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Shop-bot re-render, design kept (Dancer skin_tight.py: before, after, exploded at RES 1300, 96 spp, 4-core cloud) | 11.9 min script end to end (before 5.2 min, after 4.4 min, exploded 1.6 min); pip build123d + bpy 1 min; ~14 min thread (job sheet guessed 10 to 20) | 21 Nov |
 | Jacket design, one per machine (CORSET: model from the jackets kit incl. own collar/busk/lacing/boning helpers, 14 make-and-check passes with clipping + extra body-vs-everything check, finals 2 colours x 2 views 1100x1500 160 spp, 4-core cloud) | ~51 min thread end to end: kit setup 2 min, each preview 40 to 60 s + ~1 min check, finals 2.8 to 3.0 min per colour (5.8 min for 4 images) | 21 Nov |
 | Jacket design, one per machine (CRESCENT: model from the jackets kit incl. own tails/neckline/lacing/moon helpers, ~15 make-and-check passes with clipping + extra body/lace checks, finals 2 colours x 2 views 1100x1500 160 spp, 4-core cloud) | ~70 min thread end to end: pip bpy 3 min, field+sleeves 1.5 min, each preview pass 35 to 60 s per 2 views + 30 s build/check, finals 4.0 min per colour (8.0 min for 4 images) | 21 Nov |
+| Jacket design, one per machine (SCALE r4: ~1,150 generated moulded scales on a row field, own isoline/placement/clasp helpers, ~8 make-and-check passes, part sheet + finals 2 colours x 2 views 1100x1500 160 spp, 4-core cloud) | ~100 min thread end to end: pip+field 3 min; build+check 25 s and preview 35 to 45 s per 2 views once geo.sample was cached (6 to 7 min per build before: kit npz decompressed on every sample); part sheet 4.6 min; finals 3.4 to 3.7 min per colour | 21 Nov |
+| Boot design, one per machine (GAUNTLET r4 on kit v4.0: own lame/plate helpers and cast cap/rondels, 6 make-and-check rounds, part sheet + finals 6 black + 2 red views 1400 px 64 spp, 4-core cloud) | ~95 min thread end to end: pip bpy+matplotlib 3 min; build+fit+clip 3.5 min (6.5 min before cast grids were coarsened); preview 4 views 700 px 16 spp ~1 min; finals black 6 views + 27-part sheet ~30 min, red 2 views ~8 min | 21 Nov |
 | Farm download of two 2160-frame 4K jobs (39 GB, ~9.1 MB/frame) | 4.5 h | 2.5 to 4.5 MB/s; 1.2 MB/s seen early |
 | renderBeamer cold start (plugin download) / restart to first frames | 9 min / 10 min | |
 | Gotcha: renderBeamer auto-download can be off; then nothing downloads. Check it first | | 1 h lost 18 Nov |
 | Gotcha: if the Renders SSD is unplugged mid-download, renderBeamer keeps failing (I/O error) until restarted; restart to first frames 35 s, then about 2.5 MB/s | | |
+
+## Step 0: find the project first (never forget one)
+An ETA for the wrong thing, or "I can't find it", is the worst ETA. The user often names work by how it looks ("the reel with white grass, red water and a black sky"), not by its title, and a stalled thread can sit unseen for days.
+1. **Search the registry** (`PROJECTS.md` in the live copy) by name *and* by look words (colours, setting, materials, piece names): `grep -i -E "grass|red water" PROJECTS.md`.
+2. **Open the row's thread and folder** and read where it actually stands (last checklist, last file times). Base the ETA on that, not on the plan.
+3. **Not in the registry?** Page `list_threads` back well past the last 2 days (use `next_cursor`), grep the project folder's `.md`/`.json`/`.py` files, and search the Drive backups. Only then say it can't be found, and say what you searched. Add the row once you find it.
+4. **A row marked active with no thread activity for 2 hours is stalled.** Say so with the ETA, and resume it or route it; don't quote the old ETA.
+5. **Keep the registry current**: add a row when work on a new project or deliverable starts, and update its status and next step when it finishes, parks or blocks, in the same turn. Re-read the file just before editing (other threads write to it), change only your rows. The format and rules are in `references/project-registry.md`.
 
 ## Making an ETA
 1. **Split the job into steps** and mark each one:
@@ -122,6 +134,7 @@ After every round: add a row to `data/projects.csv` (ask, delivered, verdict tim
 3. **When the work finishes**:
    - `python3 scripts/eta.py resolve <id> <actual minutes>`
    - add each measured step: `python3 scripts/eta.py add <category> <value> --source "<thread>" --note "<what was different>"` (minutes; categories ending `_h` are hours, `_sec` seconds, `_usd` dollars). Make a new category when nothing fits, named `<area>_<what>` in lower case.
+   - update the project's row in `PROJECTS.md` (status, where the output is, what's next).
    - `python3 scripts/eta.py rebuild`, and add a line to `references/baselines.md` if you learned something a number can't say (a new trap, a new limit).
 4. Check `python3 scripts/eta.py calibration` now and then. If the median actual/p50 drifts above 1.2, the baselines are optimistic: widen future ranges and note why.
 5. Measure from real timestamps (thread start and finish, log lines, file times, farm job pages), never from memory.
@@ -135,3 +148,4 @@ After every round: add a row to `data/projects.csv` (ask, delivered, verdict tim
 - A job widened past what the user asked (a redesign when they asked for matching pictures) blows the ETA and gets thrown away. Estimate the scope the user's words give (request-handoffs `brief`), not the plan.
 - Fan-out above the platform's concurrency limit doesn't fail loudly: threads start and then never run. Check that every piece actually started.
 - A design round parked silently behind urgent shop-floor questions: it sat at "not started" for two hours with no ETA, and when the user asked where it was, the thread said it had never been asked. Parking is an ETA change; say it out loud (step 2a).
+- A finished reel went unfound for a day: its thread stalled one step before delivery (saving to Drive), and when the user asked for its ETA by its look, the search covered only the last 2 days of threads. Nothing listed all projects. Fix: Step 0 and the project registry.

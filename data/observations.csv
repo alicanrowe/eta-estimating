@@ -495,9 +495,42 @@ proj_round_end_to_end,115,2026-11-20T23:49:00Z,Design jackets to match boots,jac
 render_shopbot_3view_1300px_96spp,8.5,2026-11-21T02:49:13Z,Render Dancer mud_diva,"before/after/exploded, 1300 px 96 spp, 4-core cloud, bpy already in setup ~1 min extra"
 render_shopbot_3view_1300px_96spp,10.3,,Render Dancer flex_appeal,"before/after/exploded, 1300 px 96 spp, 4-core cloud, plus ~1.5 min pip install build123d+bpy"
 render_shopbot_3view_1300px_96spp,10.3,2026-11-21T02:41:50Z,Render Dancer lathe_minnelli,"before/after/exploded, 1300 px 96 spp, 4-core cloud, plus ~1.5 min pip install build123d+bpy"
-jewelry_piece_job_cloud,3.0,2026-11-21T05:00:00Z,HELIUM render jobs,"small piece, 0.045 voxel 6M faces, check+render, one piece per machine"
-jewelry_piece_job_cloud,5.5,2026-11-21T05:00:00Z,HELIUM render jobs,"small piece with enamel coat, 0.045 voxel"
-jewelry_piece_job_cloud_collar,10,2026-11-21T05:00:00Z,HELIUM collar,"9-balloon hollow collar, 0.1 voxel 2.5M faces"
-jewelry_piece_job_cloud_cuff,8,2026-11-21T05:00:00Z,HELIUM datamosh cuff,"0.055 voxel 5M faces, needs 8 GB swap"
-jewelry_piece_job_cloud_large_swap,16,2026-11-21T05:00:00Z,HELIUM knot buckle,"0.055 voxel, swap-bound; one run took about 60 min"
-jewelry_piece_job_cloud_large_swap,60,2026-11-21T05:00:00Z,HELIUM knot buckle,"same piece, swap thrash"
+boot_build_check_kit4,1.7,2026-11-21T02:45:00Z,Rebuild STAY boot (round 4),"run4.py build+fit+clip, mid-calf with cast busk, 4-core cloud"
+boot_final_render_set_1400px_64spp,31.0,2026-11-21T03:04:37Z,Rebuild STAY boot (round 4),"6 black views + 5 close-ups + red hero/lateral + 14-part sheet, 4-core cloud CPU"
+boot_design_round4_to_pass,95.0,2026-11-21T02:29:29Z,Rebuild STAY boot (round 4),"STAY: brief to gates OK + 20/24, 5 build-check rounds"
+boot_build_check_kit4,1.6,2026-11-21T03:30:00Z,Rebuild SCALE boot (round 4),"run4.py build+fit+clip, 12 scale courses + wedge, 4-core cloud"
+boot_final_render_set_1400px_64spp,24.0,2026-11-21T03:40:00Z,Rebuild SCALE boot (round 4),"6 black views + red hero/lateral + 17-part sheet, 4-core cloud CPU"
+boot_design_round4_to_pass,95.0,2026-11-21T02:29:35Z,Rebuild SCALE boot (round 4),"SCALE: brief to gates OK, 6 rounds, ended 18/24 (below bar, delivered per handoff)"
+boot_r4_piece_thread,98.0,,Rebuild COAT boot (round 4),"COAT r4: spawn to final mesh, 6 check rounds, own 4-core machine"
+boot_build_v4_tall,2.1,,Rebuild COAT boot (round 4),"kit v4.0 run4 build+fit+clip, tall boot, ~50 parts"
+boot_render_v4_black_final,21.0,,Rebuild COAT boot (round 4),"6 views 1400px SPP64 + 24 part close-ups 600px SPP32, 4 cores"
+boot_render_v4_red_final,4.5,,Rebuild COAT boot (round 4),hero+lateral 1400px SPP64
+boot_build_check_kit4,2.0,2026-11-21T03:10:00Z,Rebuild SERAPH boot (round 4),"run4.py build+fit+clip, mid-calf, 6 wing tiers + 2 edge strips + SDF clasp, 4-core cloud"
+boot_final_render_set_1400px_64spp,34.0,2026-11-21T03:36:00Z,Rebuild SERAPH boot (round 4),"6 black views + 18-part sheet + red hero/lateral, 4-core cloud CPU"
+boot_design_round4_to_pass,101.0,2026-11-21T02:29:39Z,Rebuild SERAPH boot (round 4),"SERAPH: brief to gates OK + 21/24, 12 build-check rounds"
+boot_final_render_set_1400px_64spp,18.0,2026-11-21T04:24:00Z,Rebuild SERAPH boot (round 4),"revision: 6 black views + 16-part sheet + red hero/lateral, 4-core cloud CPU"
+boot_revision_pass_round4,31.0,2026-11-21T04:11:12Z,Rebuild SERAPH boot (round 4),"review notes to delivered renders, 5 build-check rounds + final set"
+jewelry_piece_machined_cold,1.5,2026-11-21T04:22:45Z,Design transmission machining jewelry collection,gv-r1 exact-CSG kit; 12 threads; job start to done 30-70 s each at 800px/48spp (setup excluded); all 12 back within 3 min of fan-out
+site_collection_page,22,2026-11-21T04:20:00Z,Design transmission machining jewelry collection,Governor page: generator from BOMBYX template + drawings + PR + merge; live ~8 min after merge (Cloudflare)
+boot_r4_strong_pass,42.0,,Rebuild COAT boot (round 4),peer-requested redo: design + 3 builds + preview + final renders 26 min
+jacket_r4_design_full,180.0,,Design BRIAR jacket (round 4),"BRIAR jacket: design + ~20 build-check rounds + 7 make-and-check passes + finals both colours, 4-core cloud CPU; 21/24 all-zero check"
+jacket_build_check,1.75,,Design BRIAR jacket (round 4),"build_only (model + clipping check, no render)"
+jacket_part_sheet_render,8.0,,Design BRIAR jacket (round 4),red part sheet
+jacket_preview_2views,3.5,,Design BRIAR jacket (round 4),preview front+back
+jacket_final_render_per_colour,13.5,,Design BRIAR jacket (round 4),"front -32 + back 152 finals, one colourway"
+boot_build_kit4,2.8,2026-11-21T04:30:00Z,Rebuild BRIAR boot (round 4),knee boot 1 mm grid + 7 casts + clip check on 4 cores; ~2.8 min per build (one outlier 9.5 min)
+boot_render_preview_5views_parts,9,2026-11-21T03:40:00Z,Rebuild BRIAR boot (round 4),700 px SPP16 five views + 40 part tiles
+boot_render_final_set,25,2026-11-21T04:25:00Z,Rebuild BRIAR boot (round 4),6 black + 2 red views 1400 px SPP64 + parts 800 px SPP32 on 4 cores
+proj_boot_r4_one_boot,155,2026-11-21T02:29:32Z,Rebuild BRIAR boot (round 4),one boot end to end: read 10 min + 7 build/fix rounds + finals; spawn to delivery
+jacket_revision_pass_round4,55.0,,Design BRIAR jacket (round 4),"owner review, 4 fixes: 5 build/check runs + 2 close-up sets + part sheet + finals both colours (finals+sheet 16 min total)"
+collection_fanout_renders,6,2026-11-21T06:33:00Z,Design transmission machining jewelry collection,"Governor r2: 12 cloud render jobs (800 px, 48 spp, GLB) all back within 6 min of the job list"
+site_collection_rebuild,20,2026-11-21T06:39:00Z,Design transmission machining jewelry collection,Governor r2: regenerate page + new copy for 12 pieces + cards + PR + merge; live ~5 min after merge
+collection_redesign_polish,50,2026-11-21T05:55:00Z,Design transmission machining jewelry collection,polish pass on 6 of 12 pieces after a contact-sheet review: ~25 quick renders on 4 cores
+bombyx_job_piece,4.2,2026-11-21T06:57:12Z,Render Bombyx fix bx_crescent_ear,"bx_crescent_ear fix round 2, watertight first try, incl pip install"
+bombyx_job_piece,4.1,2026-11-21T06:57:42Z,Render Bombyx fix bx_balas_ring,"bx_balas_ring fix round 2, watertight on 4th voxel try (0.04005), incl pip install"
+site_publish_batch,50,2026-11-21T08:08:35Z,Publish Bombyx fixes,53 files (page + 26 stills + 26 GLBs); flicker check on changed GLBs only in 4 shards ~15 min
+farm_render_shots_medium,16.5,2026-11-20T18:15:50Z,reel,"v8: 8 shots, 540 frames 1080x1920 Cycles 64 spp adaptive 0.03, MEDIUM 30 nodes; submit to last frame; $62.61 ($0.116/frame)"
+farm_render_shots_medium,10.5,2026-11-20T19:31:14Z,reel,"v9: 5 summer shots, 315 frames same settings, MEDIUM; $30.98 ($0.098/frame)"
+farm_upload_renderbeamer_headless,1.5,2026-11-20T19:28:34Z,reel,"Blender -b headless run 5.9 s, 52 MB blend visible in web Files ~1 min later; no Send click"
+farm_web_submit_js,5,2026-11-20T19:29:30Z,reel,"GarageFarm web New job via Control_Chrome JS: Full job, select 5 cameras, per-camera ranges, Submit"
+reel_patch_post_encode,20,2026-11-20T19:58:00Z,reel,"pull 315 frames (tar+stage 139 MB), post.py 4 chunks, encode 2700-frame CRF17 master + 9 Mbps web, 4-core cloud"

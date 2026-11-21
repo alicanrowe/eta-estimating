@@ -31,8 +31,8 @@ id,made_utc,what,p50_min,p90_min,actual_min,ratio_actual_to_p50,status,source
 30,2026-11-19T21:19:51Z,Xometry manual casting quote reply,5630.0,7070.0,,,open,"casting 21:10Z: about 2 business days, check Mon 10 AM ET"
 31,2026-11-19T19:23:38Z,monster + 5 stills (cloud),35,40,29,0.83,closed,"thread: 30 to 40 min; first send 29 min, white re-send 49 min"
 32,2026-11-20T16:55:03Z,"CLO fit pass: load foot + 3 boots, screenshot each (said 30 min at 11:52 ET)",30.0,45.0,53,1.77,closed,"boots-thread: screen lock, stale dialogs and a refused folder grant added 25 min of human gates"
-33,2026-11-20T23:27:00Z,"Silk Road jewelry: 64 pieces designed, fanned-out renders, page live",330,450,,,open,"Silk Road thread: design ~3.5 h (16 motif generators + preview loop), fan-out ~45 min, page + checks ~1 h"
+33,2026-11-20T23:27:00Z,"Silk Road jewelry: 64 pieces designed, fanned-out renders, page live",330,450,213,0.65,closed,"Silk Road thread: design ~3.5 h (16 motif generators + preview loop), fan-out ~45 min, page + checks ~1 h"
 34,2026-11-20T23:58:00Z,"Boots round 3: 9 designs reviewed to Komune bar, 18 fanned-out renders, page live",210,300,102,0.49,closed,"boots-thread: 2 review passes ~100 min (prior round took 70 min for build+render), fan-out renders ~30 min, page + merge ~60 min; kit already built, all 9 pass fit checks; actual: design passes were quick, renders slower than planned because the extra agents shared one 4-core machine"
-35,2026-11-21T02:22:00Z,boots round 4 page (kit v4 + 9 boots fanned out + page),170,250,198,1.16,closed,"boots thread: kit 30 + parallel boots 100 + page 40; actual 198 (one rework pass on 4 boots added ~45)"
+35,2026-11-21T02:22:00Z,boots round 4 page (kit v4 + 9 boots fanned out + page),170,250,,,open,boots thread: kit 30 + parallel boots 100 + page 40
 36,2026-11-21T02:26:10Z,Jackets round 4: all 8 fanned-out jackets done (project model),108.0,162.0,,,open,"project model from 01:45Z: kit 14 actual, fanout 8 x proj_fanout_piece_design"
 37,2026-11-21T02:26:10Z,Silk Road: page live (project model backtest from 23:22Z),270.0,378.0,,,open,project model run at 02:30Z with start 23:22Z; hand ETA was #33
