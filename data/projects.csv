@@ -1,0 +1,10 @@
+project,kind,round,pieces,ask_utc,delivered_utc,verdict_utc,outcome,source,note
+boots,new_look,1,3,2026-11-19T23:19:00Z,2026-11-20T00:21:00Z,2026-11-20T17:51:00Z,rejected,Design and make boots,"""these are all ugly"""
+boots,new_look,2,9,2026-11-20T17:53:00Z,2026-11-20T19:06:00Z,2026-11-20T23:43:00Z,rejected,Design and make boots,"""super ugly and unoriginal"""
+boots,new_look,3,9,2026-11-20T23:43:00Z,2026-11-21T01:20:00Z,2026-11-21T01:44:00Z,rejected,Design and make boots,"too simple, uneven detail, flat surfaces"
+jackets,new_look,1,8,2026-11-20T23:49:00Z,2026-11-21T01:44:00Z,2026-11-21T01:44:00Z,rejected,Design jackets to match boots,pulled with the boots before the page
+moth_book_metal,new_look,1,1,,,,rejected,build book,metal pages redone after rejection (68 min redo)
+moth_book_metal,new_look,2,1,,,,accepted,build book,accepted after the redo
+silk_road,known_kind,1,64,2026-11-20T23:22:00Z,,,open,Design Silk Road jewelry collection,user asked for no reviews; verdict comes on the live page
+boots,new_look,4,9,2026-11-21T01:45:00Z,,,open,Design and make boots,first round built from the design-taste skill
+jackets,new_look,2,8,2026-11-21T01:45:00Z,,,open,Design jackets to match boots,first round built from the design-taste skill

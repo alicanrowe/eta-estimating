@@ -413,22 +413,82 @@ material_photo_match,106.0,,build book thread,"felt match to photo: 3 rounds, fa
 site_batch_deploy,180.0,,website thread,"batch 2: v7f model swap, renders, diagram, exploded view, jewellery 3D, one deploy"
 human_gate_active,8.0,,build book thread,Mac refused paid upload until the user typed the exact submit line (23:12-23:20Z)
 farm_upload_renderbeamer,5.0,,fix7h,16:9 upload start 23:20 to both jobs running 23:25Z
-human_gate_active,43.0,2026-11-20T17:24:35Z,farm automation thread,Remote Control consent card for a new folder sat unanswered 43 min; reusing an already-served folder started instantly with no card
-research_tooling,70.0,2026-11-20T16:59:45Z,farm automation thread,renderBeamer/GarageFarm automation research + Mac read-only inspection + new skill and pointers in 7 skills pushed
-fractal_preset_render,1.8,2026-11-20T18:20:00Z,syd preset thread,fractal engine preset 2350x1000 20 samples headless SwiftShader on cloud; 940x400 2-sample preview ~2 s
-site_style_iteration,58.0,2026-11-20T17:58:00Z,syd preset thread,fractal engine syd preset: ~20 render-compare rounds, engine sky mode, PR merged and live checked
-site_deploy_live_min,6.0,,Thread nine-lives,merge to live on / and /nine-lives (Cloudflare Pages; build queued behind another deploy)
-farm_upload_renderbeamer,1.4,2026-11-19T23:19:29Z,moth fix7h mac thread,"headless renderBeamer upload, 219 MB packed .blend, app already running; upload to registered"
-farm_render_medium_min_per_100f,2.67,2026-11-19T23:22:48Z,moth fix7h mac thread,"GarageFarm MEDIUM 30 nodes, 2560x1440 Cycles 128 GPU, 461 frames in 12.3 min"
-farm_render_medium_min_per_100f,2.29,2026-11-19T23:23:38Z,moth fix7h mac thread,"GarageFarm MEDIUM 30 nodes, 1440x2560 Cycles 128 GPU, 288 frames in 6.6 min"
-farm_cost_usd_per_100f_medium_1440p,6.31,2026-11-19T23:22:48Z,moth fix7h mac thread,"461 frames 2560x1440 Cycles 128, $29.11"
-farm_cost_usd_per_100f_medium_1440p,5.63,2026-11-19T23:23:38Z,moth fix7h mac thread,"288 frames 1440x2560 Cycles 128, $16.22"
-farm_download_min_per_100f,1.47,2026-11-19T23:36:35Z,moth fix7h mac thread,"749 PNG frames 1440p, auto-download after app restart, first to last file 11 min"
-caption_overlay_min_per_100f_mac_nice19,2.06,2026-11-20T14:24:20Z,moth fix7h mac thread,"kit v7 moverlay.py PIL, 1080 frames 1440x2560 on owner's Mac at nice 19, 22.2 min"
-caption_overlay_min_per_100f_mac_nice19,2.09,2026-11-20T14:47:04Z,moth fix7h mac thread,"kit v7 moverlay.py PIL, 1728 frames 2560x1440, 36.2 min"
-caption_overlay_min_per_100f_mac_nice19,0.47,2026-11-20T17:40:47Z,moth fix7h mac thread,"kit v8 moverlay_theme.py (numpy), 1728 frames 2560x1440, 8.2 min"
-caption_overlay_min_per_100f_mac_nice19,0.46,2026-11-20T17:49:01Z,moth fix7h mac thread,"kit v8 moverlay_theme.py, 1080 frames 1440x2560, 5.0 min"
-encode_videotoolbox_mac,0.6,2026-11-20T14:46:30Z,moth fix7h mac thread,"Swift VideoToolbox H.264 40 Mbps, 1080 src frames 1440x2560 -> 2160 out, nice 19"
-encode_videotoolbox_mac,0.8,2026-11-20T15:23:17Z,moth fix7h mac thread,1728 src frames 2560x1440 -> 3456 out
-encode_videotoolbox_mac,1.1,2026-11-20T17:54:00Z,moth fix7h mac thread,1728 src frames 2560x1440 (captions v8)
-encode_videotoolbox_mac,0.4,2026-11-20T17:55:06Z,moth fix7h mac thread,1080 src frames 1440x2560 (captions v8)
+research_sourcing,8,2026-11-20T18:21:18Z,Apply to MIT RISD North Bennet Krenov,4 programs researched + tracker doc + skill drafted (parallel fetch agents)
+clo_remote_import,53,2026-11-20T17:48:00Z,boots thread,CLO import of 3 boots via Python editor incl. lock/dialog/folder gates
+soft_build_check_furniture,1.8,,"Thread r11 saddle, 10 parts vs 2M-tri frame, manifold3d","check_soft_build.py, 4 cores"
+soft_part_redesign_to_0fail,55.0,,Thread r11 saddle,"construction research + CAD + new check, 4 check iterations (16>13>2>0)"
+boot_round_9_designs_kit_rebuild,70.0,2026-11-20T17:55Z,Thread boots round 2,"kit v2 (pchip lasts, panels, welts, stitch, hardware) + 9 styles to ALL_PASS + benchmark scorecard + 9 cloud renders + sheets/BOM; renders ~30 min of it"
+site_3d_flicker_fix,85.0,2026-11-20T18:03Z,Thread Fix a site project preview flicker,diagnose + coplanar finder + lift/inset fix + gltfpack + rendered checks (~1.5 min each) + PR + Cloudflare preview 4 min + live
+drive_backup_direct_resumable_per_gb,6.0,2026-11-21T00:25:40Z,Back up and clear project storage,1.0 GB source as xz archives (0.58 GB) uploaded straight from the cloud container with a Drive resumable session opened through the Composio Drive proxy; ~1 min upload + ~5 min compress + md5 verify; no Mac needed
+jewelry_bx_batch4,10.3,,Render Silk Road batch: Buyao,"4 BOMBYX pieces sequential on one VM incl setup (ring ~3, ear 2.2, pendant 1.8, clip 3.2 min)"
+jewelry_bx_batch4,16.5,,Render Silk Road batch: Crescent,"4 BOMBYX pieces sequential on one VM incl setup (ring 5.1, ear 2.3, pendant 3.7, clip 5.3 min)"
+jewelry_piece_warm_rerender,1.7,,Render Silk Road batch: Buyao,"bx-r1-fix1 buyao ring 111s, ear 93s, same VM, deps already installed"
+jacket_design_cloud,29,2026-11-21T00:36:00Z,Design COAT jacket,brief read + kit setup (pip+fields ~3 min) + 4 make-and-check passes to all-zero check; one machine
+jacket_final_render,8.2,2026-11-21T00:57:30Z,Design COAT jacket,final 160 spp 1100x1500; 2 colours x 2 views; ~4.1 min per colour on 4 CPU cores
+jacket_design_cold,33.0,,Design SERAPH jacket,spawn 00:36Z to finals start 01:09Z; 10 make-and-check passes at ~38 s preview each; kit setup ~3 min
+jacket_final_render_pair,2.6,,Design SERAPH jacket,"final 160 spp 1100x1500, 2 views per colour, 4 vCPU, ~152-161 s per colour"
+jacket_preview_3view,0.65,,Design SERAPH jacket,"preview 48 spp 550x750 x3 views, 4 vCPU"
+jewelry_bx_batch4,32.8,,Render Silk Road batch: Senmurv,"4 BOMBYX pieces sequential on one VM incl setup (ring 7.6 incl dep install, ear 5.5, pendant 6.8, clip 12.0 min)"
+jacket_design_cloud,33,2026-11-21T00:36:00Z,Design GAUNTLET jacket,spawn 00:36Z to finals start 01:09Z; 8 make-and-check passes; one machine
+jacket_final_render,7.2,2026-11-21T01:09:00Z,Design GAUNTLET jacket,black+red front/back final 160spp 1100x1500 on 4 cores (~108 s per image)
+jewelry_piece_job_cloud,2.5,2026-11-21T00:38:00Z,Design Silk Road jewelry collection,bx_job.sh one piece (mesh+checks+4-view square+web GLB): rings/ears/pendants 1.8 to 4 min; first job on a fresh machine +4 to 6 min for pip setup
+jewelry_piece_job_cloud_cuff,6,2026-11-21T00:38:00Z,Design Silk Road jewelry collection,cuffs and big clips 4.5 to 12 min
+jewelry_collection_fanout_64,47,2026-11-21T00:38:00Z,Design Silk Road jewelry collection,64 pieces on 16 threads x 4 pieces: first report 00:41Z, last first-round piece about 01:25Z
+jewelry_fix_round_21,25,2026-11-21T00:58:00Z,Design Silk Road jewelry collection,21 re-runs across 11 threads; +5 min lost to the square-skip gotcha (render_square skips an existing jpg)
+jacket_design_cold,50,2026-11-21T00:36:00Z,Design HARNESS jacket,"spawn to first finals start (01:14Z); harness straps folded round rings and buckles; 6 passes, ~50 s preview each; kit setup ~3 min"
+jacket_final_render,8.2,2026-11-21T01:26:28Z,Design HARNESS jacket,"final 160 spp 1100x1500, 2 colours x 2 views, 4 vCPU, ~4.1 min per colour; one re-render after fixing sleeve seams"
+jacket_design_full,70,2026-11-21T01:45:00Z,Design HORN jacket,spawn to finals on one 4-CPU cloud machine; setup 4 min incl bpy install; 10 check passes; two final runs
+jacket_final_render,7.4,2026-11-21T01:43:00Z,Design HORN jacket,"final mode 1100x1500 160spp 2 colours x 2 views on 4 vCPU, ~3.7 min per colour"
+bombyx_job_piece,7.0,,Render Silk Road batch: Zaojing,"bx_zaojing_ring r1, cold incl pip deps, 3 voxel tries, 4 vCPU"
+bombyx_job_piece,6.5,,Render Silk Road batch: Zaojing,"bx_zaojing_ear r1, warm, 3 voxel tries"
+bombyx_job_piece,12.3,,Render Silk Road batch: Zaojing,"bx_zaojing_pendant r1, warm, 3 voxel tries, 4.1M tris"
+bombyx_job_piece,23.9,,Render Silk Road batch: Zaojing,"bx_zaojing_clip fix1, 5 voxel tries all fail, 6M tris; GLB step OOM-killed at 14 GB on 15 GB machine"
+bombyx_job_piece,7.4,,Render Silk Road batch: Zaojing,"bx_zaojing_ring fix2, 5 voxel tries all fail"
+bombyx_job_piece,9.4,,Render Silk Road batch: Zaojing,"bx_zaojing_ear fix2, 5 voxel tries all fail"
+proj_design_round_central,75,2026-11-20T23:22:00Z,Design Silk Road jewelry collection,"64 pieces / 16 motifs, one agent: concept, history, generators, 4 preview rounds, code freeze (ask to freeze)"
+proj_design_round_central,73,2026-11-20T17:53:00Z,Design and make boots,"round 2: 9 boots, one agent, classic-boot checks, BOM cards, sheets (ask to delivered)"
+proj_design_round_central,62,2026-11-19T23:19:00Z,Design and make boots,"round 1: 3 boots from a new voxel kit, fit checks, 4 views (ask to delivered)"
+proj_kit_and_briefs,47,2026-11-20T23:49:00Z,Design jackets to match boots,"jackets r3: refs, shared kit, 8 briefs, until fan-out request"
+proj_kit_and_briefs,14,2026-11-21T01:45:00Z,Design jackets to match boots,jackets r4: kit fixes + briefs after the taste skill landed
+proj_kit_and_briefs,11,2026-11-21T01:45:00Z,Design and make boots,"boots r4: taste skill (separate thread, 9 min) + locked brief list"
+proj_fanout_piece_design,29,2026-11-21T00:36:00Z,Design COAT jacket,one jacket per machine: design + check passes + finals
+proj_fanout_piece_design,30,2026-11-21T00:36:00Z,Design SERAPH jacket,one jacket per machine
+proj_fanout_piece_design,41,2026-11-21T00:36:00Z,Design GAUNTLET jacket,one jacket per machine
+proj_fanout_piece_design,45,2026-11-21T00:36:00Z,Design THORN jacket,one jacket per machine
+proj_fanout_piece_design,51,2026-11-21T00:36:00Z,Design CORSET jacket,one jacket per machine
+proj_fanout_piece_design,59,2026-11-21T00:36:00Z,Design HARNESS jacket,one jacket per machine
+proj_fanout_piece_design,66,2026-11-21T00:36:00Z,Design CRESCENT jacket,one jacket per machine
+proj_fanout_piece_design,68,2026-11-21T00:36:00Z,Design HORN jacket,one jacket per machine
+proj_fanout_piece_redesign_heavy,138,2026-11-18T20:41:00Z,Bring Thorn sawhorse to Durumi level,one sawhorse per machine to a new detail bar
+proj_fanout_piece_redesign_heavy,137,2026-11-18T20:40:00Z,Bring Rest sawhorse to Durumi level,one sawhorse per machine
+proj_fanout_piece_redesign_heavy,133,2026-11-18T20:41:00Z,Bring Swarm sawhorse to Durumi level,one sawhorse per machine
+proj_fanout_piece_redesign_heavy,128,2026-11-18T20:41:00Z,Match Edge sawhorse closeups to Durumi,one sawhorse per machine
+proj_fanout_piece_redesign_heavy,125,2026-11-18T20:41:00Z,Bring Stage sawhorse to Durumi level,one sawhorse per machine
+proj_fanout_piece_redesign_heavy,125,2026-11-18T20:41:00Z,Redesign Liquid sawhorse glyph and feet,one sawhorse per machine
+proj_render_batch4_wave,10,2026-11-21T00:38:00Z,Render Silk Road batch: Buyao,frozen code; 4 pieces per thread; start to first-round report
+proj_render_batch4_wave,12,2026-11-21T00:38:00Z,Render Silk Road batch: Balas,frozen code; 4 pieces per thread
+proj_render_batch4_wave,14,2026-11-21T00:38:00Z,Render Silk Road batch: Pendilia,frozen code; 4 pieces per thread
+proj_render_batch4_wave,15,2026-11-21T00:38:00Z,Render Silk Road batch: Cane,frozen code; 4 pieces per thread
+proj_render_batch4_wave,16,2026-11-21T00:38:00Z,Render Silk Road batch: Murex,frozen code; 4 pieces per thread
+proj_render_batch4_wave,17,2026-11-21T00:38:00Z,Render Silk Road batch: Leizu,frozen code; 4 pieces per thread
+proj_render_batch4_wave,17,2026-11-21T00:38:00Z,Render Silk Road batch: Crescent,frozen code; 4 pieces per thread
+proj_render_batch4_wave,18,2026-11-21T00:38:00Z,Render Silk Road batch: Loulan,frozen code; 4 pieces per thread
+proj_render_batch4_wave,18,2026-11-21T00:38:00Z,Render Silk Road batch: Dome,frozen code; 4 pieces per thread
+proj_render_batch4_wave,18,2026-11-21T00:38:00Z,Render Silk Road batch: Ossuary,frozen code; 4 pieces per thread
+proj_render_batch4_wave,21,2026-11-21T00:38:00Z,Render Silk Road batch: Tillya,frozen code; 4 pieces per thread
+proj_render_batch4_wave,23,2026-11-21T00:38:00Z,Render Silk Road batch: Vine,frozen code; 4 pieces per thread
+proj_render_batch4_wave,25,2026-11-21T00:38:00Z,Render Silk Road batch: Bombyx,frozen code; 4 pieces per thread
+proj_render_batch4_wave,26,2026-11-21T00:38:00Z,Render Silk Road batch: Feitian,frozen code; 4 pieces per (pendant 10 min alone)
+proj_render_batch4_wave,33,2026-11-21T00:38:00Z,Render Silk Road batch: Senmurv,frozen code; 4 pieces per thread; 21.7 g clip took 12 min
+proj_first_wave_fail_pct,33,2026-11-21T00:59:00Z,Design Silk Road jewelry collection,21 of 64 failed casting checks after the first wave (13 stone settings + watertight)
+proj_fix_tail,75,2026-11-21T00:59:00Z,Design Silk Road jewelry collection,"first fail report to last fix landed: 3 fix rounds (fix1 21 pieces, fix2 1, fix3 1); tail ran 2.3x the first wave"
+proj_page_build_merge,25,,Dancers overhaul,24-section page merge + checks + PR + live
+proj_page_build_merge,40,,Bring Dancers page fully up to date,24-section rebuild + checks + 2 PRs
+proj_page_build_merge,44,,website thread,batch 1: texture + viewer rebuild + merge + live check
+proj_review_gate_design,1050,2026-11-20T00:21:00Z,Design and make boots,boots r1 delivered 7:21 PM ET; verdict next day 12:51 PM ET
+proj_review_gate_design,277,2026-11-20T19:06:00Z,Design and make boots,boots r2 delivered 2:06 PM ET; verdict 6:43 PM ET (afternoon away)
+proj_review_gate_design,24,2026-11-21T01:20:00Z,Design and make boots,boots r3 page live 8:20 PM ET; verdict 8:44 PM ET (active)
+proj_round_end_to_end,62,2026-11-19T23:19:00Z,Design and make boots,boots r1 ask to delivered (3 boots)
+proj_round_end_to_end,73,2026-11-20T17:53:00Z,Design and make boots,boots r2 ask to delivered (9 boots)
+proj_round_end_to_end,97,2026-11-20T23:43:00Z,Design and make boots,boots r3 ask to page live (9 boots x 2 colours)
+proj_round_end_to_end,115,2026-11-20T23:49:00Z,Design jackets to match boots,jackets r3 ask to last of 8 fanned-out jackets done (no page; pulled)

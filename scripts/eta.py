@@ -16,6 +16,8 @@ Commands
   eta.py calibration                            how far off past ETAs were
   eta.py rebuild                                regenerate the baselines table
   eta.py stallcheck LISTING.json [--min 3]      flag fan-out threads that started but never ran
+  eta.py project --pieces 9 [--design central|fanout] [--kit] [--page] [--kind new_look]
+                                                whole-project ETA: this round, and until accepted
 Only the standard library is used.
 """
 import argparse, csv, datetime as dt, math, os, re, statistics, sys
@@ -65,6 +67,8 @@ def unit(cat):
         return "s"
     if "usd" in cat:
         return "$"
+    if cat.endswith("_pct"):
+        return "%"
     return "min"
 
 
@@ -222,6 +226,140 @@ def cmd_stallcheck(a):
         print("Restart these as others finish, and add up to 90 min to the late end of the ETA until they run.")
 
 
+# ---------------------------------------------------------------- whole-project estimates
+PROJ = os.path.join(ROOT, "data", "projects.csv")
+
+
+def _samples(cat, rows):
+    v = [float(r["minutes"]) for r in rows if r["category"] == cat]
+    if not v:
+        sys.exit(f"no observations for {cat}; add some or pick another --*-cat")
+    return v
+
+
+def _draw(rng, vals):
+    """One plausible duration. Thin data (<4) is widened to 0.8 x min .. 1.5 x max, peaked at the median."""
+    if len(vals) < 4:
+        return rng.triangular(0.8 * min(vals), 1.5 * max(vals), statistics.median(vals))
+    return rng.choice(vals) * math.exp(rng.gauss(0, 0.2))
+
+
+def _p_accept(kind):
+    """Chance a delivered round is accepted, from projects.csv (Laplace-smoothed)."""
+    acc = rej = 0
+    if os.path.exists(PROJ):
+        with open(PROJ, newline="") as f:
+            for r in csv.DictReader(f):
+                if r["kind"] != kind:
+                    continue
+                acc += r["outcome"] == "accepted"
+                rej += r["outcome"] == "rejected"
+    return (acc + 1) / (acc + rej + 2), acc, rej
+
+
+def _gate(rng, at_local_h, mode, rows):
+    """Minutes until the user gives a verdict on a delivered round."""
+    if mode == "none":
+        return 0.0
+    if mode == "active":
+        return rng.uniform(10, 40)
+    h = at_local_h % 24
+    if h >= 23 or h < 8:          # delivered at night: answer after waking
+        wake = (9 - h) % 24
+        return wake * 60 + rng.uniform(0, 60)
+    if h >= 16:                    # evening: active or out, measured 24 min to 4.6 h
+        return rng.choice([24, 39, 67, 277]) * math.exp(rng.gauss(0, 0.3))
+    return _draw(rng, _samples("human_gate_daytime_away", rows))
+
+
+def cmd_project(a):
+    import random
+    rows = load_obs()
+    rng = random.Random(a.seed)
+    S = lambda c: _samples(c, rows)
+    kit = S(a.kit_cat) if a.kit else None
+    design_c = S(a.design_cat) if a.design == "central" else None
+    piece = S(a.piece_cat) if a.design == "fanout" else None
+    render = S(a.render_cat) if a.design == "central" and a.render_cat != "none" else None
+    fixtail = S("proj_fix_tail")
+    page = S(a.page_cat) if a.page else None
+    stall = S("platform_concurrency_stall")
+    p_acc, n_acc, n_rej = _p_accept(a.kind)
+    if a.p_accept is not None:
+        p_acc = a.p_accept
+    start = _parse_ts(a.start) if a.start else dt.datetime.now(dt.timezone.utc)
+    tz = dt.timezone(dt.timedelta(hours=a.tz))
+
+    def one_round(rework):
+        parts = {}
+        parts["kit"] = _draw(rng, kit) * (0.5 if rework else 1) if kit else 0.0
+        threads = 0
+        if a.design == "central":
+            parts["design"] = _draw(rng, design_c)
+            if render:
+                threads = math.ceil(a.pieces / a.per_thread)
+                waves = math.ceil(threads / a.cap)
+                parts["render"] = threads * 3 / 60 + sum(max(_draw(rng, render) for _ in range(min(a.cap, threads)))
+                                                         for _ in range(waves))
+            else:
+                parts["render"] = 0.0
+        else:
+            threads = a.pieces
+            waves = math.ceil(threads / a.cap)
+            parts["design"] = threads * 3 / 60 + sum(max(_draw(rng, piece) for _ in range(min(a.cap, threads)))
+                                                     for _ in range(waves))
+            parts["render"] = 0.0
+        fails = sum(rng.random() < a.fail_pct / 100 for _ in range(a.pieces))
+        parts["fix"] = _draw(rng, fixtail) * min(1.0, 0.4 + fails / 21) if fails else 0.0
+        if threads > a.stall_above and rng.random() < 0.5:
+            parts["stall"] = _draw(rng, stall)
+        else:
+            parts["stall"] = 0.0
+        build = parts["render"] + parts["fix"] + parts["stall"]
+        if page:
+            pg = _draw(rng, page) * a.page_scale
+            # the page is built while machines render, but fix rounds take the same agent's attention; +5 merge/live
+            parts["page"] = max(0.0, pg - parts["render"] - parts["stall"]) + 5
+        else:
+            parts["page"] = 0.0
+        # one shared factor per round: when a job is harder than usual, every phase of it is slower
+        f = math.exp(rng.gauss(0, a.spread))
+        for k in list(parts):
+            parts[k] *= f
+        parts["total"] = parts["kit"] + parts["design"] + parts["render"] + parts["fix"] + parts["stall"] + parts["page"]
+        return parts
+
+    first, full, rounds_used, phase = [], [], [], {}
+    for _ in range(a.trials):
+        r = one_round(False)
+        for k, v in r.items():
+            phase.setdefault(k, []).append(v)
+        t = r["total"]
+        first.append(t)
+        n = 1
+        while rng.random() > p_acc and n < a.max_rounds:
+            when = start + dt.timedelta(minutes=t)
+            t += _gate(rng, when.astimezone(tz).hour + when.astimezone(tz).minute / 60, a.gate, rows)
+            t += one_round(True)["total"]
+            n += 1
+        full.append(t)
+        rounds_used.append(n)
+
+    def clock(m):
+        return (start + dt.timedelta(minutes=m)).astimezone(tz).strftime("%a %-I:%M %p")
+
+    print(f"{a.pieces} pieces, design={a.design}, kind={a.kind}, {a.trials} simulated runs from {clock(0)} (UTC{a.tz:+g})")
+    print("phase medians: " + ", ".join(f"{k} {statistics.median(v):.0f}" for k, v in phase.items() if k != "total") + " min")
+    p10, p50, p90 = q(first, .1), q(first, .5), q(first, .9)
+    print(f"THIS ROUND delivered: p50 {fmt(p50,'min')} (p10 {fmt(p10,'min')}, p90 {fmt(p90,'min')})  ->  {clock(p50)} to {clock(p90)}")
+    src = f"{n_acc} accepted / {n_rej} rejected rounds of kind '{a.kind}'" if a.p_accept is None else "given"
+    print(f"chance this round is accepted: {p_acc:.0%} ({src})")
+    f50, f90 = q(full, .5), q(full, .9)
+    print(f"UNTIL ACCEPTED (incl. review waits, rework rounds; median {statistics.median(rounds_used):.0f} rounds, "
+          f"p90 {q(rounds_used,.9):.0f}): p50 {fmt(f50,'min')}, p90 {fmt(f90,'min')}  ->  {clock(f50)} to {clock(f90)}")
+    print("Quote THIS ROUND as the ETA; give UNTIL ACCEPTED as the full-scope range when the user asks how long the whole thing takes.")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = p.add_subparsers(dest="cmd", required=True)
@@ -248,6 +386,32 @@ def main():
     s.add_argument("--quiet", type=float, default=20.0, help="minutes of silence on a started thread")
     s.add_argument("--now", help="ISO time to measure against (default: now)")
     s.set_defaults(f=cmd_stallcheck)
+    s = sp.add_parser("project", help="whole-project ETA: this round, and until accepted")
+    s.add_argument("--pieces", type=int, required=True)
+    s.add_argument("--design", choices=["central", "fanout"], default="central",
+                   help="central: one agent designs all, then frozen-code renders fan out; fanout: one piece per machine")
+    s.add_argument("--kind", default="new_look", help="new_look (first time for this kind of thing) or known_kind")
+    s.add_argument("--kit", action="store_true", help="a shared kit and briefs come first")
+    s.add_argument("--kit-cat", default="proj_kit_and_briefs")
+    s.add_argument("--design-cat", default="proj_design_round_central")
+    s.add_argument("--piece-cat", default="proj_fanout_piece_design")
+    s.add_argument("--render-cat", default="proj_render_batch4_wave", help="'none' if renders are part of design")
+    s.add_argument("--per-thread", type=int, default=4)
+    s.add_argument("--fail-pct", type=float, default=33.0, help="share of pieces failing checks after wave 1")
+    s.add_argument("--page", action="store_true", help="ends with a site page, PR and live check")
+    s.add_argument("--page-cat", default="proj_page_build_merge")
+    s.add_argument("--page-scale", type=float, default=1.0, help="2 for a big page (history, call-outs, viewers)")
+    s.add_argument("--gate", choices=["auto", "active", "none"], default="auto")
+    s.add_argument("--p-accept", type=float)
+    s.add_argument("--max-rounds", type=int, default=6)
+    s.add_argument("--cap", type=int, default=40)
+    s.add_argument("--stall-above", type=int, default=30)
+    s.add_argument("--start", help="ISO UTC start (default now)")
+    s.add_argument("--tz", type=float, default=-5.0, help="user's UTC offset (New York -5)")
+    s.add_argument("--spread", type=float, default=0.25, help="shared per-round uncertainty (log sd)")
+    s.add_argument("--trials", type=int, default=4000)
+    s.add_argument("--seed", type=int, default=7)
+    s.set_defaults(f=cmd_project)
     a = p.parse_args()
     a.f(a)
 
