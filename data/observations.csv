@@ -492,3 +492,6 @@ proj_round_end_to_end,62,2026-11-19T23:19:00Z,Design and make boots,boots r1 ask
 proj_round_end_to_end,73,2026-11-20T17:53:00Z,Design and make boots,boots r2 ask to delivered (9 boots)
 proj_round_end_to_end,97,2026-11-20T23:43:00Z,Design and make boots,boots r3 ask to page live (9 boots x 2 colours)
 proj_round_end_to_end,115,2026-11-20T23:49:00Z,Design jackets to match boots,jackets r3 ask to last of 8 fanned-out jackets done (no page; pulled)
+render_shopbot_3view_1300px_96spp,8.5,2026-11-21T02:49:13Z,Render Dancer mud_diva,"before/after/exploded, 1300 px 96 spp, 4-core cloud, bpy already in setup ~1 min extra"
+render_shopbot_3view_1300px_96spp,10.3,,Render Dancer flex_appeal,"before/after/exploded, 1300 px 96 spp, 4-core cloud, plus ~1.5 min pip install build123d+bpy"
+render_shopbot_3view_1300px_96spp,10.3,2026-11-21T02:41:50Z,Render Dancer lathe_minnelli,"before/after/exploded, 1300 px 96 spp, 4-core cloud, plus ~1.5 min pip install build123d+bpy"

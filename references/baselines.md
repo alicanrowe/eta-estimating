@@ -114,7 +114,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `render_machine_3views_1300px_96spp` | 4 | 10 min | 8.6 min to 11 min | 8.0 min to 12 min |
 | `render_sawhorse_view_1000px_48spp` | 3 | 1.1 min | 1.1 min to 1.2 min | 1.1 min to 1.2 min (few samples) |
 | `render_sawhorse_view_1100px_64spp` | 3 | 1.9 min | 1.7 min to 2.0 min | 1.6 min to 2.0 min (few samples) |
-| `render_shopbot_3view_1300px_96spp` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
+| `render_shopbot_3view_1300px_96spp` | 4 | 10 min | 9.0 min to 10 min | 8.5 min to 10 min |
 | `render_still_cloud_each` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `render_stills_cloud_set` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
 | `renderbeamer_restart_to_frames` | 2 | 5.3 min | 1.5 min to 9.1 min | 0.6 min to 10 min (few samples) |
