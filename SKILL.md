@@ -71,6 +71,11 @@ An ETA for the wrong thing, or "I can't find it", is the worst ETA. The user oft
 3. **Not in the registry?** Page `list_threads` back well past the last 2 days (use `next_cursor`), grep the project folder's `.md`/`.json`/`.py` files, and search the Drive backups. Only then say it can't be found, and say what you searched. Add the row once you find it.
 4. **A row marked active with no thread activity for 2 hours is stalled.** Say so with the ETA, and resume it or route it; don't quote the old ETA.
 5. **Keep the registry current**: add a row when work on a new project or deliverable starts, and update its status and next step when it finishes, parks or blocks, in the same turn. Re-read the file just before editing (other threads write to it), change only your rows. The format and rules are in `references/project-registry.md`.
+6. **Check the second brain too.** If the project keeps an Obsidian vault as shared memory (an LLM-wiki:
+   `CRITICAL_FACTS.md`, `wiki/index.md`, `wiki/hot.md`, `wiki/projects/<project>.md`), search it by name and look
+   words as well. The registry row is the status; the vault's project page is the history behind it (decisions,
+   critique, what went wrong, past ETAs). When a timed job finishes, add one line to that project page's
+   History with the ETA given and the actual time, next to the baseline you log here.
 
 ## Making an ETA
 1. **Split the job into steps** and mark each one:
