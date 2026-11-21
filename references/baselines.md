@@ -76,8 +76,10 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_fix_round_21` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
 | `jewelry_piece_cold` | 56 | 7.2 min | 4.2 min to 12 min | 0.9 min to 16 min |
 | `jewelry_piece_incl_stall` | 4 | 30 min | 18 min to 43 min | 18 min to 44 min |
-| `jewelry_piece_job_cloud` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
-| `jewelry_piece_job_cloud_cuff` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
+| `jewelry_piece_job_cloud` | 3 | 3.0 min | 2.6 min to 5.0 min | 2.5 min to 5.5 min (few samples) |
+| `jewelry_piece_job_cloud_collar` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
+| `jewelry_piece_job_cloud_cuff` | 2 | 7.0 min | 6.2 min to 7.8 min | 6.0 min to 8.0 min (few samples) |
+| `jewelry_piece_job_cloud_large_swap` | 2 | 38 min | 20 min to 56 min | 16 min to 60 min (few samples) |
 | `jewelry_piece_restart_after_stall` | 3 | 3.5 min | 2.3 min to 4.7 min | 2.0 min to 5.0 min (few samples) |
 | `jewelry_piece_warm_rerender` | 25 | 2.5 min | 0.9 min to 5.1 min | 0.8 min to 11 min |
 | `jewelry_render_4views_sec` | 49 | 27 s | 21 s to 35 s | 16 s to 43 s |
