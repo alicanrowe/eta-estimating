@@ -29,6 +29,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `boot_round_9_designs_kit_rebuild` | 1 | 70 min | 70 min to 70 min | 70 min to 70 min (few samples) |
 | `bot_render_1300_96_cloud` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `cad_design_feature` | 1 | 76 min | 76 min to 76 min | 76 min to 76 min (few samples) |
+| `cad_sdf_foot_marching_cubes` | 1 | 0.2 min | 0.2 min to 0.2 min | 0.2 min to 0.2 min (few samples) |
 | `cadcheck_trimesh_fcl_swing` | 1 | 11 min | 11 min to 11 min | 11 min to 11 min (few samples) |
 | `callouts_19_of_21` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
 | `clo_remote_import` | 1 | 53 min | 53 min to 53 min | 53 min to 53 min (few samples) |
@@ -52,6 +53,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `dancers_machine_tray_remodel` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
 | `dancers_tile_48frame_range_cold` | 3 | 27 min | 19 min to 31 min | 16 min to 32 min (few samples) |
 | `design_three_options_to_frozen` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
+| `drive_backup_connector_small_files` | 1 | 1.0 min | 1.0 min to 1.0 min | 1.0 min to 1.0 min (few samples) |
 | `drive_backup_direct_resumable_per_gb` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `drive_backup_via_mac_per_gb` | 2 | 10 min | 7.2 min to 13 min | 6.5 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
@@ -135,6 +137,8 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `reel_patch_post_encode` | 1 | 20 min | 20 min to 20 min | 20 min to 20 min (few samples) |
 | `render_8view_cycles_1000px_48spp` | 2 | 13 min | 10 min to 16 min | 9.3 min to 17 min (few samples) |
 | `render_check_round` | 7 | 8.0 min | 6.6 min to 25 min | 4.5 min to 38 min |
+| `render_cycles_clay_cpu4` | 1 | 0.2 min | 0.2 min to 0.2 min | 0.2 min to 0.2 min (few samples) |
+| `render_cycles_final_1280x1600_cpu4` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
 | `render_loop_fanout` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `render_machine_3views_1300px_64spp` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `render_machine_3views_1300px_96spp` | 4 | 10 min | 8.6 min to 11 min | 8.0 min to 12 min |
@@ -285,3 +289,5 @@ Update 18 Nov, 3:45 PM ET: 6 closed ETAs, median actual/p50 1.30 (above the 1.2 
 - Boots r3 renders were slower than planned because extra agents shared one 4-core machine. Fan-out means one machine per piece.
 - Rejections dominate full-scope time: boots r1 to r3 and jackets r3 were all rejected. Each rejected round costs a review wait (24 min to next day) plus a 60 to 115 min redo. The taste skill (built in 9 min) is the bet to raise the accept rate; r4 verdicts will show it.
 - The taste-skill distillation took 9 min (18 min thread). A small skill save is 8 to 24 min.
+- 2026-11-22 | cloud CPU (4 cores, bpy 4.2 Cycles) | VIGIL on plinth + block wall, 1080x1920, 96 spp, denoise, no volumes | about 3.5 min per frame (4 plates in 14 min). Collage animatic in PIL + ffmpeg, 372 frames at 1080x1920: about 3 min.
+- 2026-11-22 | cloud CPU (4 cores) | Shrine bench reference-reel pass (reel watch, one design change to a parametric piece, cadcheck, 6 Cycles renders at 1800x1200 64 spp, site PR, Drive backup) | about 3 h wall clock from ask to live page. Model rebuild 13 s; carved cadcheck at preview 10 to 12 min; renders about 2 to 4 min each; seatcheck at 15 mm cells about 2.5 h for 10 cases when sharing CPU, and its 7000 s cap killed the first run one case short. Run seatcheck uncapped (nohup) and start it first.
