@@ -538,3 +538,6 @@ render_cycles_final_1280x1600_cpu4,3.5,2026-11-22T17:30:00Z,robotic lamp,"Cycles
 render_cycles_clay_cpu4,0.25,2026-11-22T16:00:00Z,robotic lamp,"clay pass, low samples, one view"
 cad_sdf_foot_marching_cubes,0.25,2026-11-22T15:30:00Z,robotic lamp,"skimage marching_cubes smooth-min SDF foot, cached to npz after"
 drive_backup_connector_small_files,1,2026-11-22T19:20:00Z,robotic lamp,"Drive connector: 1.5 MB zip + six 1.3 MB PNGs, one call each; 4.2 MB per-call cap, refs must be under scratchpad not /mnt"
+layer_kit_exact_union_ring,6.0,2026-11-22T20:57:00Z,jewelry pipeline thread,"dome_layer.py: 309 inserts placed + manifold batch union + bezel, 4 CPU cloud"
+layer_kit_finish_ring,10.0,2026-11-22T21:20:00Z,jewelry pipeline thread,"finish.py: voxel remesh 0.03 + 2 rounds closing 17 pinholes + remesh; genus 84 -> 1"
+render_fidelity_view_1200_64spp,2.0,2026-11-22T21:34:00Z,jewelry pipeline thread,"render_mesh.py ring view, 4M tris, PRES 1200 PSPP 64, cloud 4 CPU; ~0.75 min at 900px/24spp"
