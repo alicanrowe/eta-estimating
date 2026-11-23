@@ -541,3 +541,5 @@ drive_backup_connector_small_files,1,2026-11-22T19:20:00Z,robotic lamp,"Drive co
 layer_kit_exact_union_ring,6.0,2026-11-22T20:57:00Z,jewelry pipeline thread,"dome_layer.py: 309 inserts placed + manifold batch union + bezel, 4 CPU cloud"
 layer_kit_finish_ring,10.0,2026-11-22T21:20:00Z,jewelry pipeline thread,"finish.py: voxel remesh 0.03 + 2 rounds closing 17 pinholes + remesh; genus 84 -> 1"
 render_fidelity_view_1200_64spp,2.0,2026-11-22T21:34:00Z,jewelry pipeline thread,"render_mesh.py ring view, 4M tris, PRES 1200 PSPP 64, cloud 4 CPU; ~0.75 min at 900px/24spp"
+jewelry_piece_cold,15.7,2026-11-22T23:18:02Z,jewelry piece thread,overhaul ov_job gv_wormtrail_wrap 4 CPU; 113 parts; clay+fidelity 1400px 96spp
+flatwork_final_piece,8.0,2026-11-23T00:51:00Z,Render sculpture metamer thread,"final_piece.sh metamer: 4 stills 1400px 128/96 spp + GLB/STEP/DXF, 17 parts ~40k tris, 4-core cloud, pip deps incl.; job sheet guessed 45-75 min"
