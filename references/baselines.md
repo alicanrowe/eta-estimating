@@ -52,6 +52,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `dancers_machine_overhaul` | 17 | 80 min | 56 min to 1.9 h | 42 min to 2.4 h |
 | `dancers_machine_tray_remodel` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
 | `dancers_tile_48frame_range_cold` | 3 | 27 min | 19 min to 31 min | 16 min to 32 min (few samples) |
+| `design_origami_redesign_concept_to_checked_model` | 1 | 60 min | 60 min to 60 min | 60 min to 60 min (few samples) |
 | `design_three_options_to_frozen` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `drive_backup_connector_small_files` | 1 | 1.0 min | 1.0 min to 1.0 min | 1.0 min to 1.0 min (few samples) |
 | `drive_backup_direct_resumable_per_gb` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
@@ -142,6 +143,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `render_check_round` | 7 | 8.0 min | 6.6 min to 25 min | 4.5 min to 38 min |
 | `render_cycles_clay_cpu4` | 1 | 0.2 min | 0.2 min to 0.2 min | 0.2 min to 0.2 min (few samples) |
 | `render_cycles_final_1280x1600_cpu4` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
+| `render_cycles_final_1400x1750_128spp_ao_bevel_cpu4` | 2 | 23 min | 18 min to 28 min | 17 min to 29 min (few samples) |
 | `render_fidelity_view_1200_64spp` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
 | `render_loop_fanout` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `render_machine_3views_1300px_64spp` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
@@ -296,3 +298,4 @@ Update 18 Nov, 3:45 PM ET: 6 closed ETAs, median actual/p50 1.30 (above the 1.2 
 - 2026-11-22 | cloud CPU (4 cores, bpy 4.2 Cycles) | VIGIL on plinth + block wall, 1080x1920, 96 spp, denoise, no volumes | about 3.5 min per frame (4 plates in 14 min). Collage animatic in PIL + ffmpeg, 372 frames at 1080x1920: about 3 min.
 - 2026-11-22 | cloud CPU (4 cores) | Shrine bench reference-reel pass (reel watch, one design change to a parametric piece, cadcheck, 6 Cycles renders at 1800x1200 64 spp, site PR, Drive backup) | about 3 h wall clock from ask to live page. Model rebuild 13 s; carved cadcheck at preview 10 to 12 min; renders about 2 to 4 min each; seatcheck at 15 mm cells about 2.5 h for 10 cases when sharing CPU, and its 7000 s cap killed the first run one case short. Run seatcheck uncapped (nohup) and start it first.
 - 2026-11-23 | GarageFarm LOW | VIGIL bloom (1080x1920, 96 spp, haze): upload 8.5 MB about 10 s; 6-frame test 2 min 29 s, $0.11; full 102 frames quoted $1.87; download about 6 s after the farm finishes. Waiting on the owner to finish a renderBeamer update and two logins added about 40 min.
+- 2026-11-23 | cloud | Skill publish sweep: dry-run all 20 skill folders with sync.sh about 2.5 min, then 4 real pushes about 1 min. Whole job about 4 min.
