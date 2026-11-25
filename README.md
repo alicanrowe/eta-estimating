@@ -11,7 +11,7 @@ It answers with a range in the user's time zone, names what could make it late, 
 - **`references/baselines.md`**: the measured table and what each row means (jewelry renders one per machine, furniture variants with render-check loops, farm animation upload, render, download and encode, web features, research, and how long people take to answer).
 - **`data/observations.csv`**: every measured duration behind the table.
 - **`data/predictions.csv`**: past ETAs and how far off they were.
-- **`scripts/eta.py`**: ranges per category, fan-out and transfer maths, the prediction ledger and calibration. Standard library only.
+- **`scripts/eta.py`**: ranges per category, fan-out and transfer maths, the prediction ledger and calibration, per-thread step plans (`plan`, `step`) and a one-command ETA list for every open thread (`board`). Standard library only.
 
 ## Install
 - **Claude.ai / Claude app:** zip this folder and upload it under Settings > Capabilities > Skills.
@@ -27,7 +27,11 @@ python3 scripts/eta.py resolve 6 253
 python3 scripts/eta.py add farm_download_2160f_h 4.2 --source "my thread"
 python3 scripts/eta.py rebuild                                 # refresh the table
 python3 scripts/eta.py calibration
+python3 scripts/eta.py plan T1 "Lights reel" "Preview OK=gate" "Tower render=tower_frames:480" "Page live=site"
+python3 scripts/eta.py step T1 1 done                          # logs actual vs planned
+python3 scripts/eta.py board --listing threads.json            # one ETA line per open thread
 ```
+Set `ETA_TZ` (default America/New_York) and `ETA_USER` (the name shown on gates) for your own clock and name.
 
 ## Where the numbers come from
 About 140 measurements from two days of real studio work in November 2026: thread start and finish times, Blender render logs and GarageFarm jobs. Your own work will differ, so log your ETAs and add your own measurements; the table rebuilds from them.

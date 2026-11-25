@@ -10,14 +10,15 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `animation_frames_48_chunk` | 3 | 28 min | 19 min to 32 min | 17 min to 33 min (few samples) |
 | `animation_label_fix_round` | 2 | 50 min | 15 min to 84 min | 6.0 min to 1.6 h (few samples) |
 | `animation_small` | 1 | 42 min | 42 min to 42 min | 42 min to 42 min (few samples) |
-| `blender_download_cloud` | 1 | 0.6 min | 0.6 min to 0.6 min | 0.6 min to 0.6 min (few samples) |
-| `bombyx_job_piece` | 8 | 7.2 min | 4.2 min to 16 min | 4.1 min to 24 min |
+| `blender_download_cloud` | 3 | 0.6 min | 0.5 min to 0.9 min | 0.5 min to 1.0 min (few samples) |
+| `bombyx_job_piece` | 9 | 7.4 min | 4.2 min to 16 min | 4.1 min to 24 min |
 | `book_metal_pages_redo_after_rejection` | 1 | 68 min | 68 min to 68 min | 68 min to 68 min (few samples) |
 | `book_rebuild_existing` | 1 | 7.3 min | 7.3 min to 7.3 min | 7.3 min to 7.3 min (few samples) |
 | `boot_build_check_kit4` | 3 | 1.7 min | 1.6 min to 1.9 min | 1.6 min to 2.0 min (few samples) |
 | `boot_build_kit4` | 1 | 2.8 min | 2.8 min to 2.8 min | 2.8 min to 2.8 min (few samples) |
 | `boot_build_v4_tall` | 1 | 2.1 min | 2.1 min to 2.1 min | 2.1 min to 2.1 min (few samples) |
 | `boot_design_round4_to_pass` | 3 | 1.6 h | 1.6 h to 1.7 h | 1.6 h to 1.7 h (few samples) |
+| `boot_final_render_set_1400px_32spp` | 1 | 61 min | 61 min to 61 min | 61 min to 61 min (few samples) |
 | `boot_final_render_set_1400px_64spp` | 4 | 28 min | 20 min to 33 min | 18 min to 34 min |
 | `boot_r4_piece_thread` | 1 | 1.6 h | 1.6 h to 1.6 h | 1.6 h to 1.6 h (few samples) |
 | `boot_r4_strong_pass` | 1 | 42 min | 42 min to 42 min | 42 min to 42 min (few samples) |
@@ -27,15 +28,17 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `boot_render_v4_red_final` | 1 | 4.5 min | 4.5 min to 4.5 min | 4.5 min to 4.5 min (few samples) |
 | `boot_revision_pass_round4` | 1 | 31 min | 31 min to 31 min | 31 min to 31 min (few samples) |
 | `boot_round_9_designs_kit_rebuild` | 1 | 70 min | 70 min to 70 min | 70 min to 70 min (few samples) |
+| `boot_thread_round5_one_boot` | 1 | 3.6 h | 3.6 h to 3.6 h | 3.6 h to 3.6 h (few samples) |
 | `bot_render_1300_96_cloud` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `cad_design_feature` | 1 | 76 min | 76 min to 76 min | 76 min to 76 min (few samples) |
-| `cad_sdf_foot_marching_cubes` | 1 | 0.2 min | 0.2 min to 0.2 min | 0.2 min to 0.2 min (few samples) |
+| `cadcheck_preview_model` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
 | `cadcheck_trimesh_fcl_swing` | 1 | 11 min | 11 min to 11 min | 11 min to 11 min (few samples) |
 | `callouts_19_of_21` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
 | `clo_remote_import` | 1 | 53 min | 53 min to 53 min | 53 min to 53 min (few samples) |
 | `cloud_bpy_setup` | 2 | 1.8 min | 1.1 min to 2.4 min | 1.0 min to 2.5 min (few samples) |
 | `cloud_cpu_test_still` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
 | `cloud_env_setup_bpy` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
+| `cloud_still_cycles_1600x900_48spp` | 1 | 4.2 min | 4.2 min to 4.2 min | 4.2 min to 4.2 min (few samples) |
 | `code_freeze_break` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
 | `collection_fanout_renders` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `collection_redesign_polish` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
@@ -44,6 +47,15 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `context_render_case_3views_1500px` | 2 | 8.5 min | 8.1 min to 8.9 min | 8.0 min to 9.0 min (few samples) |
 | `cycles_3view_strip_1400px_128s_4cpu_75kfaces` | 3 | 1.6 min | 1.6 min to 1.8 min | 1.6 min to 1.8 min (few samples) |
 | `cycles_frame_576x720_32s_4cpu` | 1 | 0.3 min | 0.3 min to 0.3 min | 0.3 min to 0.3 min (few samples) |
+| `cycles_sequence_cloud` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
+| `cycles_still_1200px_64spp_4cpu` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
+| `cycles_still_1280x1600_160spp_set4` | 1 | 6.8 min | 6.8 min to 6.8 min | 6.8 min to 6.8 min (few samples) |
+| `cycles_still_1280x1600_160spp_x4` | 1 | 12 min | 12 min to 12 min | 12 min to 12 min (few samples) |
+| `cycles_still_1400px_96spp_4cpu_leather` | 1 | 2.2 min | 2.2 min to 2.2 min | 2.2 min to 2.2 min (few samples) |
+| `cycles_still_1600px_96spp_4cpu_400kfaces` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
+| `cycles_still_1600x900_40spp_pair` | 1 | 9.5 min | 9.5 min to 9.5 min | 9.5 min to 9.5 min (few samples) |
+| `cycles_still_2560x1440_48spp` | 1 | 8.0 min | 8.0 min to 8.0 min | 8.0 min to 8.0 min (few samples) |
+| `cycles_stills_5` | 2 | 28 min | 20 min to 35 min | 18 min to 37 min (few samples) |
 | `dancer_machine_overhaul` | 1 | 2.3 h | 2.3 h to 2.3 h | 2.3 h to 2.3 h (few samples) |
 | `dancers_build_audit` | 14 | 50 min | 26 min to 2.6 h | 24 min to 3.2 h |
 | `dancers_example_print_swap` | 1 | 27 min | 27 min to 27 min | 27 min to 27 min (few samples) |
@@ -52,29 +64,44 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `dancers_machine_overhaul` | 17 | 80 min | 56 min to 1.9 h | 42 min to 2.4 h |
 | `dancers_machine_tray_remodel` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
 | `dancers_tile_48frame_range_cold` | 3 | 27 min | 19 min to 31 min | 16 min to 32 min (few samples) |
-| `design_origami_redesign_concept_to_checked_model` | 1 | 60 min | 60 min to 60 min | 60 min to 60 min (few samples) |
+| `design_product_line_expand` | 1 | 1.9 h | 1.9 h to 1.9 h | 1.9 h to 1.9 h (few samples) |
 | `design_three_options_to_frozen` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
-| `drive_backup_connector_small_files` | 1 | 1.0 min | 1.0 min to 1.0 min | 1.0 min to 1.0 min (few samples) |
+| `drive_backup_direct` | 1 | 0.7 min | 0.7 min to 0.7 min | 0.7 min to 0.7 min (few samples) |
+| `drive_backup_direct_put` | 3 | 1.0 min | 1.0 min to 1.0 min | 1.0 min to 1.0 min (few samples) |
 | `drive_backup_direct_resumable_per_gb` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `drive_backup_via_mac_per_gb` | 2 | 10 min | 7.2 min to 13 min | 6.5 min to 14 min (few samples) |
 | `encode_81s_4k` | 1 | 37 min | 37 min to 37 min | 37 min to 37 min (few samples) |
 | `encode_final_chunk` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
 | `env_bpy_venv_install` | 3 | 1.1 min | 0.7 min to 1.8 min | 0.6 min to 2.0 min (few samples) |
+| `env_lookdev_loop_test_405x720` | 1 | 1.0 min | 1.0 min to 1.0 min | 1.0 min to 1.0 min (few samples) |
+| `env_render_still_1080x1920_128spp_cloud4core` | 2 | 4.8 min | 2.5 min to 7.1 min | 2.0 min to 7.7 min (few samples) |
 | `farm_cost_usd_per_2160f_low` | 7 | $69 | $64 to $71 | $63 to $72 |
 | `farm_download` | 1 | 1.6 h | 1.6 h to 1.6 h | 1.6 h to 1.6 h (few samples) |
 | `farm_download_2160f_h` | 2 | 2.9 h | 1.9 h to 3.9 h | 1.6 h to 4.2 h (few samples) |
+| `farm_download_and_jpeg_tars` | 1 | 30 min | 30 min to 30 min | 30 min to 30 min (few samples) |
 | `farm_download_mac_sleep_stall` | 1 | 2.0 h | 2.0 h to 2.0 h | 2.0 h to 2.0 h (few samples) |
 | `farm_download_start_gate` | 1 | 2.2 h | 2.2 h to 2.2 h | 2.2 h to 2.2 h (few samples) |
+| `farm_drive_to_ssd_copy` | 1 | 3.6 min | 3.6 min to 3.6 min | 3.6 min to 3.6 min (few samples) |
+| `farm_full_render` | 1 | 41 min | 41 min to 41 min | 41 min to 41 min (few samples) |
+| `farm_full_render_816f_low` | 1 | 21 min | 21 min to 21 min | 21 min to 21 min (few samples) |
 | `farm_job_end_to_end_h` | 2 | 7.9 h | 6.5 h to 9.3 h | 6.1 h to 9.7 h (few samples) |
 | `farm_pack_copy_checksum` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `farm_render_1728f_overnight_upper_h` | 1 | 8.0 h | 8.0 h to 8.0 h | 8.0 h to 8.0 h (few samples) |
 | `farm_render_2160f_low_h` | 4 | 2.0 h | 1.7 h to 2.0 h | 1.6 h to 2.0 h |
+| `farm_render_full_reel` | 1 | 58 min | 58 min to 58 min | 58 min to 58 min (few samples) |
 | `farm_render_shots_medium` | 2 | 14 min | 11 min to 16 min | 10 min to 16 min (few samples) |
 | `farm_tail_last_frames_to_delivery` | 2 | 19 min | 15 min to 23 min | 14 min to 24 min (few samples) |
+| `farm_test_job_27frames` | 1 | 11 min | 11 min to 11 min | 11 min to 11 min (few samples) |
+| `farm_test_job_36frames_gpu` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
+| `farm_test_job_9frames` | 2 | 2.1 min | 1.9 min to 2.4 min | 1.8 min to 2.5 min (few samples) |
 | `farm_upload_renderbeamer` | 3 | 5.0 min | 5.0 min to 6.2 min | 5.0 min to 6.5 min (few samples) |
-| `farm_upload_renderbeamer_headless` | 1 | 1.5 min | 1.5 min to 1.5 min | 1.5 min to 1.5 min (few samples) |
+| `farm_upload_renderbeamer_headless` | 2 | 2.2 min | 1.6 min to 2.9 min | 1.5 min to 3.0 min (few samples) |
+| `farm_verify_pack_parts` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `farm_web_submit_js` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
-| `flatwork_final_piece` | 1 | 8.0 min | 8.0 min to 8.0 min | 8.0 min to 8.0 min (few samples) |
+| `find_lost_project` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
+| `flatwork_final_piece` | 20 | 16 min | 11 min to 25 min | 8.5 min to 29 min |
+| `flatwork_piece_final_render` | 2 | 30 min | 21 min to 40 min | 19 min to 42 min (few samples) |
+| `flicker_render_check_page_2models` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `furniture_cast_piece_cold` | 3 | 10 min | 10 min to 12 min | 10 min to 13 min (few samples) |
 | `furniture_motif_design_to_preview` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `furniture_motif_variant_round` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
@@ -101,7 +128,13 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_collection_fanout_64` | 1 | 47 min | 47 min to 47 min | 47 min to 47 min (few samples) |
 | `jewelry_cuff_cold` | 5 | 25 min | 10 min to 28 min | 5.0 min to 29 min |
 | `jewelry_fix_round_21` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
-| `jewelry_piece_cold` | 57 | 7.3 min | 4.2 min to 13 min | 0.9 min to 16 min |
+| `jewelry_ov1_bx_piece` | 2 | 17 min | 17 min to 17 min | 16 min to 18 min (few samples) |
+| `jewelry_ov4_bx_piece` | 16 | 26 min | 18 min to 39 min | 15 min to 64 min |
+| `jewelry_overhaul_ov_job_gv` | 16 | 10 min | 9.0 min to 12 min | 8.4 min to 14 min |
+| `jewelry_overhaul_ov_job_he` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
+| `jewelry_overhaul_ov_job_mb` | 26 | 18 min | 17 min to 35 min | 16 min to 37 min |
+| `jewelry_overhaul_piece_job` | 65 | 20 min | 13 min to 25 min | 10 min to 39 min |
+| `jewelry_piece_cold` | 59 | 7.1 min | 4.0 min to 13 min | 0.9 min to 80 min |
 | `jewelry_piece_incl_stall` | 4 | 30 min | 18 min to 43 min | 18 min to 44 min |
 | `jewelry_piece_job_cloud` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
 | `jewelry_piece_job_cloud_cuff` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
@@ -110,11 +143,12 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_piece_warm_rerender` | 25 | 2.5 min | 0.9 min to 5.1 min | 0.8 min to 11 min |
 | `jewelry_render_4views_sec` | 49 | 27 s | 21 s to 35 s | 16 s to 43 s |
 | `jewelry_sheet_end_to_end` | 1 | 3.2 h | 3.2 h to 3.2 h | 3.2 h to 3.2 h (few samples) |
-| `layer_kit_exact_union_ring` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
-| `layer_kit_finish_ring` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
+| `lamp_final_stills_3x_1280x1600_96spp` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
+| `lights_final_still` | 1 | 8.5 min | 8.5 min to 8.5 min | 8.5 min to 8.5 min (few samples) |
 | `mac_lag_session_kill` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `mac_setup_walkthrough` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
 | `material_photo_match` | 1 | 1.8 h | 1.8 h to 1.8 h | 1.8 h to 1.8 h (few samples) |
+| `material_recolor_full_line` | 1 | 1.6 h | 1.6 h to 1.6 h | 1.6 h to 1.6 h (few samples) |
 | `model_fix_and_refarm_prep` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `moth_gem_render_4view` | 8 | 10 min | 9.4 min to 12 min | 9.0 min to 12 min |
 | `moth_tool_v3_piece` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
@@ -122,10 +156,19 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `moth_tool_v3_render_1400_128` | 4 | 3.8 min | 2.0 min to 6.3 min | 2.0 min to 6.5 min |
 | `moth_v3_piece_cold` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
 | `moth_v3_piece_rerun` | 1 | 5.5 min | 5.5 min to 5.5 min | 5.5 min to 5.5 min (few samples) |
+| `nine_lives_harmony_mesh` | 3 | 1.9 min | 1.0 min to 2.1 min | 0.8 min to 2.2 min (few samples) |
+| `nine_lives_harmony_piece` | 2 | 72 min | 62 min to 81 min | 60 min to 83 min (few samples) |
+| `nine_lives_harmony_render_set` | 3 | 43 min | 41 min to 44 min | 40 min to 44 min (few samples) |
+| `nine_lives_render_2000_spp64` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
+| `overhaul_fidelity_square_rerun` | 1 | 22 min | 22 min to 22 min | 22 min to 22 min (few samples) |
+| `overhaul_he_job_piece` | 1 | 41 min | 41 min to 41 min | 41 min to 41 min (few samples) |
+| `overhaul_single_view_1400_96` | 1 | 15 min | 15 min to 15 min | 15 min to 15 min (few samples) |
 | `photo_matched_carving_cad_full` | 1 | 4.5 h | 4.5 h to 4.5 h | 4.5 h to 4.5 h (few samples) |
 | `pip_bpy_build123d_setup` | 1 | 2.5 min | 2.5 min to 2.5 min | 2.5 min to 2.5 min (few samples) |
+| `pip_install_bpy_stack` | 1 | 1.0 min | 1.0 min to 1.0 min | 1.0 min to 1.0 min (few samples) |
 | `platform_concurrency_stall` | 3 | 38 min | 20 min to 80 min | 15 min to 1.5 h (few samples) |
 | `platform_concurrency_stall_seen_count` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
+| `product_design_to_live_page` | 1 | 2.2 h | 2.2 h to 2.2 h | 2.2 h to 2.2 h (few samples) |
 | `proj_boot_r4_one_boot` | 1 | 2.6 h | 2.6 h to 2.6 h | 2.6 h to 2.6 h (few samples) |
 | `proj_design_round_central` | 3 | 73 min | 64 min to 75 min | 62 min to 75 min (few samples) |
 | `proj_fanout_piece_design` | 8 | 48 min | 30 min to 67 min | 29 min to 68 min |
@@ -139,33 +182,35 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `proj_round_end_to_end` | 4 | 85 min | 65 min to 1.8 h | 62 min to 1.9 h |
 | `quote_form_submit_web` | 1 | 49 min | 49 min to 49 min | 49 min to 49 min (few samples) |
 | `reel_patch_post_encode` | 1 | 20 min | 20 min to 20 min | 20 min to 20 min (few samples) |
-| `reel_pull_frames_drive_composio` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
-| `reel_studio_finish_1346f_cpu4` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
+| `reel_post_encode` | 1 | 20 min | 20 min to 20 min | 20 min to 20 min (few samples) |
+| `reel_sample_frames_cloud` | 1 | 12 min | 12 min to 12 min | 12 min to 12 min (few samples) |
+| `reelpost_full` | 1 | 20 min | 20 min to 20 min | 20 min to 20 min (few samples) |
 | `render_8view_cycles_1000px_48spp` | 2 | 13 min | 10 min to 16 min | 9.3 min to 17 min (few samples) |
 | `render_check_round` | 7 | 8.0 min | 6.6 min to 25 min | 4.5 min to 38 min |
-| `render_cycles_clay_cpu4` | 1 | 0.2 min | 0.2 min to 0.2 min | 0.2 min to 0.2 min (few samples) |
-| `render_cycles_final_1280x1600_cpu4` | 1 | 3.5 min | 3.5 min to 3.5 min | 3.5 min to 3.5 min (few samples) |
-| `render_cycles_final_1400x1750_128spp_ao_bevel_cpu4` | 2 | 23 min | 18 min to 28 min | 17 min to 29 min (few samples) |
-| `render_fidelity_view_1200_64spp` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
+| `render_cycles_still_cloud4core` | 1 | 7.0 min | 7.0 min to 7.0 min | 7.0 min to 7.0 min (few samples) |
 | `render_loop_fanout` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `render_machine_3views_1300px_64spp` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `render_machine_3views_1300px_96spp` | 4 | 10 min | 8.6 min to 11 min | 8.0 min to 12 min |
 | `render_sawhorse_view_1000px_48spp` | 3 | 1.1 min | 1.1 min to 1.2 min | 1.1 min to 1.2 min (few samples) |
 | `render_sawhorse_view_1100px_64spp` | 3 | 1.9 min | 1.7 min to 2.0 min | 1.6 min to 2.0 min (few samples) |
+| `render_sawhorse_view_2000px_64spp` | 1 | 6.5 min | 6.5 min to 6.5 min | 6.5 min to 6.5 min (few samples) |
 | `render_shopbot_3view_1300px_96spp` | 4 | 10 min | 9.0 min to 10 min | 8.5 min to 10 min |
 | `render_still_cloud_each` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `render_stills_cloud_set` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
-| `render_tower_4090_reel_1346f_1080x1920_32spp` | 1 | 1.9 h | 1.9 h to 1.9 h | 1.9 h to 1.9 h (few samples) |
 | `renderbeamer_restart_to_frames` | 2 | 5.3 min | 1.5 min to 9.1 min | 0.6 min to 10 min (few samples) |
 | `renderbeamer_startup` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
 | `research_sourcing` | 5 | 21 min | 12 min to 42 min | 8.0 min to 46 min |
 | `sawhorse_fix_round` | 10 | 28 min | 22 min to 45 min | 19 min to 46 min |
+| `sawhorse_harmony_mesh` | 1 | 3.0 min | 3.0 min to 3.0 min | 3.0 min to 3.0 min (few samples) |
+| `sawhorse_harmony_shot_2000px` | 1 | 7.6 min | 7.6 min to 7.6 min | 7.6 min to 7.6 min (few samples) |
 | `sawhorse_variant` | 8 | 36 min | 28 min to 62 min | 22 min to 80 min |
 | `scene_render_4core_1000px` | 1 | 0.9 min | 0.9 min to 0.9 min | 0.9 min to 0.9 min (few samples) |
 | `scene_render_4core_1600px_96spp` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
 | `sculpted_cast_plate_pair_round` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `sdf_carved_piece_build` | 1 | 0.6 min | 0.6 min to 0.6 min | 0.6 min to 0.6 min (few samples) |
 | `sdf_log_96in_build` | 1 | 0.8 min | 0.8 min to 0.8 min | 0.8 min to 0.8 min (few samples) |
+| `seatcheck_fe_15mm` | 1 | 30 min | 30 min to 30 min | 30 min to 30 min (few samples) |
+| `seatcheck_sheet_chair` | 2 | 53 min | 17 min to 89 min | 8.4 min to 1.6 h (few samples) |
 | `setup_pip_bpy_build123d` | 1 | 16 min | 16 min to 16 min | 16 min to 16 min (few samples) |
 | `shared_parts_batch` | 2 | 56 min | 51 min to 61 min | 50 min to 62 min (few samples) |
 | `shop_bot_final_render_1300_96` | 1 | 12 min | 12 min to 12 min | 12 min to 12 min (few samples) |
@@ -190,20 +235,34 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `site_collection_page` | 1 | 22 min | 22 min to 22 min | 22 min to 22 min (few samples) |
 | `site_collection_rebuild` | 1 | 20 min | 20 min to 20 min | 20 min to 20 min (few samples) |
 | `site_deploy_live_min` | 1 | 4.0 min | 4.0 min to 4.0 min | 4.0 min to 4.0 min (few samples) |
-| `site_deploy_wait` | 1 | 3.3 min | 3.3 min to 3.3 min | 3.3 min to 3.3 min (few samples) |
+| `site_deploy_wait` | 3 | 5.2 min | 3.7 min to 5.4 min | 3.3 min to 5.5 min (few samples) |
+| `site_merge_two_projects` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `site_page_full_refresh` | 1 | 40 min | 40 min to 40 min | 40 min to 40 min (few samples) |
+| `site_page_new_unlisted` | 1 | 1.6 h | 1.6 h to 1.6 h | 1.6 h to 1.6 h (few samples) |
+| `site_page_new_with_model` | 1 | 35 min | 35 min to 35 min | 35 min to 35 min (few samples) |
 | `site_page_rebuild` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
 | `site_publish_batch` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
+| `site_update_collection_page` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
 | `skill_fix_and_publish` | 1 | 12 min | 12 min to 12 min | 12 min to 12 min (few samples) |
 | `skill_save_or_small_skill` | 3 | 24 min | 11 min to 89 min | 8.0 min to 1.8 h (few samples) |
 | `soft_build_check_furniture` | 1 | 1.8 min | 1.8 min to 1.8 min | 1.8 min to 1.8 min (few samples) |
 | `soft_part_redesign_to_0fail` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `storage_cleanup` | 3 | 29 min | 11 min to 75 min | 7.0 min to 86 min (few samples) |
+| `storage_cleanup_sweep` | 1 | 17 min | 17 min to 17 min | 17 min to 17 min (few samples) |
 | `thread_feet_pass_total` | 1 | 45 min | 45 min to 45 min | 45 min to 45 min (few samples) |
 | `thread_fix_pass_total` | 1 | 50 min | 50 min to 50 min | 50 min to 50 min (few samples) |
 | `thread_redesign_iteration_lowres` | 1 | 2.3 min | 2.3 min to 2.3 min | 2.3 min to 2.3 min (few samples) |
 | `thread_restyle_sheet_total` | 2 | 38 min | 33 min to 44 min | 32 min to 45 min (few samples) |
+| `tower_blender_77frames_nave_v2` | 1 | 18 min | 18 min to 18 min | 18 min to 18 min (few samples) |
+| `tower_blender_frame_1080x1920_sec` | 3 | 9.7 s | 5.9 s to 14 s | 5.0 s to 15 s (few samples) |
+| `tower_clo_boot_sec` | 2 | 268 s | 62 s to 474 s | 11 s to 525 s (few samples) |
+| `tower_clo_jacket_sec` | 2 | 40 s | 20 s to 61 s | 15 s to 66 s (few samples) |
+| `tower_clo_round_20piece` | 3 | 36 min | 33 min to 47 min | 32 min to 50 min (few samples) |
+| `tower_jewelry_still_queue` | 2 | 17 min | 15 min to 19 min | 14 min to 20 min (few samples) |
+| `tower_reboot_to_signin` | 1 | 2.0 min | 2.0 min to 2.0 min | 2.0 min to 2.0 min (few samples) |
+| `transfer_large_file_to_drive_via_mac` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `web_feature_build` | 1 | 27 min | 27 min to 27 min | 27 min to 27 min (few samples) |
+| `whole_piece_idea_to_live_h` | 1 | 1.9 h | 1.9 h to 1.9 h | 1.9 h to 1.9 h (few samples) |
 <!-- AUTO:END -->
 
 ## What the numbers mean
@@ -239,8 +298,9 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 - **Swap re-rendered shots into a finished cut:** about 20 min for 300 to 500 frames (tar on the user's computer, stage, post in 4 chunks, re-encode master + web).
 - **Camera gimbal flips** in keyed euler paths showed as whip-pans in 8 of 36 shots; key rotation_quaternion with sign continuity instead. A frame-difference spike scan (mean abs diff of consecutive 108x192 frames, flag > 4x the shot median) catches both flips and lens-blocking splashes before delivery.
 - **Volumes:** each volume object costs about 4 s of per-frame setup on the farm even when off screen; key hide_render so a shot only carries its own clouds.
+- **renderBeamer RBE0003 "Not enough disk space, need at least 7.5 GB /System/Volumes/Data" (21 Nov):** renderBeamer packs every upload into ~/Library/Application Support/renderbeamer/temp on the internal disk and checks for 7.5 GB free there, whatever the download folder is. Before any upload, check `df -h /System/Volumes/Data` is above 10 GB; if not, move old beamer_temp_* packages (untouched 30+ min) and big Downloads files to /Volumes/Renders, then thin Time Machine local snapshots (`tmutil thinlocalsnapshots / 20000000000 4`). Moving files off may free less than expected until snapshots are thinned.
 - **Project files rewrite mp4s:** a C2PA manifest box (~6 KB) is inserted into any .mp4 written to the project file store, including the first split part of one. Wrap files in a tar before splitting them for transfer, or the reassembled file differs.
-- **Mac disk:** the reel's transfer tars and parts (about 2.3 GB in Downloads) filled the user's computer's disk to 100% on 20 Nov. Clean up _xfer/_out/_parts folders as soon as a transfer is verified.
+- **Mac disk:** the reel's transfer tars and parts (about 2.3 GB in Downloads) filled the user's computer's disk to 100% on 20 Nov. **Standing rule from the user (21 Nov): every temp or transfer file goes on the external SSD, never the user's computer's internal disk or Downloads.** Connect the SSD folder first (a gate if it isn't connected), and delete transfer parts as soon as a transfer is verified.
 
 ### Cloud machines without a GPU
 - A preview test frame takes about 2 minutes on a 4-core cloud machine. A full-quality animation frame is estimated at 40 to 60 minutes (not measured yet), which is why animations go to the farm.
@@ -298,9 +358,7 @@ Update 18 Nov, 3:45 PM ET: 6 closed ETAs, median actual/p50 1.30 (above the 1.2 
 - Boots r3 renders were slower than planned because extra agents shared one 4-core machine. Fan-out means one machine per piece.
 - Rejections dominate full-scope time: boots r1 to r3 and jackets r3 were all rejected. Each rejected round costs a review wait (24 min to next day) plus a 60 to 115 min redo. The taste skill (built in 9 min) is the bet to raise the accept rate; r4 verdicts will show it.
 - The taste-skill distillation took 9 min (18 min thread). A small skill save is 8 to 24 min.
-- 2026-11-22 | cloud CPU (4 cores, bpy 4.2 Cycles) | VIGIL on plinth + block wall, 1080x1920, 96 spp, denoise, no volumes | about 3.5 min per frame (4 plates in 14 min). Collage animatic in PIL + ffmpeg, 372 frames at 1080x1920: about 3 min.
-- 2026-11-22 | cloud CPU (4 cores) | Shrine bench reference-reel pass (reel watch, one design change to a parametric piece, cadcheck, 6 Cycles renders at 1800x1200 64 spp, site PR, Drive backup) | about 3 h wall clock from ask to live page. Model rebuild 13 s; carved cadcheck at preview 10 to 12 min; renders about 2 to 4 min each; seatcheck at 15 mm cells about 2.5 h for 10 cases when sharing CPU, and its 7000 s cap killed the first run one case short. Run seatcheck uncapped (nohup) and start it first.
-- 2026-11-23 | GarageFarm LOW | VIGIL bloom (1080x1920, 96 spp, haze): upload 8.5 MB about 10 s; 6-frame test 2 min 29 s, $0.11; full 102 frames quoted $1.87; download about 6 s after the farm finishes. Waiting on the owner to finish a renderBeamer update and two logins added about 40 min.
+- Drive backups from the cloud: the direct resumable PUT (drive-backups skill) moves about 50 MB/s; 3.1 GB took under a minute. A storage cleanup of ~3.6 GB took 25 min end to end, mostly checksum matching and bundling.
+- Tool time limit trap (Flatwork halyard, 23 Nov): a Bash `run_in_background` job is killed at 30 min by default. A flatwork final_piece.sh can run 29 min (halyard's close-up was the slow still), so the first run died with close.jpg unfinished. Start these with `timeout` 7200000 (2 h) so one slow piece doesn't cost a full re-run.
 - 2026-11-23 | cloud | Skill publish sweep: dry-run all 20 skill folders with sync.sh about 2.5 min, then 4 real pushes about 1 min. Whole job about 4 min.
-- 2026-11-24 | cloud CPU (4 cores, bpy Cycles) | Carved-wood + brass + glass set (tea set: 8 SDF grips, tray, arch, lid; 78 parts) from reel ask to live page: about 6 h wall clock incl. two blind-review rounds. Grip SDF about 1 min each; tray SDF about 4 min; arch 2 min; manifold3d clash check of 78 parts 1 to 2 min; test renders 700x875 48 spp 25 to 80 s; finals 1400x1750 96 spp 3 to 8.5 min each (glass close-up with DOF slowest); site checks + PR + merge about 40 min; Drive backup of 325 MB by direct PUT under 1 min.
-- 2026-11-24 | cloud CPU (4 cores, bpy 5.3 Cycles) | Photoreal room stills (photoreal.py, concrete room, light-linked strips, DOF, AgX), Stay chair: test frames 480x600 32 spp about 15 s; finals 1200x1500 192 spp OIDN about 7 min each (3 in 21 min per room). Pulling 60 IG posts via Composio GetAnyAPI under 1 min, about $0.01.
+- 2026-11-25 | cloud (4-core, Mesa lavapipe CPU Vulkan) | in-house VFX tool render: 10-node audio-reactive feedback graph at 960x540, 240 frames + h264 + audio mux in 32 s (about 10 fps, 100 ms/frame; blur is 40% of it). Probe of one moment about 5 s. Expect real-time (30 fps+) on the tower 4090; time a real run before quoting.
