@@ -546,3 +546,6 @@ flatwork_final_piece,8.0,2026-11-23T00:51:00Z,Render sculpture metamer thread,"f
 render_cycles_final_1400x1750_128spp_ao_bevel_cpu4,17.0,,Redesign Plissé sconce,"brass_ox AO+bevel shader, 2 renders in parallel on 4 cores"
 render_cycles_final_1400x1750_128spp_ao_bevel_cpu4,29.0,,Redesign Plissé sconce,"close-up, mostly metal in frame, parallel with hero"
 design_origami_redesign_concept_to_checked_model,60.0,,Redesign Plissé sconce,new fold engine + 6 clay rounds + full model
+render_tower_4090_reel_1346f_1080x1920_32spp,113.0,,Make jewelry collection reel,"Imago v12 on home tower RTX 4090 OptiX, about 5 s/frame, 2.3M grass instances"
+reel_pull_frames_drive_composio,6.0,2026-11-25T07:58:00Z,Make jewelry collection reel,"1346 jpg 456 MB: Composio GOOGLEDRIVE_DOWNLOAD_FILE r2 urls in workbench, curl x16, md5 checked"
+reel_studio_finish_1346f_cpu4,25.0,2026-11-25T08:05:00Z,Make jewelry collection reel,"studio.py grade+unify+overlay2 with nodes, 4 workers, plus encode"
