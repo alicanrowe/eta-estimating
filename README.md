@@ -1,3 +1,5 @@
+![ETA estimating: Honest time estimates for creative production, from measured baselines that update themselves.](.github/banner.png)
+
 # ETA estimating skill
 
 A Claude skill for giving honest time estimates on creative production work: renders, render-and-check loops, splitting a batch across many cloud machines, farm animations, CAD, site work, and the waits on a person (sign-ins, OKs, unlocking a computer).
