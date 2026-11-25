@@ -139,6 +139,8 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `proj_round_end_to_end` | 4 | 85 min | 65 min to 1.8 h | 62 min to 1.9 h |
 | `quote_form_submit_web` | 1 | 49 min | 49 min to 49 min | 49 min to 49 min (few samples) |
 | `reel_patch_post_encode` | 1 | 20 min | 20 min to 20 min | 20 min to 20 min (few samples) |
+| `reel_pull_frames_drive_composio` | 1 | 6.0 min | 6.0 min to 6.0 min | 6.0 min to 6.0 min (few samples) |
+| `reel_studio_finish_1346f_cpu4` | 1 | 25 min | 25 min to 25 min | 25 min to 25 min (few samples) |
 | `render_8view_cycles_1000px_48spp` | 2 | 13 min | 10 min to 16 min | 9.3 min to 17 min (few samples) |
 | `render_check_round` | 7 | 8.0 min | 6.6 min to 25 min | 4.5 min to 38 min |
 | `render_cycles_clay_cpu4` | 1 | 0.2 min | 0.2 min to 0.2 min | 0.2 min to 0.2 min (few samples) |
@@ -153,6 +155,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `render_shopbot_3view_1300px_96spp` | 4 | 10 min | 9.0 min to 10 min | 8.5 min to 10 min |
 | `render_still_cloud_each` | 1 | 5.0 min | 5.0 min to 5.0 min | 5.0 min to 5.0 min (few samples) |
 | `render_stills_cloud_set` | 1 | 29 min | 29 min to 29 min | 29 min to 29 min (few samples) |
+| `render_tower_4090_reel_1346f_1080x1920_32spp` | 1 | 1.9 h | 1.9 h to 1.9 h | 1.9 h to 1.9 h (few samples) |
 | `renderbeamer_restart_to_frames` | 2 | 5.3 min | 1.5 min to 9.1 min | 0.6 min to 10 min (few samples) |
 | `renderbeamer_startup` | 1 | 9.0 min | 9.0 min to 9.0 min | 9.0 min to 9.0 min (few samples) |
 | `research_sourcing` | 5 | 21 min | 12 min to 42 min | 8.0 min to 46 min |
