@@ -11,6 +11,7 @@ Give ETAs from measured durations, not from feel. Every ETA is a range with cloc
 
 ## Where the data is
 - Live copy, shared by every thread of the project: a shared project folder (for example `<project-files>/eta-estimating/`) (use this when it exists, and write new data here).
+- Per-thread step plans live in plans.csv in the live copy's data folder (`plan` creates it ; private: thread ids and titles, never published).
 - Otherwise the copy bundled with this skill: `data/observations.csv` (measured durations), `data/predictions.csv` (past ETAs and how they did), `references/baselines.md` (the table plus what each row means).
 - `scripts/eta.py` does the maths. It needs only Python 3.
 - **Project registry**: `PROJECTS.md` in the live copy lists every project and deliverable with its look, folder, thread and status. It stays private (never copied to the public repo); `references/project-registry.md` has the format and rules for starting one.
@@ -23,7 +24,8 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Step | Typical | Range seen |
 |---|---|---|
 | Jewelry piece, own cloud machine, cold start to checked report | 9 min | 4 to 16 min |
-| Heavy jewelry piece (5 to 6 million triangles, e.g. cuffs) | 26 min | 18 to 29 min |
+| Heavy jewelry piece (5 to 6 million triangles, e.g. cuffs) | 26 min | 18 to 29 min; 37 min with the overhaul chase carving plus clay and fidelity squares (ov_job.sh, 23 Nov) |
+| Overhaul jewelry piece, no carving, clay + fidelity squares (ov_job.sh), 4 CPU / 15 GB | 19 min | 15 to 25 min (8 pieces, 23 Nov); a STL watertight repair adds nothing noticeable; pieces at 5.6M+ triangles ran out of memory at render on 15 GB even with FACECAP 500k; one took 94 min before failing, so give those a bigger-RAM machine |
 | Re-render on a machine already set up | 3 min | 1.5 to 7 min |
 | The 4-view Cycles render inside that | 27 s | 16 to 43 s |
 | Furniture variant: model, render-check loop, sheet | 36 min | 21 to 80 min |
@@ -31,18 +33,21 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Render-check round that rebuilds a material system | 38 min | 30 to 40 min |
 | Preview still on a 4-core cloud machine, no GPU | 2 min | |
 | Farm: pack and copy / renderBeamer upload per file | 6 min / 6 min | 5 to 7 min |
+| Tower (RTX 4090) Blender frame 1080x1920 OptiX / CLO 20-piece round / reboot to sign-in | 5 to 15 s / 36 min / 2 min, then waits for a human sign-in | Imago 5.0, Stay 9.7, Nave v2 256 spp 15 s; CLO 32 to 50 min (jackets 15 to 66 s, boots 11 s to 9 min); 25 Nov, GarageFarm retired |
 | Farm render, 2160 frames 4K, Cycles 256, LOW priority | 2 h, about $69 | 1.6 to 2 h, $63 to $70 |
 | Farm frame download, 2160 x 8 MB at about 2.3 MB/s | 2 to 4 h | 4.2 h seen |
 | Callouts on about 20 labels / encode a 90 s 4K reel | 30 min / 45 min | |
 | Farm job end to end, "go" to delivered video | 6 h | |
 | Web feature built and live (deploy about 3 min) | 27 min | |
-| Research or sourcing | 29 min | 18 to 46 min |
+| Research or sourcing (one pass) | 21 min | 8 to 46 min |
+| Site change, PR, CI, merge, live check / merge to live only | 40 min / 5 min | 25 to 44 / 3 to 6 min |
 | Small skill save / small graphic or teaser | 16 min / 13 min | 8 to 24 / 11 to 15 min |
 | User answers while active / daytime away / asked after 4 PM | 1 min / 47 min / next morning | 0.3 to 2 min / 31 to 75 min / 14 to 16 h |
 | Fan-out thread stalled by the concurrency limit (until restarted) | 90 min | |
 | Shared code changed without a version bump (render threads blocked) | 3 min | |
 | Sawhorse r8 re-render, design kept (8 images 1000 px, 32 spp, 4-core cloud, mesh 0.09 + checks) | 15 min per full pass; 50 min thread incl. pip setup 3 min, 3 passes | 18 Nov |
 | v2 stand render, one piece per machine (3 views 1400 px, 128 spp Cycles CPU, 4-core cloud, ~22k faces) | 3.3 min render (re-render after a central fix: 3.0 min render, 4 min end to end); ~13 min thread incl. pip bpy 1 min, checks and overlap test | 18 Nov |
+| Jewelry fidelity look, one pendant view (1400 px, 96 spp adaptive, Cycles CPU, 4-core cloud, VOX 0.027 mesh) | mesh 1.8 min; before view 1200 px 64 spp ~1 min; after view ~6 min; 420 px 24 spp tests 30 s each; pip bpy ~4 min | 21 Nov |
 | Moth v3 stand render, round 2 high-poly (~196k faces, 3 views 1400 px, 128 spp, 4-core cloud) | 6.2 min render (fix1 rerun 5.8 min, fix4 184k faces 4.1 min) + fabcheck under 1 min; ~9 min end to end (job sheet guessed up to 25) | 18 Nov |
 | Boots round 1, three designs from a voxel kit (fit checks, 4 views, brand sheet) | 3 boots took about 85 min of fix rounds after the kit existed (toe box, open toe faces, sliver spikes, hardware too small to read); final build at 1.0 mm voxels + Cycles 48 spp 1400 px x 4 views: about 4 min per boot (12 min for three) on a 4-core cloud machine; fit cross-sections about 1 min per boot | 20 Nov |
 | CLO3D on the Mac by remote control | The OS file picker and CLO's import dialog cannot be clicked from a CLO-only grant, and a full-screen Space blocks moving windows; each import is a human gate (about 1 to 3 min per file while the user is active). Plan CLO steps as user-driven, or skip CLO until there are flat patterns | 20 Nov |
@@ -58,6 +63,14 @@ Read `references/baselines.md` before the first ETA in a conversation. Paths to 
 | Jacket design, one per machine (CORSET: model from the jackets kit incl. own collar/busk/lacing/boning helpers, 14 make-and-check passes with clipping + extra body-vs-everything check, finals 2 colours x 2 views 1100x1500 160 spp, 4-core cloud) | ~51 min thread end to end: kit setup 2 min, each preview 40 to 60 s + ~1 min check, finals 2.8 to 3.0 min per colour (5.8 min for 4 images) | 21 Nov |
 | Jacket design, one per machine (CRESCENT: model from the jackets kit incl. own tails/neckline/lacing/moon helpers, ~15 make-and-check passes with clipping + extra body/lace checks, finals 2 colours x 2 views 1100x1500 160 spp, 4-core cloud) | ~70 min thread end to end: pip bpy 3 min, field+sleeves 1.5 min, each preview pass 35 to 60 s per 2 views + 30 s build/check, finals 4.0 min per colour (8.0 min for 4 images) | 21 Nov |
 | Jacket design, one per machine (SCALE r4: ~1,150 generated moulded scales on a row field, own isoline/placement/clasp helpers, ~8 make-and-check passes, part sheet + finals 2 colours x 2 views 1100x1500 160 spp, 4-core cloud) | ~100 min thread end to end: pip+field 3 min; build+check 25 s and preview 35 to 45 s per 2 views once geo.sample was cached (6 to 7 min per build before: kit npz decompressed on every sample); part sheet 4.6 min; finals 3.4 to 3.7 min per colour | 21 Nov |
+| Jacket r6 render, one per machine (SERAPH, kit6 job6.sh, KEEP_DOME=1: drape 60 frames on 4.5 mm grid, then finals 2 colours x 2 views 2000x2500 128 spp, 4-core cloud) | drape 21 min; finals 54 min (13.5 min per image); pip bpy+scipy+skimage 2 to 3 min (bpy was NOT preinstalled despite RUN.md) | 23 Nov |
+| Jacket r6b re-render of a collected drape (SERAPH, kit6b final6b.sh, v7 look, 2 colours x 2 views 2000x2500 128 spp, both colours run in parallel on one 4-core cloud machine) | 67.5 min wall for both colours together (65 min on the kit v2 rerun) (about 17 min per image when two run at once); kit setup under 1 min when bpy and jkwork40 are already there | 23 Nov |
+| Jacket r6 render, one per machine (COAT, kit6 job6.sh: drape 60 frames on 4.5 mm grid, then finals 2 colours x 2 views 2000x2500 128 spp, 4-core cloud) | drape 33 min; finals 93 min (about 23 min per image, so 1.7x SERAPH; split finals into two jobs if a jacket is heavier); pip bpy 2 min | 23 Nov |
+| Jacket r6b re-render, one per machine (COAT, kit6b final6b.sh from the collected r6 .blend, one colour per job: front+back 2000x2500 128 spp, 4-core cloud) | 45 to 49 min per colour (black 45, red 49); kit setup under 1 min when bpy is already installed | 23 Nov |
+| Jacket r6 render, one per machine (BRIAR, kit6 job6.sh: drape 60 frames on 4.5 mm grid, then finals 2 colours x 2 views 2000x2500 128 spp, 4-core cloud) | drape 38 min; finals 114 min (about 29 min per image; finished 6 min inside the 2 h background limit, so split finals into two jobs for heavy jackets); pip bpy+scipy+skimage 2 min | 23 Nov |
+| Jacket r6b re-render, one per machine (BRIAR, kit6b v2 final6b.sh from a collected r6 drape: 2 colours x 2 views 2000x2500 128 spp, v7 look, 4-core cloud) | 54 min per colour (about 27 min per image); run the colours one after the other, never in parallel on the same 4 cores | 23 Nov |
+| Jacket r6 render + r6b re-render, one per machine (HORN, kit6 job6.sh then kit6b final6b.sh one colour at a time, 2000x2500 128 spp, 4-core cloud) | r6: drape 32 min, finals 90 min (about 22 min per image); r6b: about 43 min per colour run alone (about 11 min per image), both colours run back to back 85 min; pip bpy+scipy+skimage 2 min | 23 Nov |
+| Flatwork sculpture final, one per machine (final_piece.sh: 4 stills 1400x1750 128/96 spp Cycles CPU + dims SVG, web GLB, STEP, DXF, 4-core cloud, 80k to 370k tris) | 8.5 to 17 min end to end incl. pip install (knell 8.5, chord 11, husk 13, tympan 15, vrille 16, writhe 17 at 95 parts/410k tris; round 2: plisse 11.9 at 3 parts/11k tris, rete 12.9 at 9 parts/78k tris, soufflet 15 at 15 parts/51k tris, creel 15 at 87k tris; jalousie v2 23 min at 16 parts/60k tris with 0.9 mm 4-segment bevels, plus 9 min for a re-aimed 1400 close); cardoon v2 50 min at 64/48 spp, 114 parts with 90 folded bracts + 4 glow strips, plus 4 min for a 1400 px 48 spp dusk still; job sheet guessed 45 to 75; gyre v2 18 min at 62 parts/523k tris (deps already installed), plus about 4 min per extra 1400 px 96 spp still while it runs | 23 Nov |
 | Boot design, one per machine (GAUNTLET r4 on kit v4.0: own lame/plate helpers and cast cap/rondels, 6 make-and-check rounds, part sheet + finals 6 black + 2 red views 1400 px 64 spp, 4-core cloud) | ~95 min thread end to end: pip bpy+matplotlib 3 min; build+fit+clip 3.5 min (6.5 min before cast grids were coarsened); preview 4 views 700 px 16 spp ~1 min; finals black 6 views + 27-part sheet ~30 min, red 2 views ~8 min | 21 Nov |
 | Farm download of two 2160-frame 4K jobs (39 GB, ~9.1 MB/frame) | 4.5 h | 2.5 to 4.5 MB/s; 1.2 MB/s seen early |
 | renderBeamer cold start (plugin download) / restart to first frames | 9 min / 10 min | |
@@ -76,6 +89,28 @@ An ETA for the wrong thing, or "I can't find it", is the worst ETA. The user oft
    words as well. The registry row is the status; the vault's project page is the history behind it (decisions,
    critique, what went wrong, past ETAs). When a timed job finishes, add one line to that project page's
    History with the ETA given and the actual time, next to the baseline you log here.
+
+> **Temp files on the Mac go on the external SSD** (the user, 21 Nov): transfer tars, split parts, farm downloads and scratch never go on the internal disk or Downloads. If the SSD folder isn't connected, that is a gate; count it.
+
+## Every thread: a checklist with a time on each step (the moment work starts)
+An ETA question about running work can only get a clock time if the thread already said how long each step takes. On 25 Nov the coordinator was asked for ETAs and couldn't give firm times for six running threads, because their checklists had steps but no times. So:
+1. **When a thread starts work, it logs a step plan and posts it as its checklist**, in the same turn:
+   `python3 scripts/eta.py plan <thread_id> "<title>" "Step one=<category>" "Step two=20/35" "User OKs=gate" "Page live=site" "Tower render=tower_frames:480"`
+   It looks each step up in the baselines and prints checklist lines with a duration and a clock time, e.g.
+   `○ Tower render (~90 min, by 3:47 PM)`. Paste those lines into `update_progress_checklist` as they are.
+   - A step spec is `Label=<category>` (p50/p90 from the data), `Label=<category>*N` (N rounds), `Label=p50/p90` in minutes when nothing fits (say why in the label), or a shorthand: `gate` (waits on the user, by their clock; after 4 PM it is next morning), `site` (page, PR, CI, merge, live check), `deploy`, `research`, `skill`, `round` (one render-check round), `clo_round` (one 20-piece CLO round on the tower), `tower_frames:N` (Blender frames on the tower at measured s/frame, plus fetch and encode). Add `@gate`, `@machine` or `@agent` to set a step's kind.
+   - Split anything over about 45 minutes into steps a person can recognise. Mark every wait on the user as its own gate step.
+   - Re-plan (run `plan` again; it replaces the old one) when the scope changes, and post the new checklist.
+2. **As each step finishes**: `python3 scripts/eta.py step <thread_id> <n> done`. It records the actual time against the plan, logs it as an observation for that step's category (so the baselines calibrate themselves) and starts the next step's clock. `step <thread_id> <n> start` when a step starts later than the one before ended (for example after a gate).
+3. **Keep the times on the checklist current**: when a step runs past its late end, update the checklist line with the new time once, the way step 2 of "Keeping it honest" says.
+
+## The coordinator's ETA list (one command)
+When the user asks "ETA?" or "where is everything", do this and nothing slower:
+1. `list_threads` (since about 24 h ago, plus `state: blocked`) and save the JSON result(s) to a scratch file.
+2. `python3 scripts/eta.py board --listing <file> [<file2>]`
+   It prints one line per open thread with a clock-time range in the user's time zone (`ETA_TZ`, default America/New_York), the step it is on and any gate ahead, flags threads quiet for over 2 h as STALLED, puts delivered or blocked threads under "Waiting on <user>" (set `ETA_USER` to their name), skips ghost threads still marked working but silent for over a day, and lists running threads that have no plan.
+3. For each "no plan logged" thread: read its last checklist, write a plan for it from the baselines (`plan` with `--now <when the current step started>`), and rerun `board`. Ask that thread to keep its plan up to date from then on.
+4. Send the board as it is, with one sentence on what sets the late ends (usually a tower render or a wait on the user). Shared machines queue: when several threads need the tower at once, say which goes first.
 
 ## Making an ETA
 1. **Split the job into steps** and mark each one:
@@ -133,11 +168,12 @@ After every round: add a row to `data/projects.csv` (ask, delivered, verdict tim
 - If work is already running, base the rest on its measured progress (frames done per minute, pieces done so far), not the plan.
 
 ## Keeping it honest
-1. **Log every ETA you give**: `python3 scripts/eta.py predict "<what>" --p50 <min> --p90 <min> --source "<thread>"`.
+1. **Log every ETA you give** (step plans from `plan` are logged already; this is for one-off ETAs): `python3 scripts/eta.py predict "<what>" --p50 <min> --p90 <min> --source "<thread>"`.
 2. **When a step passes its late end**, re-estimate from what has actually happened and tell the user the new range once. Don't post every small slip.
 2a. **When newer work pushes an accepted job back, its ETA has changed.** Tell the user in one line what is waiting, why, and the new range, in the same turn you park it. Keep it on your checklist marked paused, and resume it as soon as the urgent work ends. Log it with the request-handoffs skill's `ledger.py park` if the project keeps a request ledger. A job with no update for two hours counts as parked.
 3. **When the work finishes**:
-   - `python3 scripts/eta.py resolve <id> <actual minutes>`
+   - `python3 scripts/eta.py step <thread_id> <n> done` for each planned step (logs it as an observation), and
+   - `python3 scripts/eta.py resolve <id> <actual minutes>` for one-off ETAs
    - add each measured step: `python3 scripts/eta.py add <category> <value> --source "<thread>" --note "<what was different>"` (minutes; categories ending `_h` are hours, `_sec` seconds, `_usd` dollars). Make a new category when nothing fits, named `<area>_<what>` in lower case.
    - update the project's row in `PROJECTS.md` (status, where the output is, what's next).
    - `python3 scripts/eta.py rebuild`, and add a line to `references/baselines.md` if you learned something a number can't say (a new trap, a new limit).
@@ -145,6 +181,7 @@ After every round: add a row to `data/projects.csv` (ask, delivered, verdict tim
 5. Measure from real timestamps (thread start and finish, log lines, file times, farm job pages), never from memory.
 
 ## Traps already seen
+- A checklist with no times on its steps (25 Nov): six running threads, and the coordinator could only say "in progress". Every checklist carries a duration and a clock time per step, from `plan`.
 - Estimating a render job from the render time: the render was 20 to 40 s, the job was 8 to 16 min. Setup and checking dominate.
 - Estimating farm download as a quick step: 2160 frames of 16-bit PNG is about 17 GB, 2 to 4 hours at about 2.3 MB/s.
 - ETAs given for serial work on one machine go stale the moment the work is split across machines. Re-issue the ETA when the plan changes.
@@ -156,14 +193,12 @@ After every round: add a row to `data/projects.csv` (ask, delivered, verdict tim
 - A finished reel went unfound for a day: its thread stalled one step before delivery (saving to Drive), and when the user asked for its ETA by its look, the search covered only the last 2 days of threads. Nothing listed all projects. Fix: Step 0 and the project registry.
 
 ## Excuses that don't count
-Each of these is a shortcut that ends in a broken result. If you catch yourself thinking the left column, do the right column.
-
-| The excuse | What to do instead |
+| Excuse | Why it doesn't count |
 |---|---|
-| "This one is just a quick guess" | Every ETA comes from the baselines. No baseline? Say so and give a range. |
-| "I'll log the real time later" | Log actual against estimate when the job ends, in the same session. |
-| "It's just the render, the rest is quick" | Count every stage: check loops, fan-out, uploads, site work, and waits on the user. |
-| "While I'm in here I'll also tidy/refactor this other bit" | Change only what the task needs. Smallest diff that works; no new options, helpers or files nobody asked for. Note other ideas for later instead. |
+| "It's still in progress, so I can't give a time" | The thread's step plan has a time per step; run `board`. If there is no plan, write one from its checklist and the baselines. |
+| "There's no baseline for this step" | Take the nearest category, widen it by half, give minutes as p50/p90 and say the data is thin. |
+| "The render time is short, so the job is short" | Setup, queueing, checking and delivery dominate; plan them as steps. |
+| "I'll add the times to the checklist later" | The ETA question comes while the work runs. Times go on the checklist when it is first posted. |
 
 ## Keep this skill improving
-When a step here goes wrong or the owner corrects something, write the lesson into this skill (dated) in the same session, add a check to a script if one could have caught it, and publish it with the skills publish script. No private data.
+When an ETA misses its late end, add the measured step with `step ... done` (or `add`), and add a trap line above if the cause was new. When a step kind keeps needing hand-typed minutes, give it a category or a shorthand in `scripts/eta.py`.

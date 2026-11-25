@@ -16,6 +16,10 @@ Commands
   eta.py calibration                            how far off past ETAs were
   eta.py rebuild                                regenerate the baselines table
   eta.py stallcheck LISTING.json [--min 3]      flag fan-out threads that started but never ran
+  eta.py plan THREAD_ID "title" "Step=category" "Step=20/35" "Step=gate" "Step=site" "Step=tower_frames:456"
+                                                record a thread's steps; prints its checklist with clock times
+  eta.py step THREAD_ID N start|done            mark a step; done logs actual vs planned
+  eta.py board [--listing threads.json ...]     one ETA line per open thread (the coordinator's one call)
   eta.py project --pieces 9 [--design central|fanout] [--kit] [--page] [--kind new_look]
                                                 whole-project ETA: this round, and until accepted
 Only the standard library is used.
@@ -315,6 +319,7 @@ def cmd_project(a):
             parts["stall"] = _draw(rng, stall)
         else:
             parts["stall"] = 0.0
+        build = parts["render"] + parts["fix"] + parts["stall"]
         if page:
             pg = _draw(rng, page) * a.page_scale
             # the page is built while machines render, but fix rounds take the same agent's attention; +5 merge/live
@@ -357,6 +362,281 @@ def cmd_project(a):
     print(f"UNTIL ACCEPTED (incl. review waits, rework rounds; median {statistics.median(rounds_used):.0f} rounds, "
           f"p90 {q(rounds_used,.9):.0f}): p50 {fmt(f50,'min')}, p90 {fmt(f90,'min')}  ->  {clock(f50)} to {clock(f90)}")
     print("Quote THIS ROUND as the ETA; give UNTIL ACCEPTED as the full-scope range when the user asks how long the whole thing takes.")
+
+
+# ---------------------------------------------------------------- per-thread step plans and the ETA board
+PLANS = os.path.join(ROOT, "data", "plans.csv")
+PLAN_COLS = ["thread_id", "title", "step_no", "step", "kind", "category", "p50_min", "p90_min",
+             "planned_utc", "started_utc", "done_utc", "actual_min", "source"]
+TZ_NAME = os.environ.get("ETA_TZ", "America/New_York")
+USER = os.environ.get("ETA_USER", "the user")
+# Step shorthands that are not a single observation category. Values are (category, overhead_min, kind).
+SHORTHAND = {
+    "gate": ("human_gate_daytime_away", 0, "gate"),
+    "gate_active": ("human_gate_active", 0, "gate"),
+    "site": ("proj_page_build_merge", 0, "agent"),        # page edit, PR, CI, merge, live check
+    "deploy": ("site_deploy_wait", 0, "machine"),          # merge to live only
+    "research": ("research_sourcing", 0, "agent"),
+    "skill": ("skill_fix_and_publish", 0, "agent"),
+    "round": ("render_check_round", 0, "agent"),           # one render-check round
+    "clo_round": ("tower_clo_round_20piece", 10, "machine"),
+}
+
+
+def _tz():
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo(TZ_NAME)
+    except Exception:
+        return dt.timezone(dt.timedelta(hours=-5))
+
+
+def _now(a=None):
+    t = getattr(a, "now", None) if a is not None else None
+    return _parse_ts(t) if t else dt.datetime.now(dt.timezone.utc)
+
+
+def _iso(t):
+    return t.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _clock(t, ref=None):
+    lt = t.astimezone(_tz())
+    s = lt.strftime("%-I:%M %p")
+    if ref is not None and lt.date() != ref.astimezone(_tz()).date():
+        s = lt.strftime("%a ") + s
+    return s
+
+
+def _cat_range(cat, rows):
+    v = [float(r["minutes"]) for r in rows if r["category"] == cat]
+    if not v:
+        return None
+    u = unit(cat)
+    mult = 60.0 if u == "h" else (1 / 60.0 if u == "s" else 1.0)
+    if len(v) < 4:  # thin data: min x 0.8 .. max x 1.5, as the method says
+        return statistics.median(v) * mult, max(v) * 1.5 * mult
+    return q(v, .5) * mult, q(v, .9) * mult
+
+
+def _gate_after_hours(at):
+    """A gate that starts after about 4 PM or before 8 AM user time is usually answered the next morning."""
+    lt = at.astimezone(_tz())
+    if 8 <= lt.hour < 16:
+        return None
+    nine = lt.replace(hour=9, minute=0, second=0, microsecond=0)
+    if lt.hour >= 16:
+        nine += dt.timedelta(days=1)
+    m = (nine - lt).total_seconds() / 60
+    return m, m + 120
+
+
+def _parse_step(spec, rows, at=None):
+    """'Label=cat' | 'Label=cat*N' | 'Label=20/35' | 'Label=gate' | 'Label=tower_frames:456' (+ optional @kind)."""
+    kind = None
+    if "@" in spec.rsplit("=", 1)[-1]:
+        spec, kind = spec.rsplit("@", 1)
+    if "=" not in spec:
+        sys.exit(f"step '{spec}' needs '=<category | p50/p90 | shorthand>'")
+    label, how = spec.rsplit("=", 1)
+    label, how = label.strip(), how.strip()
+    m = re.fullmatch(r"(\d+(?:\.\d+)?)/(\d+(?:\.\d+)?)", how)
+    if m:
+        return label, kind or "agent", "", float(m.group(1)), float(m.group(2))
+    m = re.fullmatch(r"tower_frames:(\d+)", how)
+    if m:  # tower Blender render: frames x measured s/frame, plus about 10 min to fetch, queue, encode and return
+        n = int(m.group(1))
+        r = _cat_range("tower_blender_frame_1080x1920_sec", rows) or (10 / 60, 15 / 60)
+        return label, kind or "machine", "tower_blender_frame_1080x1920_sec", n * r[0] + 10, n * r[1] * 1.3 + 20
+    mult = 1
+    m = re.fullmatch(r"(.+)\*(\d+(?:\.\d+)?)", how)
+    if m:
+        how, mult = m.group(1), float(m.group(2))
+    cat, over, k = SHORTHAND.get(how, (how, 0, None))
+    if how == "gate" and at is not None and _gate_after_hours(at):
+        g = _gate_after_hours(at)
+        return label, kind or "gate", cat, g[0], g[1]
+    r = _cat_range(cat, rows)
+    if r is None:
+        sys.exit(f"no observations for '{cat}' (step '{label}'); give minutes as p50/p90 instead")
+    return label, kind or k or ("machine" if "render" in cat or "tower" in cat else "agent"), cat, \
+        r[0] * mult + over, r[1] * mult + over
+
+
+def _read_plans():
+    if not os.path.exists(PLANS):
+        return []
+    with open(PLANS, newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def _write_plans(rows):
+    with open(PLANS, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=PLAN_COLS, lineterminator="\n", extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+
+
+def cmd_plan(a):
+    """Record a thread's step plan (replaces any earlier plan for that thread) and print the checklist text."""
+    obs = load_obs()
+    now = _now(a)
+    rows = [r for r in _read_plans() if r["thread_id"] != a.thread]
+    t = now
+    lines = []
+    for i, spec in enumerate(a.steps, 1):
+        label, kind, cat, p50, p90 = _parse_step(spec, obs, t)
+        started = _iso(now) if i == 1 and not a.not_started else ""
+        rows.append(dict(thread_id=a.thread, title=a.title, step_no=i, step=label, kind=kind, category=cat,
+                         p50_min=f"{p50:.1f}", p90_min=f"{p90:.1f}", planned_utc=_iso(now),
+                         started_utc=started, done_utc="", actual_min="", source=a.source or a.title))
+        t = t + dt.timedelta(minutes=p50)
+        gate = f" (needs {USER})" if kind == "gate" else ""
+        lines.append(f"{'✱' if started else '○'} {label} (~{_dur(p50)}, by {_clock(t, now)}){gate}")
+    _write_plans(rows)
+    print("\n".join(lines))
+
+
+def _dur(m):
+    return f"{m/60:.1f} h" if m >= 90 else f"{m:.0f} min"
+
+
+def cmd_step(a):
+    """Mark a step started or done. Done logs the actual time as an observation for its category."""
+    rows = _read_plans()
+    now = _now(a)
+    mine = sorted([r for r in rows if r["thread_id"] == a.thread], key=lambda r: int(r["step_no"]))
+    if not mine:
+        sys.exit(f"no plan for {a.thread}; run `eta.py plan` first")
+    tgt = [r for r in mine if int(r["step_no"]) == a.n]
+    if not tgt:
+        sys.exit(f"{a.thread} has no step {a.n}")
+    r = tgt[0]
+    if a.what == "start":
+        r["started_utc"] = _iso(now)
+    else:
+        start = r["started_utc"]
+        if not start:  # fall back to the previous step's finish, then the plan time
+            prev = [x for x in mine if int(x["step_no"]) < a.n and x["done_utc"]]
+            start = prev[-1]["done_utc"] if prev else r["planned_utc"]
+            r["started_utc"] = start
+        r["done_utc"] = _iso(now)
+        actual = (now - _parse_ts(start)).total_seconds() / 60
+        r["actual_min"] = f"{actual:.1f}"
+        ratio = actual / max(float(r["p50_min"]), 0.1)
+        print(f"step {a.n} '{r['step']}' took {actual:.0f} min (planned p50 {float(r['p50_min']):.0f}, ratio {ratio:.2f})")
+        if r["category"] and r["category"] != "tower_blender_frame_1080x1920_sec" and not a.no_log:
+            u = unit(r["category"])
+            val = actual / 60 if u == "h" else actual
+            if u in ("min", "h"):
+                with open(OBS, "a", newline="") as f:
+                    csv.writer(f, lineterminator="\n").writerow(
+                        [r["category"], f"{val:.1f}", start, f"thread {r['title']}", f"plan step: {r['step']}"])
+                print(f"logged {r['category']} = {val:.1f}")
+        nxt = [x for x in mine if int(x["step_no"]) == a.n + 1]
+        if nxt and not nxt[0]["started_utc"]:
+            nxt[0]["started_utc"] = _iso(now)
+    _write_plans(rows)
+
+
+def _remaining(steps, now):
+    """Remaining (p50, p90) minutes and the step in progress. Late end: sum p50 + largest spread, or sum p90 if < 5 steps."""
+    left = [s for s in steps if not s["done_utc"]]
+    p50s, spreads, cur, over = [], [], None, False
+    for s in left:
+        p50, p90 = float(s["p50_min"]), float(s["p90_min"])
+        if s["started_utc"]:
+            el = (now - _parse_ts(s["started_utc"])).total_seconds() / 60
+            cur = cur or s
+            if el > p90:
+                over = True
+            p50 = max(p50 - el, 0.25 * float(s["p50_min"]))
+            p90 = max(p90 - el, 0.6 * float(s["p50_min"]))
+        p50s.append(p50)
+        spreads.append(max(p90 - p50, 0))
+    if cur is None and left:
+        cur = left[0]
+    if len(left) >= 5:
+        late = sum(p50s) + max(spreads or [0])
+    else:
+        late = sum(p50s) + sum(spreads)
+    return sum(p50s), late, cur, over, left
+
+
+def _load_listing(paths):
+    import json
+    out = {}
+    for p in paths or []:
+        with open(p) as f:
+            d = json.load(f)
+        items = d if isinstance(d, list) else d.get("sessions", [])
+        for s in items:
+            tid = s.get("thread_id")
+            if tid and (tid not in out or s.get("last_activity_at", "") > out[tid].get("last_activity_at", "")):
+                out[tid] = s
+    return out
+
+
+def cmd_board(a):
+    """One ETA line per open thread, in the user's clock time."""
+    now = _now(a)
+    plans = _read_plans()
+    listing = _load_listing(a.listing)
+    by = {}
+    for r in plans:
+        by.setdefault(r["thread_id"], []).append(r)
+    out, waiting, ghosts, noplan, done = [], [], 0, [], []
+    tids = list(dict.fromkeys(list(listing) + list(by)))
+    for tid in tids:
+        s = listing.get(tid, {})
+        steps = sorted(by.get(tid, []), key=lambda r: int(r["step_no"]))
+        title = s.get("title") or (steps[0]["title"] if steps else tid)
+        state = s.get("state", "")
+        last = _parse_ts(s["last_activity_at"]) if s.get("last_activity_at") else None
+        quiet = (now - last).total_seconds() / 60 if last else None
+        if s.get("resolved") or state == "done":
+            continue
+        if listing and tid not in listing and steps and all(x["done_utc"] for x in steps):
+            continue
+        if quiet is not None and quiet > a.ghost_h * 60 and state == "working":
+            ghosts += 1
+            continue
+        if state in ("blocked", "review_ready") and not (steps and any(not x["done_utc"] and x["kind"] != "gate"
+                                                                         and x["started_utc"] for x in steps)):
+            ago = f", quiet {_dur(quiet)}" if quiet else ""
+            waiting.append(f"- {title}: {'delivered, waiting on ' + USER if state == 'review_ready' else 'waiting on ' + USER}{ago}")
+            continue
+        if not steps:
+            if state == "working" or not listing:
+                noplan.append(f"- {title}: no step plan logged yet (ask the thread; meanwhile use its checklist)")
+            continue
+        p50, p90, cur, over, left = _remaining(steps, now)
+        if not left:
+            done.append(f"- {title}: all steps done")
+            continue
+        e, l = now + dt.timedelta(minutes=p50), now + dt.timedelta(minutes=p90)
+        gates = [x["step"] for x in left if x["kind"] == "gate"]
+        flag = ""
+        if quiet is not None and quiet > 120:
+            flag = f"  STALLED (quiet {_dur(quiet)})"
+        elif over:
+            flag = "  (current step past its late end)"
+        g = f"; waits on {USER} for: {', '.join(gates)}" if gates else ""
+        out.append((p50, f"- {title}: done {_clock(e, now)} to {_clock(l, now)} ET. Now: {cur['step']} "
+                         f"({len(left)} of {len(steps)} steps left){g}{flag}"))
+    print(f"ETA board at {_clock(now)} ET ({now.astimezone(_tz()).strftime('%a %-d %b')})")
+    for _, line in sorted(out):
+        print(line)
+    if waiting:
+        print(f"Waiting on {USER}:")
+        print("\n".join(waiting))
+    if noplan:
+        print("No plan logged:")
+        print("\n".join(noplan))
+    if done:
+        print("\n".join(done))
+    if ghosts:
+        print(f"({ghosts} old 'working' threads quiet for over {a.ghost_h:g} h skipped as ghosts)")
 
 
 def main():
@@ -411,6 +691,21 @@ def main():
     s.add_argument("--trials", type=int, default=4000)
     s.add_argument("--seed", type=int, default=7)
     s.set_defaults(f=cmd_project)
+    s = sp.add_parser("plan", help="record a thread's step plan and print its checklist with ETAs")
+    s.add_argument("thread"); s.add_argument("title")
+    s.add_argument("steps", nargs="+", help="'Label=category' | 'Label=cat*2' | 'Label=20/35' | 'Label=gate' | "
+                   "'Label=site' | 'Label=tower_frames:456' (append @gate/@machine/@agent to set the kind)")
+    s.add_argument("--source"); s.add_argument("--now"); s.add_argument("--not-started", action="store_true")
+    s.set_defaults(f=cmd_plan)
+    s = sp.add_parser("step", help="mark a plan step started or done (done logs the actual time)")
+    s.add_argument("thread"); s.add_argument("n", type=int); s.add_argument("what", choices=["start", "done"])
+    s.add_argument("--now"); s.add_argument("--no-log", action="store_true")
+    s.set_defaults(f=cmd_step)
+    s = sp.add_parser("board", help="ETA list for every open thread, in clock time")
+    s.add_argument("--listing", nargs="*", help="saved list_threads JSON page(s)")
+    s.add_argument("--ghost-h", type=float, default=24.0, help="skip 'working' threads quiet longer than this")
+    s.add_argument("--now")
+    s.set_defaults(f=cmd_board)
     a = p.parse_args()
     a.f(a)
 

@@ -36,3 +36,5 @@ id,made_utc,what,p50_min,p90_min,actual_min,ratio_actual_to_p50,status,source
 35,2026-11-21T02:22:00Z,boots round 4 page (kit v4 + 9 boots fanned out + page),170,250,,,open,boots thread: kit 30 + parallel boots 100 + page 40
 36,2026-11-21T02:26:10Z,Jackets round 4: all 8 fanned-out jackets done (project model),108.0,162.0,,,open,"project model from 01:45Z: kit 14 actual, fanout 8 x proj_fanout_piece_design"
 37,2026-11-21T02:26:10Z,Silk Road: page live (project model backtest from 23:22Z),270.0,378.0,,,open,project model run at 02:30Z with start 23:22Z; hand ETA was #33
+38,2026-11-23T00:05:16Z,"10 easy-production sculptures designed, rendered, published live",270.0,390.0,150.0,0.56,closed,Design 10 easy-production sculptures; project model p50 3.3h p90 4.7h widened for 10 new techniques incl. leather
+39,2026-11-24T15:46:58Z,Nave reel farm full (396+317 frames LOW) to frames on Drive,75.0,120.0,,,open,Add X-ray beat to Nave reel
