@@ -315,7 +315,6 @@ def cmd_project(a):
             parts["stall"] = _draw(rng, stall)
         else:
             parts["stall"] = 0.0
-        build = parts["render"] + parts["fix"] + parts["stall"]
         if page:
             pg = _draw(rng, page) * a.page_scale
             # the page is built while machines render, but fix rounds take the same agent's attention; +5 merge/live
