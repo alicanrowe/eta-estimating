@@ -773,3 +773,6 @@ tower_blender_frame_1080x1920_sec,5.0,2026-11-25T12:00:00Z,Publish tower-render 
 tower_blender_frame_1080x1920_sec,9.7,2026-11-25T12:00:00Z,Publish tower-render skill (from tower thread),Stay v1
 tower_blender_77frames_nave_v2,18.5,2026-11-25T12:00:00Z,Publish tower-render skill (from tower thread),15 s/frame
 tower_reboot_to_signin,2.0,2026-11-25T12:00:00Z,Publish tower-render skill (from tower thread),then blocks until the user signs in; no autologon
+furniture_render_set_12stills_cloud_cpu4,35,2026-11-25T18:32:00Z,boot podium thread,pip bpy Cycles CPU 4 cores; 7 stills 1600px 48-64spp + 4 clay 24spp + 1 open; 61-part model; cadcheck running alongside
+furniture_cadcheck_61parts,10,2026-11-25T18:36:00Z,boot podium thread,cadcheck.py with --grain on 61 laser-cut layers, 4 cores
+furniture_design_thread_to_first_stills,57,2026-11-25T18:07:00Z,boot podium thread,brief to passing stills posted; 8 form rounds
