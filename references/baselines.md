@@ -102,9 +102,12 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `flatwork_final_piece` | 20 | 16 min | 11 min to 25 min | 8.5 min to 29 min |
 | `flatwork_piece_final_render` | 2 | 30 min | 21 min to 40 min | 19 min to 42 min (few samples) |
 | `flicker_render_check_page_2models` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
+| `furniture_cadcheck_61parts` | 1 | 10 min | 10 min to 10 min | 10 min to 10 min (few samples) |
 | `furniture_cast_piece_cold` | 3 | 10 min | 10 min to 12 min | 10 min to 13 min (few samples) |
+| `furniture_design_thread_to_first_stills` | 1 | 57 min | 57 min to 57 min | 57 min to 57 min (few samples) |
 | `furniture_motif_design_to_preview` | 1 | 55 min | 55 min to 55 min | 55 min to 55 min (few samples) |
 | `furniture_motif_variant_round` | 1 | 32 min | 32 min to 32 min | 32 min to 32 min (few samples) |
+| `furniture_render_set_12stills_cloud_cpu4` | 1 | 35 min | 35 min to 35 min | 35 min to 35 min (few samples) |
 | `graphics_small` | 2 | 13 min | 11 min to 15 min | 11 min to 15 min (few samples) |
 | `human_gate_active` | 5 | 1.3 min | 0.6 min to 5.6 min | 0.3 min to 8.0 min |
 | `human_gate_daytime_away` | 5 | 39 min | 34 min to 67 min | 31 min to 75 min |
