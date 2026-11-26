@@ -777,3 +777,4 @@ furniture_render_set_12stills_cloud_cpu4,35,2026-11-25T18:32:00Z,boot podium thr
 furniture_cadcheck_61parts,10,2026-11-25T18:36:00Z,boot podium thread,cadcheck.py with --grain on 61 laser-cut layers, 4 cores
 furniture_design_thread_to_first_stills,57,2026-11-25T18:07:00Z,boot podium thread,brief to passing stills posted; 8 form rounds
 jewelry_renderonly_square,14.5,2026-11-25T23:50:42Z,Re-render HELIUM Pitch square,"he3_job.sh he_pitch RENDERONLY=1: fidelity 4-view square 1400/96 + 2 close-ups, one Blender session, 4-core 16 GB cloud, deps already cached; rebuilds mesh at VOX 0.045 before render"
+jewelry_renderonly_square,16.0,2026-11-25T23:51:05Z,Re-render HELIUM Glint square,"he3_job.sh he_glint RENDERONLY=1 (needed VOXO/FC/CI passed in env: unbound under set -u in render-only mode): fidelity 4-view square 1400/96 + 1 close-up, one Blender session, 4-core 16 GB cloud, deps cached"
