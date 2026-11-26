@@ -145,6 +145,7 @@ Every number here comes from a real run in a one-person furniture and jewelry st
 | `jewelry_piece_restart_after_stall` | 3 | 3.5 min | 2.3 min to 4.7 min | 2.0 min to 5.0 min (few samples) |
 | `jewelry_piece_warm_rerender` | 25 | 2.5 min | 0.9 min to 5.1 min | 0.8 min to 11 min |
 | `jewelry_render_4views_sec` | 49 | 27 s | 21 s to 35 s | 16 s to 43 s |
+| `jewelry_renderonly_square` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `jewelry_sheet_end_to_end` | 1 | 3.2 h | 3.2 h to 3.2 h | 3.2 h to 3.2 h (few samples) |
 | `lamp_final_stills_3x_1280x1600_96spp` | 1 | 14 min | 14 min to 14 min | 14 min to 14 min (few samples) |
 | `lights_final_still` | 1 | 8.5 min | 8.5 min to 8.5 min | 8.5 min to 8.5 min (few samples) |
